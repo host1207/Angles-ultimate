@@ -1,0 +1,243 @@
+/* Angles MKML compiler. Canonical syntax is documented in MKML-SYNTAX.md. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.MKML = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+
+  const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+
+  function toTex(expression) {
+    const tokens = String(expression).match(/\/\/|~=|<=|>=|!=|[A-Za-z][A-Za-z0-9]*(?:_(?:\{[^}]*\}|[A-Za-z0-9]+))?(?:\^(?:\{[^}]*\}|\([^()]*\)|[A-Za-z0-9]+))?|\d+(?:\.\d+)?|[+\-*/=()[\]{}_,]|[^\s]/g) || [];
+    let cursor = 0;
+    const precedence = { '~=': 0, '=': 0, '!=': 0, '<=': 0, '>=': 0, '+': 1, '-': 1, '/': 2, '//': 2, '*': 2, div: 2 };
+    const greek = { theta: '\\theta', pi: '\\pi', inf: '\\infty', infinity: '\\infty' };
+
+    function parsePrimary() {
+      const token = tokens[cursor++];
+      if (token === undefined) return '';
+      const lower = token.toLowerCase();
+      if ((lower === 'sqrt' || lower === 'cbrt') && tokens[cursor] === '(') {
+        cursor++;
+        const inner = parseExpression(0);
+        if (tokens[cursor] === ')') cursor++;
+        return lower === 'cbrt' ? `\\sqrt[3]{${inner}}` : `\\sqrt{${inner}}`;
+      }
+      const groups = { '(': [')', '\\left(', '\\right)'], '[': [']', '\\left[', '\\right]'], '{': ['}', '\\left\\{', '\\right\\}'] };
+      if (groups[token]) {
+        const [closing, left, right] = groups[token];
+        const inner = parseExpression(0);
+        if (tokens[cursor] === closing) cursor++;
+        return `${left}${inner}${right}`;
+      }
+      if (lower === 'tri') return '\\triangle';
+      if (greek[lower]) return greek[lower];
+      if (token === '≅') return '\\cong';
+      return token;
+    }
+
+    function startsPrimary(token) {
+      return token !== undefined && ![')', ']', '}', '+', '-', '*', '/', '//', 'div', '~=', '=', '!=', '<=', '>=', ','].includes(token.toLowerCase());
+    }
+
+    function parseExpression(minPrecedence = 0) {
+      let left = parsePrimary();
+      while (cursor < tokens.length) {
+        const op = tokens[cursor];
+        if ([')', ']', '}'].includes(op)) break;
+        if (op === ',') { cursor++; left += ', '; continue; }
+        const opPrecedence = Object.prototype.hasOwnProperty.call(precedence, op.toLowerCase()) ? precedence[op.toLowerCase()] : null;
+        if (opPrecedence === null) {
+          if (!startsPrimary(op)) break;
+          const right = parsePrimary();
+          left += (left === '\\triangle' ? ' ' : '') + right;
+          continue;
+        }
+        if (opPrecedence < minPrecedence) break;
+        cursor++;
+        const right = parseExpression(opPrecedence + 1);
+        if (op === '/') left = `\\dfrac{${left}}{${right}}`;
+        else if (op === '*' ) left = `${left} \\times ${right}`;
+        else if (op === '//' || op.toLowerCase() === 'div') left = `${left} \\div ${right}`;
+        else if (op === '~=' || op === '≅') left = `${left} \\cong ${right}`;
+        else if (op === '!=') left = `${left} \\ne ${right}`;
+        else if (op === '<=') left = `${left} \\le ${right}`;
+        else if (op === '>=') left = `${left} \\ge ${right}`;
+        else left = `${left} ${op} ${right}`;
+      }
+      return left;
+    }
+
+    return parseExpression().trim();
+  }
+
+  function compileInline(source) {
+    const token = /<math\s*==\s*([\s\S]*?)>|<(ok|x)\s*=\s*([\s\S]*?)>|<hide\s*==\s*([\s\S]*?)>|<b>([\s\S]*?)<\/b>/gi;
+    return String(source).replace(token, (whole, math, correction, correctedText, hidden, bold) => {
+      if (math !== undefined) return `<span class="mkml-math" data-tex="${escapeHtml(toTex(math))}">${escapeHtml(math)}</span>`;
+      if (correction) return `<span class="mkml-${correction.toLowerCase()}">${escapeHtml(correctedText)}</span>`;
+      if (hidden !== undefined) return `<span class="mkml-spoiler" role="button" tabindex="0" aria-label="Reveal hidden text">${escapeHtml(hidden)}</span>`;
+      return `<b>${bold}</b>`;
+    });
+  }
+
+  function readAttribute(attributes, name) {
+    const match = String(attributes).match(new RegExp(`(?:^|\\s)${name}\\s*=\\s*["']?([^"'>]+?)["']?(?=\\s+[\\w-]+\\s*=|$)`, 'i'));
+    return match ? match[1].trim() : '';
+  }
+
+  function gridMarkup(attributes, content) {
+    const pair = (name, defaults) => {
+      const values = readAttribute(attributes, name).split(',').map(value => Number.parseInt(value.trim(), 10));
+      return [Number.isFinite(values[0]) && values[0] > 0 ? values[0] : defaults[0], Number.isFinite(values[1]) && values[1] > 0 ? values[1] : defaults[1]];
+    };
+    const pos = pair('pos', [1, 1]);
+    const span = pair('span', [12, 5]);
+    const col = Math.min(25, pos[0]);
+    const row = Math.min(35, pos[1]);
+    const colSpan = Math.max(1, Math.min(span[0], 26 - col));
+    const rowSpan = Math.max(1, Math.min(span[1], 36 - row));
+    const hasPos = /(?:^|\s)pos\s*=/i.test(attributes);
+    const hasSpan = /(?:^|\s)span\s*=/i.test(attributes);
+    const placement = hasPos || hasSpan ? ` style="--grid-col:${col};--grid-row:${row};--grid-col-span:${colSpan};--grid-row-span:${rowSpan}"` : '';
+    const id = readAttribute(attributes, 'id');
+    const customClass = readAttribute(attributes, 'class').split(/\s+/).filter(Boolean).map(escapeHtml).join(' ');
+    return `<div${id ? ` id="${escapeHtml(id)}"` : ''} class="grid-box${customClass ? ` ${customClass}` : ''}"${placement}>${content}</div>`;
+  }
+
+  function compileCss(source) {
+    const css = String(source == null ? '' : source);
+    let output = '';
+    let index = 0;
+    while (index < css.length) {
+      if (css.startsWith('/*', index)) {
+        const end = css.indexOf('*/', index + 2);
+        const stop = end < 0 ? css.length : end + 2;
+        output += css.slice(index, stop);
+        index = stop;
+        continue;
+      }
+      if (css[index] === '"' || css[index] === "'") {
+        const quote = css[index];
+        let stop = index + 1;
+        while (stop < css.length) {
+          if (css[stop] === '\\') { stop += 2; continue; }
+          if (css[stop++] === quote) break;
+        }
+        output += css.slice(index, stop);
+        index = stop;
+        continue;
+      }
+      const declaration = css.slice(index).match(/^grid-text-align\s*:\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)(\s*!important)?\s*;?/i);
+      let previous = index - 1;
+      while (previous >= 0 && /\s/.test(css[previous])) previous--;
+      if (declaration && (previous < 0 || css[previous] === '{' || css[previous] === ';')) {
+        const column = Math.max(1, Math.min(25, Number(declaration[1])));
+        const row = Math.max(1, Math.min(35, Number(declaration[2])));
+        const important = declaration[3] ? ' !important' : '';
+        output += `left: calc((${column} - 1) * 4%)${important}; top: calc((${row} - 1) * 2.857%)${important};`;
+        index += declaration[0].length;
+        continue;
+      }
+      output += css[index++];
+    }
+    return output;
+  }
+
+  function compileTable(match, rowsText, colsText, body) {
+    const rows = Math.max(1, Math.min(35, Number(rowsText)));
+    const cols = Math.max(1, Math.min(25, Number(colsText)));
+    const cellPattern = /<c(\d+)(\d+)\s*=\s*/gi;
+    const markers = [...body.matchAll(cellPattern)];
+    const cells = new Map();
+    markers.forEach((marker, index) => {
+      const start = marker.index + marker[0].length;
+      const end = index + 1 < markers.length ? markers[index + 1].index : body.length;
+      let value = body.slice(start, end).trim();
+      if (value.endsWith('>')) value = value.slice(0, -1).trim();
+      const row = Number(marker[1]);
+      const col = Number(marker[2]);
+      if (row >= 1 && row <= rows && col >= 1 && col <= cols) cells.set(`${row}-${col}`, compileInline(value));
+    });
+    const tableRows = Array.from({ length: rows }, (_, row) => `<tr>${Array.from({ length: cols }, (_, col) => `<td>${cells.get(`${row + 1}-${col + 1}`) || ''}</td>`).join('')}</tr>`).join('');
+    return `<table class="angle-table" data-rows="${rows}" data-cols="${cols}"><tbody>${tableRows}</tbody></table>`;
+  }
+
+  function trimTagBoundary(value) {
+    return String(value).trim().replace(/>\s*$/, '').trim();
+  }
+
+  function takeField(source, tag, stopPattern) {
+    const opener = new RegExp(`<${tag}\\s*=\\s*`, 'i');
+    const found = opener.exec(source);
+    if (!found) return { value: '', source };
+    const start = found.index + found[0].length;
+    const tail = source.slice(start);
+    const stop = stopPattern.exec(tail);
+    const end = stop ? stop.index : tail.length;
+    const value = trimTagBoundary(tail.slice(0, end));
+    const removeEnd = stop ? start + end : source.length;
+    return { value, source: source.slice(0, found.index) + source.slice(removeEnd) };
+  }
+
+  function takeAnswer(source) {
+    const pattern = /<(?:answer|ans)\s*=\s*([A-D])\s*>|<(?:answer|ans)\s*>\s*([A-D])\s*<\/(?:answer|ans)\s*>/i;
+    const match = pattern.exec(source);
+    return { answer: match ? (match[1] || match[2]).toLowerCase() : '', source: match ? source.slice(0, match.index) + source.slice(match.index + match[0].length) : source };
+  }
+
+  function compileQuestion(body, mode) {
+    const answerResult = takeAnswer(body);
+    const explanationResult = takeField(answerResult.source, 'explanation', /<\/Qn\s*>|<\/qn\s+all\s*>/i);
+    let remaining = explanationResult.source.replace(/<\/?Options\s*>/gi, '');
+    const promptResult = takeField(remaining, 'text', /<(?:Options)\s*>|<[A-D](?:\s*=|\s+)|<(?:answer|ans|explanation)\s*=/i);
+    remaining = promptResult.source;
+    const options = [];
+    const marker = /<([A-D])(?:\s*=\s*|\s+)/gi;
+    let item;
+    const boundaries = [...remaining.matchAll(marker)];
+    boundaries.forEach((entry, index) => {
+      const start = entry.index + entry[0].length;
+      const nextBoundary = index + 1 < boundaries.length ? boundaries[index + 1].index : remaining.length;
+      const structural = /<(?:answer|ans|explanation)\s*=|<\/Options\s*>|<\/Qn\s*>|<\/qn\s+all\s*>/i.exec(remaining.slice(start, nextBoundary));
+      const end = structural ? start + structural.index : nextBoundary;
+      const text = trimTagBoundary(remaining.slice(start, end));
+      options.push(`<button type="button" class="answer-option" data-answer="${entry[1].toLowerCase()}"><span class="option-letter">${entry[1].toUpperCase()}</span>${compileInline(text)}</button>`);
+    });
+    const normalizedMode = /^(exam|serious)$/i.test(mode) ? 'exam' : 'normal';
+    const details = explanationResult.value ? `<div class="explanation">${compileInline(explanationResult.value)}</div>` : '<div class="explanation"></div>';
+    const cover = normalizedMode === 'exam' ? '<div class="quiz-cover"><button type="button" class="quiz-reveal">Reveal</button></div>' : '';
+    return `<section class="question-card" data-mode="${normalizedMode}" data-answer="${escapeHtml(answerResult.answer)}"><div class="question-prompt">${compileInline(promptResult.value)}</div><div class="quiz-timer" aria-live="polite"></div><div class="quiz-options">${options.join('')}</div><div class="question-result" aria-live="polite"></div>${details}${cover}</section>`;
+  }
+
+  function compileQuizGroup(_whole, attributes, body) {
+    const mode = (readAttribute(attributes, 'mode') || 'normal').toLowerCase();
+    const questions = [...body.matchAll(/<Qn\s*>([\s\S]*?)<\/Qn\s*>/gi)];
+    if (!questions.length) return compileQuestion(body, mode);
+    return questions.map(question => compileQuestion(question[1], mode)).join('\n');
+  }
+
+  function compile(source) {
+    let html = String(source == null ? '' : source);
+    html = html.replace(/<qn\s+all\b([^>]*)>([\s\S]*?)<\/qn\s+all\s*>/gi, compileQuizGroup);
+    html = html.replace(/<qn\s+all\b([^>]*)>((?:(?!<Qn\s*>)[\s\S])*?)<\/qn\s*>/gi, compileQuizGroup);
+    html = html.replace(/<table\s+r\s*=\s*(\d+)\s+c\s*=\s*(\d+)\s*>([\s\S]*?)<\/table\s*>/gi, compileTable);
+    html = html.replace(/<grid\s+([^>]+)>([\s\S]*?)<\/grid\s*>/gi, (_whole, attrs, content) => gridMarkup(attrs, content));
+    html = html.replace(/<grid\s+([^>]+)\s*\/>/gi, (_whole, attrs) => gridMarkup(attrs, ''));
+    html = html.replace(/<rule\s*==\s*([\s\S]*?)>/gi, (_whole, text) => `<aside class="mkml-callout mkml-rule"><strong>Rule:</strong> ${compileInline(text)}</aside>`);
+    html = html.replace(/<trap\s*==\s*([\s\S]*?)>/gi, (_whole, text) => `<aside class="mkml-callout mkml-trap"><strong>SSC Trap:</strong> ${compileInline(text)}</aside>`);
+    html = html.replace(/<chain\s*==\s*([\s\S]*?)>/gi, (_whole, value) => `<div class="mkml-chain">${value.split(/\s*(?:->|➔)\s*/).map((step, index) => `${index ? '<span class="mkml-chain-arrow">➔</span>' : ''}<span class="mkml-chain-step">${compileInline(step)}</span>`).join('')}</div>`);
+    return compileInline(html);
+  }
+
+  function renderMath(root) {
+    if (!root || !root.querySelectorAll || !globalThis.katex) return;
+    root.querySelectorAll('.mkml-math').forEach(node => {
+      try { globalThis.katex.render(node.dataset.tex || '', node, { throwOnError: false, strict: 'ignore' }); }
+      catch (error) { node.title = error.message || 'Could not typeset expression'; }
+    });
+  }
+
+  return { compile, compileInline, toTex, renderMath };
+});

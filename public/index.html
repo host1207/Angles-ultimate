@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Angles — local-first note studio for competitive exam preparation.">
+  <title>Angles — Exam Note Studio</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#folders" aria-label="Angles home"><span class="brand-mark">∠</span><span>ANGLES</span></a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <button class="nav-item is-active" data-page="folders"><span class="nav-index">01</span>Folders</button>
+      <button class="nav-item" data-page="coding"><span class="nav-index">02</span>Coding Area</button>
+      <button class="nav-item" data-page="preview"><span class="nav-index">03</span>Preview</button>
+      <button class="nav-item" data-page="graph"><span class="nav-index">04</span>Graph</button>
+      <button class="nav-item" data-page="shortcuts"><span class="nav-index">05</span>Shortcuts</button>
+      <button class="nav-item" data-page="settings"><span class="nav-index">06</span>Settings</button>
+      <button class="nav-item" data-page="question-index"><span class="nav-index">07</span>Question Index</button>
+      <button class="nav-item" data-page="tracker"><span class="nav-index">08</span>Tracker</button>
+    </nav>
+    <div class="topbar-meta"><span class="live-dot"></span><span>LOCAL DISK</span><span class="meta-divider"></span><span id="topbar-clock">--:--</span></div>
+  </header>
+
+  <main class="app-main">
+    <section class="page is-visible" id="folders-page" data-route="folders">
+      <div class="page-header folder-header">
+        <div>
+          <p class="kicker">/ 01 — CHAPTER INDEX</p>
+          <h1>Choose a chapter.<br><em>Start from the rule.</em></h1>
+          <p class="page-intro">Your notes live on disk, not in a fragile manifest. Select a folder to open the studio.</p>
+        </div>
+        <div class="header-actions">
+          <button class="button button-primary" id="new-chapter-button"><span>＋</span> New Chapter Folder</button>
+          <button class="button button-quiet" id="refresh-button"><span class="button-icon">↻</span> Refresh Disk</button>
+        </div>
+      </div>
+      <div class="index-strip"><div><strong id="chapter-total">0</strong><span>chapters on disk</span></div><div><strong id="note-total">0</strong><span>HTML notes</span></div><div class="index-strip-note">Fast retrieval starts with a clean index.</div></div>
+      <div id="chapter-grid" class="chapter-grid" aria-live="polite"></div>
+      <div id="folder-empty" class="empty-state is-hidden"><span class="empty-glyph">＋</span><h2>No chapters yet.</h2><p>Create your first folder and give the page a point of view.</p><button class="button button-primary" data-action="new-chapter">Create a chapter</button></div>
+    </section>
+
+    <section class="page coding-page" id="coding-page" data-route="coding">
+      <div class="coding-layout">
+        <aside class="sidebar" id="chapter-sidebar">
+          <div class="sidebar-top"><button class="back-link" data-page="folders">← Back to folders</button><span class="sidebar-caption">CHAPTER FILES</span><h2 id="sidebar-chapter-name">No chapter selected</h2><div class="sidebar-actions"><button class="mini-button" id="new-html-button">＋ New HTML</button><button class="mini-button" id="new-css-button">＋ New CSS</button><button class="collapse-button" id="sidebar-collapse" title="Collapse sidebar (Ctrl+B)">«</button></div><div class="inline-file-creator is-hidden" id="inline-file-creator"><span id="inline-file-label">New Topic.html</span><input id="inline-file-input" type="text" autocomplete="off" placeholder="filename"><button id="inline-file-cancel" type="button" aria-label="Cancel">×</button></div></div>
+          <div class="file-list" id="file-list" aria-label="Chapter files"></div>
+          <div class="sidebar-footer"><span class="disk-symbol">◉</span><span>FILES ARE SAVED TO DISK</span></div>
+        </aside>
+        <div class="editor-workspace">
+          <div class="editor-header"><div><p class="kicker">/ 02 — CODING AREA</p><div class="editor-breadcrumb"><span id="editor-chapter-breadcrumb">Chapter</span><span>/</span><strong id="editor-file-name">Select a file</strong></div></div><div class="editor-tools"><span class="shortcut-hint">Ctrl+B sidebar <span>·</span> Alt+P preview</span><span class="save-status" id="save-status"><span class="status-dot"></span> Ready</span></div></div>
+          <div class="quick-toolbar" aria-label="Quick insert toolbar"><span class="toolbar-label">INSERT</span><button data-insert="math">Math</button><button data-insert="table"><span class="tool-key">Alt T</span> Table</button><button data-insert="question"><span class="tool-key">Alt Q</span> Question</button><button data-insert="tags">Study tags</button><button data-insert="grid"><span class="tool-key">Alt G</span> Grid box</button><span class="toolbar-spacer"></span><button id="open-preview-button" class="toolbar-preview"><span>↗</span> Open preview <span class="tool-key">Alt P</span></button></div>
+          <div class="editor-shell"><div class="line-numbers" id="line-numbers" aria-hidden="true">1</div><textarea id="code-editor" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="Choose a file to begin writing…"></textarea></div>
+          <div class="editor-footer"><span><span class="footer-key">MKML + HTML</span> syntax compiler active</span><span id="char-count">0 characters</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page preview-page" id="preview-page" data-route="preview">
+      <div class="preview-toolbar"><div><p class="kicker">/ 03 — PREVIEW</p><h1>Study the shape of the note.</h1><p class="page-intro">Compiled from <strong id="preview-file-name">your active file</strong> · <span id="preview-chapter-name">no chapter</span></p></div><p class="preview-shortcuts" aria-label="Preview keyboard shortcuts">Alt + + zoom in · Alt + − zoom out · Alt + G grid · F11 immersive · middle-drag pan</p></div>
+      <div class="preview-viewport" id="preview-viewport">
+        <div class="preview-canvas" id="preview-canvas">
+          <div class="column-labels" id="column-labels"></div>
+          <div class="row-labels" id="row-labels"></div>
+          <div class="coordinate-tooltip" id="coordinate-tooltip">Col 1, Row 1</div>
+          <div id="preview-flow-lines-layer" class="preview-flow-lines-layer" aria-hidden="true"></div>
+          <div id="preview-content" class="preview-content"><div class="preview-blank"><span class="preview-blank-mark">∠</span><p>Open a note to see its compiled sheet.</p></div></div>
+          <div id="preview-flow-boxes-layer" class="preview-flow-boxes-layer"></div>
+          <div id="preview-flow-lines-m-layer" class="preview-flow-lines-m-layer" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page diagram-questions-page" id="diagram-questions-page" data-route="diagram-questions">
+      <div class="diagram-question-header"><button type="button" class="button button-quiet" id="diagram-question-back">← Back to diagram</button><div><p class="kicker">QUESTIONS IN THIS NODE</p><h1 id="diagram-question-title">Diagram questions</h1><p class="page-intro" id="diagram-question-count"></p></div></div>
+      <div class="diagram-question-list" id="diagram-question-list"></div>
+    </section>
+
+    <section class="page placeholder-page" id="graph-page" data-route="graph"><div class="placeholder-card"><span class="placeholder-number">04</span><p class="kicker">/ PHASE 2 — GRAPH</p><h1>A visual map<br><em>for later.</em></h1><p>Graph mode will turn your chapters into connected recall paths. The canvas is reserved.</p><span class="coming-label">COMING IN PHASE 2</span></div></section>
+    <section class="page placeholder-page" id="shortcuts-page" data-route="shortcuts"><div class="placeholder-card"><span class="placeholder-number">05</span><p class="kicker">/ PHASE 2 — SHORTCUTS</p><h1>Make speed<br><em>deliberate.</em></h1><p>Shortcut profiles and custom key bindings will live here. For now, the core editor bindings are visible in the coding area.</p><span class="coming-label">COMING IN PHASE 2</span></div></section>
+    <section class="page placeholder-page" id="settings-page" data-route="settings"><div class="placeholder-card"><span class="placeholder-number">06</span><p class="kicker">/ PHASE 2 — SETTINGS</p><h1>Set the room<br><em>to think.</em></h1><p>Theme, editor density, and disk preferences will be configurable here.</p><span class="coming-label">COMING IN PHASE 2</span></div></section>
+
+    <section class="page question-index-page" id="question-index-page" data-route="question-index">
+      <div class="page-header qi-header"><div><p class="kicker">/ 07 — QUESTION INDEX</p><h1>Test the batch.<br><em>See what’s missing.</em></h1><p class="page-intro">Paste a question batch. Completion is calculated only from this paste.</p></div><button class="button button-quiet" id="qi-refresh">↻ Refresh index</button></div>
+      <div class="qi-primary">
+        <section class="qi-ingest panel"><div class="panel-heading"><div><span class="panel-index">A / PASTED QUESTIONS</span><h2>Paste batch</h2></div><span class="local-only">LOCAL · NO LLM</span></div><label class="sr-only" for="qi-input">Question batch</label><textarea id="qi-input" spellcheck="false" placeholder="Paste <Qn>…</Qn> questions here"></textarea><div id="qi-batch-completion" class="qi-batch-completion" aria-live="polite">PASTED-BATCH COMPLETION · no questions yet</div><div class="qi-actions"><button class="button button-quiet" id="qi-dry-run">Preview routing</button><button class="button button-primary" id="qi-commit" disabled>Commit batch</button></div><div id="qi-preview" class="qi-preview" aria-live="polite"><p>Preview checks question fields and destinations before anything is saved.</p></div><div class="qi-actions qi-resync"><button class="button button-quiet" id="qi-resync">Re-sync mapped questions</button><span id="qi-status">Ready for a batch.</span></div></section>
+        <section class="panel qi-batch-report"><div class="panel-heading"><div><span class="panel-index">B / BATCH RESULTS</span><h2>Completion by scope</h2></div></div><div class="qi-report-wrap"><table class="qi-report-table"><thead><tr><th scope="col">Scope</th><th scope="col">Questions</th><th scope="col">UN</th><th scope="col">Complete</th><th scope="col">Completion</th></tr></thead><tbody id="qi-batch-results"><tr><td colspan="5" class="qi-report-empty">Paste a batch to calculate completion.</td></tr></tbody></table></div></section>
+      </div>
+      <details class="qi-secondary"><summary>Saved index and question-type analytics</summary>
+        <div class="qi-secondary-content"><section class="qi-dashboard"><div class="panel qi-macro"><div class="panel-heading"><div><span class="panel-index">SAVED INDEX</span><h2>Stored question volume</h2></div></div><div class="qi-chapter-columns"><span>CHAPTER</span><span>VOLUME</span><span>SHARE</span><span>STORED COVERAGE</span></div><div id="qi-chapter-list" class="qi-bars"></div></div><div class="panel qi-detail"><div class="panel-heading"><div><span class="panel-index">CHAPTER DETAIL</span><h2>Concept frequency</h2></div><select id="qi-chapter-select" aria-label="Select chapter"></select></div><div id="qi-readiness" class="readiness-card"></div><div id="qi-concept-list" class="qi-bars"></div><div class="gap-heading"><span class="panel-index">UNMAPPED GAPS</span><span>Optional &lt;gap = …&gt; · no label → General Unmapped</span></div><div id="qi-gap-list" class="gap-list"></div></div></section><div id="qi-unassigned" class="unassigned-list"></div>
+        <section class="panel qi-type-panel" aria-labelledby="qi-type-title"><div class="panel-heading"><div><span class="panel-index">QUESTION FORMAT</span><h2 id="qi-type-title">Question-type breakdown</h2></div><span class="local-only">UNIQUE COUNTS</span></div><div class="qi-type-controls"><div><span class="qi-control-label">QUESTION TYPE</span><div id="qi-type-pills" class="qi-type-pills"></div></div><label class="qi-folder-filter"><span class="qi-control-label">FOLDER FILTER</span><select id="qi-type-folder-filter" aria-label="Filter question-type breakdown by folder"></select></label></div><div class="qi-type-chart-head"><span>FOLDER (ROOT MID)</span><span>QUESTION COUNT</span><span>SHARE</span></div><div id="qi-type-folder-ranking" class="qi-type-ranking"></div></section></div>
+      </details>
+    </section>
+
+    <section class="page tracker-page" id="tracker-page" data-route="tracker">
+      <div class="tracker-page-header"><div><p class="kicker">/ 08 — CHAPTER TRACKER</p><h1>Prove the chapter.<br><em>One question at a time.</em></h1><p class="page-intro">Latest result per unique question · timing rules are set once · all tracker data stays on this device.</p></div><button class="button button-quiet" id="tracker-refresh" type="button">↻ Refresh folders</button></div>
+      <div class="tracker-layout">
+        <aside class="tracker-folder-panel" aria-label="Chapter folders and root MIDs"><div class="tracker-folder-heading"><span class="panel-index">CHAPTER POOL</span><h2>Folders &amp; MIDs</h2><p>Question IDs are generated once and kept in the chapter ledger.</p></div><div id="tracker-chapter-list" class="tracker-chapter-list" aria-live="polite"><p class="tracker-empty">Scanning folders on disk…</p></div></aside>
+        <div id="tracker-detail" class="tracker-detail" aria-live="polite"><div class="tracker-empty-state"><span class="placeholder-number">01</span><h2>Select a chapter</h2><p>Choose a folder with a unique root MID to inspect its question pool and score ledger.</p></div></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="tracker-json-dialog" id="tracker-json-dialog" aria-labelledby="tracker-json-title"><div class="tracker-json-head"><div><p class="panel-index">LOCAL LEDGER FILE</p><h2 id="tracker-json-title">Tracker JSON</h2></div><button type="button" class="mini-button" id="tracker-json-close" aria-label="Close JSON inspector">Close</button></div><p class="tracker-json-note">Read-only preview. The live ledger is saved as <code>tracker-ledger.json</code> inside the selected chapter folder.</p><textarea id="tracker-json-text" readonly spellcheck="false" aria-label="Tracker ledger JSON"></textarea><div class="tracker-json-actions"><span id="tracker-json-status">No JSON copied yet.</span><button class="button button-primary" id="tracker-json-copy" type="button">Copy JSON</button></div></dialog>
+  <script src="/vendor/katex/katex.min.js"></script>
+  <script src="/mkml.js"></script>
+  <script src="/studio.js"></script>
+  <script src="/question-batch.js"></script>
+  <script src="/question-index.js"></script>
+  <script src="/tracker-engine.js"></script>
+  <script src="/tracker.js"></script>
+</body>
+</html>

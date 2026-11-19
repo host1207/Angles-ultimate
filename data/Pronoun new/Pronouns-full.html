@@ -1,0 +1,1671 @@
+<!-- angles-root-mid: PN -->
+<link-css-id: pn-t1>
+
+<!-- Root Node Outside Bg-1 & Bg-2 -->
+<!-- Root Node Centered Across Bg-1..Bg-10 (X = 1..401 -> Center X = 201, right between T5 & T6) -->
+<box points = (195,1),(207,1),(207,4),(195,4) background-color = #0F172A color = #FFFFFF>
+  <div class="pn-root-title">PRONOUNS (PN)</div>
+</box>
+
+<!-- =========================================================================
+     MID = C1 : T1 — PERSONAL PRONOUNS (Bg-1 Dark Container X = 1..41, Y = 6..133)
+     ========================================================================= -->
+<mid = c1>
+
+  <!-- Bg-1 Outer Dark Container (Inner bounds X=6..36, Y=11..128 -> exact 5-box gap on all 4 sides = X=1..41, Y=6..133) -->
+  <box points = (1,6),(41,6),(41,133),(1,133) background-color = #0F172A color = #334155></box>
+
+  <!-- Trap-4 Outer Light Red Container -->
+  <box points = (6,66),(36,66),(36,93),(6,93) background-color = #FFE4E6 color = #E11D48></box>
+
+  <!-- Trap-5 Outer Light Red Container -->
+  <box points = (6,95),(36,95),(36,122),(6,122) background-color = #FFE4E6 color = #E11D48></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-1 -->
+  <!-- Root PRONOUNS (41,4) -> T1 Head (21,11) -->
+ <line m color = #0284C7>(201,4),(201,5),(21,5),(21,11)</line m>
+
+  <!-- T1 Head (21,14) -> Split to ST1 (13,17) and ST2 (29,17) -->
+  <line m color = #0284C7>(21,14),(21,15),(13,15),(13,17)</line m>
+  <line m color = #0284C7>(21,15),(29,15),(29,17)</line m>
+
+  <!-- ST1 (13,26) -> Ex1 (13,28) and ST2 (29,26) -> Ex2 (29,28) -->
+  <line m color = #B45309>(13,26),(13,28)</line m>
+  <line m color = #B45309>(29,26),(29,28)</line m>
+
+  <!-- Merge Ex1 (13,33) and Ex2 (29,33) -> Trap-1 (21,36) -->
+  <line m color = #E11D48>(13,33),(13,34),(29,34),(29,33)</line m>
+  <line m color = #E11D48>(21,34),(21,36)</line m>
+
+  <!-- Trap-1 (21,43) -> Trap-2 (21,45) -> Trap-3 (21,54) -> Trap-4 Head (21,68) -->
+  <line m color = #E11D48>(21,43),(21,45)</line m>
+  <line m color = #E11D48>(21,52),(21,54)</line m>
+  <line m color = #E11D48>(21,64),(21,68)</line m>
+
+  <!-- Inside Trap-4: Pronoun Sequence (21,71) -> Singular (15,73) and Plural (29,73) -->
+  <line m color = #E11D48>(21,71),(21,72),(15,72),(15,73)</line m>
+  <line m color = #E11D48>(21,72),(29,72),(29,73)</line m>
+
+  <!-- Singular (15,76) -> Positive (11,79) and Negative (19,79) -->
+  <line m color = #E11D48>(15,76),(15,77),(11,77),(11,79)</line m>
+  <line m color = #E11D48>(15,77),(19,77),(19,79)</line m>
+
+  <!-- Positive (11,83) -> Positive Eg (11,85) and Negative (19,83) -> Negative Eg (19,85) -->
+  <line m color = #065F46>(11,83),(11,85)</line m>
+  <line m color = #065F46>(19,83),(19,85)</line m>
+
+  <!-- Plural (29,76) -> Always 1-2-3 (29,79) -->
+  <line m color = #E11D48>(29,76),(29,79)</line m>
+
+  <!-- Trap-4 Outer Bottom (21,93) -> Trap-5 Part 1 (21,97) -->
+  <line m color = #E11D48>(21,93),(21,97)</line m>
+
+  <!-- Inside Trap-5: Part 1 (21,103) -> Collective Nouns Head (21,105) -->
+  <line m color = #E11D48>(21,103),(21,105)</line m>
+
+  <!-- Collective Nouns Head (21,108) -> United (14,110) and Divided (28,110) -->
+  <line m color = #E11D48>(21,108),(21,109),(14,109),(14,110)</line m>
+  <line m color = #E11D48>(21,109),(28,109),(28,110)</line m>
+
+  <!-- United (14,114) -> United Eg (14,116) and Divided (28,114) -> Divided Eg (28,116) -->
+  <line m color = #065F46>(14,114),(14,116)</line m>
+  <line m color = #065F46>(28,114),(28,116)</line m>
+
+  <!-- Trap-5 Outer Bottom (21,122) -> Quiz Placeholder (21,125) -->
+  <line m color = #0284C7>(21,122),(21,125)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-1 -->
+  <box points = (13,11),(29,11),(29,14),(13,14) background-color = #E0F2FE color = #0C4A6E>
+    <div class="pn-t1-head">1) Personal Pronouns (T1)</div>
+  </box>
+
+  <box points = (7,17),(19,17),(19,26),(7,26) background-color = #FDF6E3 color = #111827>
+    <div class="pn-st-head">ST1: Subjective Case</div>
+    <div class="pn-st-points">
+      • <b>I</b> — (F.P) (S)<br>
+      • <b>We</b> — (F.P) (P)<br>
+      • <b>You</b> — (S.P) (S/P)<br>
+      • <b>He</b> — (T.P) (S)<br>
+      • <b>She</b> — (T.P) (S)<br>
+      • <b>It</b> — (T.P) (S)<br>
+      • <b>They</b> — (T.P) (P)
+    </div>
+  </box>
+
+  <box points = (23,17),(35,17),(35,26),(23,26) background-color = #FDF6E3 color = #111827>
+    <div class="pn-st-head">ST2: Objective Case</div>
+    <div class="pn-st-points">
+      • <b>Me</b> — (F.P) (S)<br>
+      • <b>Us</b> — (F.P) (P)<br>
+      • <b>You</b> — (S.P) (S/P)<br>
+      • <b>Him</b> — (T.P) (S)<br>
+      • <b>Her</b> — (T.P) (S)<br>
+      • <b>It</b> — (T.P) (S)<br>
+      • <b>Them</b> — (T.P) (P)
+    </div>
+  </box>
+
+  <box points = (7,28),(19,28),(19,33),(7,33) background-color = #FDF6E3 color = #111827>
+    <div class="pn-st-head">Ex1: Subjective Case</div>
+    <div class="pn-st-points">• Sits before a <b>finite verb</b> always.</div>
+  </box>
+
+  <box points = (23,28),(35,28),(35,33),(23,33) background-color = #FDF6E3 color = #111827>
+    <div class="pn-st-head">Ex2: Objective Form</div>
+    <div class="pn-st-points">
+      • We use objective form in both:<br>
+      1) After a <b>transitive verb</b><br>
+      2) After a <b>Preposition</b>
+    </div>
+  </box>
+
+  <box points = (9,36),(33,36),(33,43),(9,43) background-color = #FFE4E6 color = #3B0764>
+    <div class="pn-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-trap-point">
+      • Prepositions always force an <b>objective case</b>.<br>
+      • Point: <b>between, let, like, but, except</b>
+    </div>
+    <div class="pn-trap-eg">
+      <b>Eg (Wrong):</b> <x = Between you and I><br>
+      <b>Eg (Correct):</b> <ok = Between you and me>
+    </div>
+  </box>
+
+  <box points = (9,45),(33,45),(33,52),(9,52) background-color = #FFE4E6 color = #3B0764>
+    <div class="pn-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-trap-point">
+      • <b>Be verbs</b> are state verbs.<br>
+      • Since objects require transitive verbs, they can't come.<br>
+      • Instead we use <b>subjective case</b> after a state verb.
+    </div>
+  </box>
+
+  <box points = (8,54),(34,54),(34,64),(8,64) background-color = #FFE4E6 color = #3B0764>
+    <div class="pn-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-trap-point">
+      • In comparisons, the pronoun must take its form based on which it is being compared.
+    </div>
+    <div class="pn-trap-eg">
+      <b>Eg 1:</b> <ud = S>She</ud> <ud = V>runs</ud> <ud = Adj>faster</ud> than <ud = O (X)>me</ud> (<x = X>) → She runs faster than <ud = S (✓)>I</ud> (<ok = ✓>) <i>[compares subjects]</i><br>
+      <b>Eg 2:</b> <ud = S>The director</ud> <ud = V>trusts</ud> <ud = O>you</ud> more than <ud = S (X)>I</ud> (<x = X>) → <ud = S>The director</ud> <ud = V>trusts</ud> <ud = O>you</ud> more than <ud = O (✓)>me</ud> (<ok = ✓>)
+    </div>
+  </box>
+
+  <box points = (12,68),(30,68),(30,71),(12,71) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-head">Trap - 4 (T4): Pronoun Sequence</div>
+  </box>
+
+  <box points = (10,73),(20,73),(20,76),(10,76) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>Singular</b></div>
+  </box>
+
+  <box points = (25,73),(33,73),(33,76),(25,76) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>Plural</b></div>
+  </box>
+
+  <box points = (8,79),(14,79),(14,83),(8,83) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>Positive</b><br><b>2 - 3 - 1</b></div>
+  </box>
+
+  <box points = (16,79),(22,79),(22,83),(16,83) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>Negative</b><br><b>1 - 2 - 3</b></div>
+  </box>
+
+  <box points = (8,85),(14,85),(14,91),(8,91) background-color = #FFF1F2 color = #065F46>
+    <div class="pn-trap-eg"><b>Eg:</b> (You, he and I will submit it.)</div>
+  </box>
+
+  <box points = (16,85),(22,85),(22,91),(16,91) background-color = #FFF1F2 color = #065F46>
+    <div class="pn-trap-eg"><b>Eg:</b> (I, you and he broke it.)</div>
+  </box>
+
+  <box points = (24,79),(34,79),(34,85),(24,85) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>Always (1 - 2 - 3)</b></div>
+    <div class="pn-trap-eg"><b>Eg:</b> (We, you and they)</div>
+  </box>
+
+  <box points = (9,97),(33,97),(33,103),(9,103) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-head">Trap - 5 (T5)</div>
+    <div class="pn-trap-point">• <b>"It"</b> is used in non-living things and dummy subjects (weather, time).</div>
+    <div class="pn-trap-eg"><b>Eg:</b> (It is 6 PM) &nbsp;|&nbsp; (It is rainy)</div>
+  </box>
+
+  <box points = (13,105),(29,105),(29,108),(13,108) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>For Collective Nouns</b></div>
+  </box>
+
+  <box points = (8,110),(20,110),(20,114),(8,114) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>1) United</b><br>(Singular Poss. Adj → <b>its</b>)</div>
+  </box>
+
+  <box points = (22,110),(34,110),(34,114),(22,114) background-color = #FFF1F2 color = #3B0764>
+    <div class="pn-trap-point"><b>2) When Divided</b><br>(Poss. Adj (P) → <b>their</b> is used)</div>
+  </box>
+
+  <box points = (8,116),(20,116),(20,120),(8,120) background-color = #FFF1F2 color = #065F46>
+    <div class="pn-trap-eg"><b>Eg:</b> The jury has submitted <ok = its> report.</div>
+  </box>
+
+  <box points = (22,116),(34,116),(34,120),(22,120) background-color = #FFF1F2 color = #065F46>
+    <div class="pn-trap-eg"><b>Eg:</b> The jury were divided in <ok = their> opinion.</div>
+  </box>
+
+  <box points = (15,125),(27,125),(27,128),(15,128) background-color = #E0F2FE color = #0C4A6E>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C2 : T2 — POSSESSIVE PRONOUNS (Bg-2 Light Container X = 41..81, Y = 6..133)
+     Touches Bg-1 directly at X = 41; Inner bounds X = 46..76, Y = 11..128 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c2>
+
+  <!-- Bg-2 Outer Light Container (Contrasts with Dark Bg-1; touches Bg-1 at X=41) -->
+  <box points = (41,6),(81,6),(81,133),(41,133) background-color = #E2E8F0 color = #475569></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-2 -->
+  <!-- Root PRONOUNS (41,4) -> T2 Head (61,11) -->
+<line m color = #38BDF8>(201,4),(201,5),(61,5),(61,11)</line m>
+
+  <!-- T2 Head (61,14) -> Split to ST1 (52,17) and ST2 (70,17) -->
+  <line m color = #38BDF8>(61,14),(61,15),(52,15),(52,17)</line m>
+  <line m color = #38BDF8>(61,15),(70,15),(70,17)</line m>
+
+  <!-- Left Track: ST1 (52,26) -> Ex1 (52,28) and Ex1 (52,35) -> Ex3 (52,37) -->
+  <line m color = #38BDF8>(52,26),(52,28)</line m>
+  <line m color = #38BDF8>(52,35),(52,37)</line m>
+
+  <!-- Right Track: ST2 (70,26) -> Ex2 (70,28) and Ex2 (70,43) -> Ex4 (70,45) -->
+  <line m color = #38BDF8>(70,26),(70,28)</line m>
+  <line m color = #38BDF8>(70,43),(70,45)</line m>
+
+  <!-- Merge Ex3 (52,44) and Ex4 (70,56) -> Trap-1 (61,59) -->
+  <line m color = #6366F1>(52,44),(52,57),(70,57),(70,56)</line m>
+  <line m color = #6366F1>(61,57),(61,59)</line m>
+
+  <!-- Central Trap Spine: Trap-1 -> Trap-2 -> Trap-3 -> Trap-4 -> Trap-5 -> Trap-6 -> Quiz Box -->
+  <line m color = #6366F1>(61,69),(61,71)</line m>
+  <line m color = #6366F1>(61,80),(61,82)</line m>
+  <line m color = #6366F1>(61,89),(61,91)</line m>
+  <line m color = #6366F1>(61,100),(61,102)</line m>
+  <line m color = #6366F1>(61,111),(61,113)</line m>
+  <line m color = #0284C7>(61,122),(61,125)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-2 (Dark Theme Boxes with White Headings, Light Grey Subheadings, Light Blue Points, Light Green Examples) -->
+
+  <!-- T2 Head Box -->
+  <box points = (53,11),(69,11),(69,14),(53,14) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-head">2) Possessive Pronouns (T2)</div>
+  </box>
+
+  <!-- ST1: Possessive Adjective (Left Track X=46..59) -->
+  <box points = (46,17),(59,17),(59,26),(46,26) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">ST1: Possessive Adjective</div>
+    <div class="pn-t2-point">
+      • <b>My</b> — (F.P) (S)<br>
+      • <b>Our</b> — (F.P) (P)<br>
+      • <b>Your</b> — (S.P) (S/P)<br>
+      • <b>His</b> — (T.P) (S)<br>
+      • <b>Her</b> — (T.P) (S)<br>
+      • <b>Its</b> — (T.P) (S)<br>
+      • <b>Their</b> — (T.P) (P)
+    </div>
+  </box>
+
+  <!-- ST2: Possessive Pronoun (Right Track X=63..76) -->
+  <box points = (63,17),(76,17),(76,26),(63,26) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">ST2: Possessive Pronoun</div>
+    <div class="pn-t2-point">
+      • <b>Mine</b> — (F.P) (S)<br>
+      • <b>Ours</b> — (F.P) (P)<br>
+      • <b>Yours</b> — (S.P) (S/P)<br>
+      • <b>His</b> — (T.P) (S)<br>
+      • <b>Hers</b> — (T.P) (S)<br>
+      • <b>—</b> <i>(None for Its)</i><br>
+      • <b>Theirs</b> — (T.P) (P)
+    </div>
+  </box>
+
+  <!-- Ex1: Possessive Adjective Identification (Left Track) -->
+  <box points = (46,28),(59,28),(59,35),(46,35) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">Ex1: Possessive Adj Identification</div>
+    <div class="pn-t2-point">• Sits right in front of a noun.</div>
+    <div class="pn-t2-eg"><b>Eg:</b> This is <ud = Possessive Adj>my</ud> laptop.</div>
+  </box>
+
+  <!-- Ex3: Position of Possessive Adjectives (Left Track) -->
+  <box points = (46,37),(59,37),(59,44),(46,44) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">Ex3: Position of Possessive Adj</div>
+    <div class="pn-t2-point">• Right in front of a noun.</div>
+    <div class="pn-t2-eg"><b>Eg:</b> That is <ud = P.A>your</ud> land.</div>
+  </box>
+
+  <!-- Ex2: Possessive Pronoun Identification + Hidden Singular & Plural Noun (Right Track) -->
+  <box points = (63,28),(76,28),(76,43),(63,43) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">Ex2: Possessive Pronoun Identification</div>
+    <div class="pn-t2-point">
+      • It combines <b>Possessive Adjective + Noun</b>.<br>
+      • It doesn't have any noun behind it.
+    </div>
+    <div class="pn-t2-eg">
+      <b>Eg:</b> This laptop is <ud = P.Pronoun (my [P.A] + laptop [Noun])>mine</ud>.
+    </div>
+    <div class="pn-t2-subhead">Hidden Singular Noun</div>
+    <div class="pn-t2-eg">
+      <b>Eg:</b> Your phone is on the table, <ud = my phone (S)>mine</ud> <b>is</b> on my pocket.
+    </div>
+    <div class="pn-t2-point">
+      • <b>mine</b> = my phone → verb is <b>singular</b> because "mine" points at a singular subject.
+    </div>
+    <div class="pn-t2-subhead">Hidden Plural Noun</div>
+    <div class="pn-t2-eg">
+      <b>Eg:</b> Your keys are on the table, <ud = my keys (P)>mine</ud> <b>are</b> on my pocket.
+    </div>
+    <div class="pn-t2-point">
+      • <b>mine</b> = my keys → so we use <b>plural verb</b>.
+    </div>
+  </box>
+
+  <!-- Ex4: Position of Possessive Pronouns (Right Track) -->
+  <box points = (63,45),(76,45),(76,56),(63,56) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t2-box-head">Ex4: Position of Possessive Pronoun</div>
+    <div class="pn-t2-subhead">1) At Subject</div>
+    <div class="pn-t2-eg"><b>Eg:</b> <ud = Subj>Yours</ud> is parked in the main gate.</div>
+    <div class="pn-t2-subhead">2) At Object</div>
+    <div class="pn-t2-eg"><b>Eg:</b> I forgot my book, so I borrowed <ud = Obj>his</ud>.</div>
+    <div class="pn-t2-subhead">3) At Preposition Object</div>
+    <div class="pn-t2-eg"><b>Eg:</b> Our office is much closer to station than <ud = P.O>theirs</ud>.</div>
+    <div class="pn-t2-subhead">4) At Complement</div>
+    <div class="pn-t2-eg"><b>Eg:</b> That book is <ud = Comp>mine</ud>.</div>
+  </box>
+
+  <!-- Trap - 1 -->
+  <box points = (47,59),(75,59),(75,69),(47,69) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 1</div>
+    <div class="pn-t2-point">
+      • Unlike nouns which use apostrophe to indicate possession, <b>Possessive Pronouns never use them</b>.<br>
+      • <b>Wrong:</b> <x = your's, her's, their's, our's> &nbsp;|&nbsp; <b>Correct:</b> <ok = yours, hers, theirs, ours><br>
+      • <b>"It's"</b> has an apostrophe because it doesn't show possession; instead it gives <b>"It is"</b> or <b>"It has"</b> meaning.
+    </div>
+    <div class="pn-t2-eg"><b>Eg:</b> <u>It's</u> raining for three days.</div>
+  </box>
+
+  <!-- Trap - 2 -->
+  <box points = (47,71),(75,71),(75,80),(47,80) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 2</div>
+    <div class="pn-t2-point">• <b>"His"</b> is same for P.Adj and P.Pronoun.</div>
+    <div class="pn-t2-eg"><b>Eg:</b> This is <u>his</u> file. &nbsp;|&nbsp; This file is <u>his</u>.</div>
+    <div class="pn-t2-point">• <b>"Its"</b> has no P.Pronoun, so "its" must require a noun after it.</div>
+    <div class="pn-t2-eg">
+      <b>Wrong:</b> <x = This cage is its.> &nbsp;|&nbsp; <b>Correct:</b> <ok = This is its cage.>
+    </div>
+  </box>
+
+  <!-- Trap - 3 -->
+  <box points = (47,82),(75,82),(75,89),(47,89) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 3</div>
+    <div class="pn-t2-point">
+      • Never stack two determiners together <b>(an, the, this, that, some, a, any, no)</b>.
+    </div>
+    <div class="pn-t2-eg">
+      <b>Wrong:</b> <x = He is a my friend.> &nbsp;|&nbsp; <b>Correct:</b> <ok = He is my friend.>
+    </div>
+  </box>
+
+  <!-- Trap - 4 -->
+  <box points = (47,91),(75,91),(75,100),(47,100) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 4</div>
+    <div class="pn-t2-point">
+      • When <b>gerund</b> is functioning as a noun, its preceding pronoun must be a <b>Possessive Adjective</b>.<br>
+      • Because gerund itself is a noun.
+    </div>
+    <div class="pn-t2-eg">
+      <b>Wrong:</b> My parents objected to <ud = Pronoun (X)>me</ud> <ud = Gerund (Object)>travelling</ud>.<br>
+      <b>Correct:</b> My parents objected to <ud = P.A (✓)>my</ud> <ud = Gerund>travelling</ud>.
+    </div>
+  </box>
+
+  <!-- Trap - 5 -->
+  <box points = (47,102),(75,102),(75,111),(47,111) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 5</div>
+    <div class="pn-t2-point">
+      • Never compare an item to a person; always compare possession via <b>P.Pronoun</b>.
+    </div>
+    <div class="pn-t2-eg">
+      <b>Wrong:</b> My laptop's processor is faster than <ud = Pronoun (Human) (X)>you</ud>.<br>
+      <b>Correct:</b> My laptop's processor is faster than <ud = yours = your laptop's processor (✓)>yours</ud>.
+    </div>
+  </box>
+
+  <!-- Trap - 6 -->
+  <box points = (47,113),(75,113),(75,122),(47,122) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t2-box-head">Trap - 6</div>
+    <div class="pn-t2-point">
+      • <b>separation, leave, excuse, mention, report, pardon, sight, favour</b> do not take Possessive Adj in front of them.
+    </div>
+    <div class="pn-t2-eg">
+      <b>Wrong:</b> <x = I cannot bear your separation.><br>
+      <b>Correct:</b> <ok = I cannot bear separation from you.>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C2 -->
+  <box points = (55,125),(67,125),(67,128),(55,128) background-color = #0F172A color = #38BDF8>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C3 : T3 — REFLEXIVE PRONOUNS (Bg-3 Dark Emerald Canvas X = 81..121, Y = 6..133)
+     Touches Bg-2 directly at X = 81; Inner bounds X = 86..116, Y = 11..128 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c3>
+
+  <!-- Bg-3 Outer Dark Emerald Container -->
+  <box points = (81,6),(121,6),(121,133),(81,133) background-color = #061B17 color = #10B981></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-3 (Center Spine X = 101) -->
+  <!-- Root PRONOUNS (41,4) -> T3 Head (101,11) -->
+  <line m color = #10B981>(41,4),(41,5),(101,5),(101,11)</line m>
+
+  <!-- T3 Head (101,14) -> ST1 (101,16) -> Id1 (101,29) -->
+  <line m color = #10B981>(101,14),(101,16)</line m>
+  <line m color = #10B981>(101,27),(101,29)</line m>
+
+  <!-- Id1 (101,35) -> Trap 1 (101,37) -->
+  <line m color = #22D3EE>(101,35),(101,37)</line m>
+
+  <!-- Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Trap 5 -> Trap 6 -> Quiz Placeholder -->
+  <line m color = #F59E0B>(101,52),(101,54)</line m>
+  <line m color = #F59E0B>(101,67),(101,69)</line m>
+  <line m color = #F59E0B>(101,83),(101,85)</line m>
+  <line m color = #F59E0B>(101,98),(101,100)</line m>
+  <line m color = #F59E0B>(101,110),(101,112)</line m>
+  <line m color = #10B981>(101,122),(101,125)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-3 -->
+  <box points = (92,11),(110,11),(110,14),(92,14) background-color = #ECFDF5 color = #10B981>
+    <div class="pn-t3-head">3) Reflexive Pronouns (T3)</div>
+  </box>
+
+  <box points = (88,16),(114,16),(114,27),(88,27) background-color = #F2F8F5 color = #10B981>
+    <div class="pn-t3-st-head">ST1: Reflexive Pronouns</div>
+    <div class="pn-t3-st-points">
+      • <b>Myself</b> — (F.P) (S)<br>
+      • <b>Ourselves</b> — (F.P) (P)<br>
+      • <b>Yourself</b> — (S.P) (S)<br>
+      • <b>Yourselves</b> — (S.P) (P)<br>
+      • <b>Himself</b> — (T.P) (S)<br>
+      • <b>Herself</b> — (T.P) (S)<br>
+      • <b>Itself</b> — (T.P) (S)<br>
+      • <b>Themselves</b> — (T.P) (P)<br>
+      * <b> It is used when the doer and receiver is the same </b>
+    </div>
+  </box>
+
+  <box points = (86,29),(116,29),(116,35),(86,35) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">• Sits as an <b>object</b> (like after a <b>transitive verb</b> or a <b>preposition</b>).</div>
+    </div>
+  </box>
+
+  <box points = (86,37),(116,37),(116,52),(86,52) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t3-trap-point">• If <b>transitive verbs</b> don't have an external object, put a <b>Reflexive Pronoun</b>.</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg 1: We enjoyed <s>at the party</s>. ✗</div>
+      <div class="pn-ibracket-right">We enjoyed <b>ourselves</b> at the party. ✓</div>
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg 2: Students should <s>avail the library facilities</s>. ✗</div>
+      <div class="pn-ibracket-right">Students should avail <b>themselves of</b> the library facilities. ✓</div>
+    </div>
+  </box>
+
+  <box points = (86,54),(116,54),(116,67),(86,67) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t3-trap-point">
+      • Verbs that already tell info about the object <b>never take a Reflexive Pronoun</b>.<br>
+      • <b>Hid</b> is usually done by oneself, so no <i>him/herself</i> after this. Same for <b>prepare, qualify, keep, stop, bathe, move, turn</b>, etc.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg: He hid <s>himself</s> behind the tree. ✗</div>
+      <div class="pn-ibracket-right">He <b>hid</b> behind the tree. ✓</div>
+    </div>
+  </box>
+
+  <box points = (86,69),(116,69),(116,83),(86,83) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t3-trap-point">• Reflexive pronouns will <b>never come as a subject</b>.</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg 1: <s>Myself</s> Manoj. ✗</div>
+      <div class="pn-ibracket-right"><b>I am</b> Manoj. ✓</div>
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg 2: God and <s>myself</s> will defeat the evil. ✗</div>
+      <div class="pn-ibracket-right">God and <b>I</b> will defeat the evil. ✓</div>
+    </div>
+  </box>
+
+  <box points = (86,85),(116,85),(116,98),(86,98) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t3-trap-point">
+      • In <b>imperative sentences</b>, the subject (<b>"You"</b>) is hidden, so use <b>self-case</b> after the verb in these cases.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg: Put <s>you</s> in that position. <i>(Here <ud = Hidden Subj>You</ud> put <s>you</s> is wrong)</i> ✗</div>
+      <div class="pn-ibracket-right"><i>[After a transitive verb put self-case]</i> → Put <b>yourself</b> in that position. ✓</div>
+    </div>
+  </box>
+
+  <box points = (86,100),(116,100),(116,110),(86,110) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 5 (T5)</div>
+    <div class="pn-t3-trap-point">
+      • When showing <b>physical location prepositions</b>, use <b>objective case</b> instead of self-case.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg: He placed his laptop beside <s>himself</s>. ✗</div>
+      <div class="pn-ibracket-right">He placed his laptop beside <b>him</b>. ✓</div>
+    </div>
+  </box>
+
+  <box points = (86,112),(116,112),(116,122),(86,122) background-color = #FEF9EC color = #F59E0B>
+    <div class="pn-t3-trap-head">Trap - 6 (T6)</div>
+    <div class="pn-t3-trap-point">
+      • When an action is shared <b>mutually between 2 or more people</b>, use a <b>Reciprocal Pronoun</b> (<i>each other / one another</i>) instead of a Reflexive Pronoun.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Eg: Both of them blamed <s>themselves</s>. <i>(Self-blame, not mutual)</i> ✗</div>
+      <div class="pn-ibracket-right">Both of them blamed <b>each other</b>. ✓</div>
+    </div>
+  </box>
+
+  <box points = (95,125),(107,125),(107,128),(95,128) background-color = #ECFDF5 color = #10B981>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C4 : T4 — EMPHATIC PRONOUNS (Bg-4 Light Warm Alabaster Canvas X = 121..161, Y = 6..133)
+     Touches Bg-3 directly at X = 121; Inner bounds X = 126..156, Y = 11..128 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c4>
+
+  <!-- Bg-4 Outer Light Warm Alabaster Container -->
+  <box points = (121,6),(161,6),(161,133),(121,133) background-color = #F6F4F0 color = #A855F7></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-4 (Center Spine X = 141) -->
+  <!-- Root PRONOUNS (41,4) -> T4 Head (141,11) -->
+  <line m color = #9333EA>(41,4),(41,5),(141,5),(141,11)</line m>
+
+  <!-- T4 Head (141,14) -> ST1 (141,16) -> Id1 (141,30) -->
+  <line m color = #9333EA>(141,14),(141,16)</line m>
+  <line m color = #9333EA>(141,28),(141,30)</line m>
+
+  <!-- Id1 (141,51) -> Trap 1 (141,54) -->
+  <line m color = #22D3EE>(141,51),(141,54)</line m>
+
+  <!-- Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Quiz Placeholder -->
+  <line m color = #E11D48>(141,66),(141,69)</line m>
+  <line m color = #E11D48>(141,87),(141,90)</line m>
+  <line m color = #E11D48>(141,108),(141,111)</line m>
+  <line m color = #9333EA>(141,122),(141,125)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-4 -->
+  <box points = (132,11),(150,11),(150,14),(132,14) background-color = #2E1065 color = #A855F7>
+    <div class="pn-t4-head">4) Emphatic Pronouns (T4)</div>
+  </box>
+
+  <box points = (128,16),(154,16),(154,28),(128,28) background-color = #27132A color = #9333EA>
+    <div class="pn-t4-st-head">ST1: Emphatic Pronouns</div>
+    <div class="pn-t4-st-points">
+      • <b>Myself</b> — (F.P) (S)<br>
+      • <b>Ourselves</b> — (F.P) (P)<br>
+      • <b>Yourself</b> — (S.P) (S)<br>
+      • <b>Yourselves</b> — (S.P) (P)<br>
+      • <b>Himself</b> — (T.P) (S)<br>
+      • <b>Herself</b> — (T.P) (S)<br>
+      • <b>Itself</b> — (T.P) (S)<br>
+      • <b>Themselves</b> — (T.P) (P)
+    </div>
+  </box>
+
+  <box points = (126,30),(156,30),(156,51),(126,51) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">
+        • Emphatic pronouns <b>never occupy an objective seat</b>.<br>
+        • Instead, they sit near a noun/pronoun to <b>emphasize it</b>.<br>
+        • <b>Deleting it will not break the sentence.</b>
+      </div>
+      <div class="pn-ibracket-dark-pair">
+        <div class="pn-ibracket-dark-info"><b>Eg (Emphatic):</b> She <ud = delete>herself</ud> wrote it for me.</div>
+        <div class="pn-ibracket-dark-right">→ <b>She wrote it for me. ✓</b> <i>(Valid after deletion)</i></div>
+      </div>
+      <div class="pn-id-point">
+        • <b>Reflexive pronouns</b>, on the other hand, actually act as <b>objects</b>, so they <b>can't be deleted</b>.
+      </div>
+      <div class="pn-ibracket-dark-pair">
+        <div class="pn-ibracket-dark-info"><b>Eg (Reflexive):</b> She blamed <b>herself</b> for the crash.</div>
+        <div class="pn-ibracket-dark-wrong">→ Here "herself" is the object after a transitive verb, so it <b>can't be deleted</b>. ✗</div>
+      </div>
+    </div>
+  </box>
+
+  <box points = (126,54),(156,54),(156,66),(126,66) background-color = #350D16 color = #E11D48>
+    <div class="pn-t4-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t4-trap-point">• An Emphatic pronoun can <b>never come alone as a subject</b>.</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong"><s>Myself</s> will handle the backend. ✗</div>
+      <div class="pn-ibracket-dark-right"><b>I myself</b> will handle the backend. ✓</div>
+    </div>
+  </box>
+
+  <box points = (126,69),(156,69),(156,87),(126,87) background-color = #350D16 color = #E11D48>
+    <div class="pn-t4-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t4-trap-point">• <b>United Collective Noun → itself</b></div>
+    <div class="pn-t4-trap-eg"><b>Eg:</b> The committee <b>itself</b> admitted its error in the answer key. ✓</div>
+    <div class="pn-t4-trap-point">• <b>Divided Collective Noun → themselves</b></div>
+    <div class="pn-t4-trap-eg"><b>Eg:</b> The jury <b>themselves</b> were divided in their final verdict. ✓</div>
+    <div class="pn-t4-trap-point">• <b>Generic "One" → oneself</b></div>
+    <div class="pn-t4-trap-eg"><b>Eg:</b> One <b>oneself</b> must verify the source before sharing the data. ✓</div>
+  </box>
+
+  <box points = (126,90),(156,90),(156,108),(126,108) background-color = #350D16 color = #E11D48>
+    <div class="pn-t4-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t4-trap-point">
+      • Placing an emphatic pronoun next to the wrong noun shifts the emphasis onto the wrong person or creates ambiguity.
+    </div>
+    <div class="pn-t4-subhead">Subject Stress</div>
+    <div class="pn-t4-trap-eg"><b>The Prime Minister herself</b> inaugurated the facility. <i>(Stresses that it was the PM)</i></div>
+    <div class="pn-t4-subhead">Object Stress</div>
+    <div class="pn-t4-trap-eg">I met <b>the Prime Minister herself</b>. <i>(Emphasizes that I met the actual PM)</i></div>
+    <div class="pn-t4-subhead">Ambiguous Trap</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">The manager met the intern <s>herself</s>. <i>(Not known / can't be deduced)</i> ✗</div>
+      <div class="pn-ibracket-dark-right"><b>The manager herself</b> met the intern. ✓</div>
+    </div>
+  </box>
+
+  <box points = (126,111),(156,111),(156,122),(126,122) background-color = #350D16 color = #E11D48>
+    <div class="pn-t4-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t4-trap-point">• <b>Never stack possessives</b> with emphatic pronouns.</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Wrong — This is <s>my myself</s> laptop. ✗</div>
+      <div class="pn-ibracket-dark-right">Correct — This is <b>my</b> laptop. ✓</div>
+    </div>
+  </box>
+
+  <box points = (135,125),(147,125),(147,128),(135,128) background-color = #2E1065 color = #A855F7>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C5 : T5 — DEMONSTRATIVE PRONOUNS (Bg-5 Deep Midnight Indigo Canvas X = 161..201, Y = 6..133)
+     Touches Bg-4 directly at X = 161; Inner bounds X = 166..196, Y = 11..128 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c5>
+
+  <!-- Bg-5 Outer Deep Midnight Indigo Container (Contrasts with Light Warm Alabaster Bg-4) -->
+  <box points = (161,6),(201,6),(201,133),(161,133) background-color = #0B1120 color = #38BDF8></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-5 (Center Spine X = 181) -->
+  <!-- Root PRONOUNS (41,4) -> T5 Head (181,11) -->
+  <line m color = #38BDF8>(41,4),(41,5),(181,5),(181,11)</line m>
+
+  <!-- T5 Head (181,14) -> ST1 (181,16) -> Trap 1 (181,59) -->
+  <line m color = #38BDF8>(181,14),(181,16)</line m>
+  <line m color = #F59E0B>(181,56),(181,59)</line m>
+
+  <!-- Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Quiz Placeholder -->
+  <line m color = #F59E0B>(181,72),(181,75)</line m>
+  <line m color = #F59E0B>(181,90),(181,93)</line m>
+  <line m color = #F59E0B>(181,106),(181,109)</line m>
+  <line m color = #38BDF8>(181,122),(181,125)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-5 -->
+  <box points = (171,11),(191,11),(191,14),(171,14) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t5-head">5) Demonstrative Pronouns (T5)</div>
+  </box>
+
+  <box points = (166,16),(196,16),(196,56),(166,56) background-color = #F8FAFC color = #0284C7>
+    <div class="pn-t5-st-head">ST1: Demonstrative Pronouns &amp; Adjectives</div>
+
+    <div class="pn-t5-subhead">1) This — (இது) Pronoun (Singular) &amp; (இந்த) Adjective</div>
+    <div class="pn-t5-st-points">
+      • <b>Pronoun (S):</b> <span class="pn-t5-eg-inline"><b>Eg:</b> <u>This</u> is my car. (இது என்னுடைய கார்)</span><br>
+      • <b>Adjective (இந்த):</b> <i>[த + அ = எச்சம் — பெயரெச்சம்]</i> → <span class="pn-t5-eg-inline"><b>Eg:</b> <u>This</u> car is mine. (இந்த கார்)</span>
+    </div>
+
+    <div class="pn-t5-subhead">2) These — (இவை / இது) Pronoun (Plural) &amp; (இந்த) Adjective</div>
+    <div class="pn-t5-st-points">
+      • <b>Pronoun (P):</b> <span class="pn-t5-eg-inline"><b>Eg:</b> <u>These</u> are great cars. (இவை)</span><br>
+      • <b>Adjective (இந்த):</b> Comes before a plural noun.
+    </div>
+
+    <div class="pn-t5-subhead">3) That — (அது) Pronoun (Singular) &amp; (அந்த) Adjective</div>
+    <div class="pn-t5-st-points">
+      • <b>Pronoun (S):</b> <span class="pn-t5-eg-inline"><b>Eg:</b> <u>That</u> is my car. (அது)</span> &nbsp;|&nbsp; <b>Adjective (அந்த):</b> <span class="pn-t5-eg-inline"><b>Eg:</b> <u>That</u> car is mine.</span>
+    </div>
+
+    <div class="pn-t5-subhead">4) Those — (அவைகள் / அது) Pronoun (Plural) &amp; (அந்த) Adjective</div>
+    <div class="pn-t5-st-points">
+      • <b>Pronoun (P)</b> &amp; <b>Adjective (அந்த)</b> before plural nouns.
+    </div>
+
+    <div class="pn-t5-subhead">5) That of (Singular Comparison) &amp; Those of (Plural Comparison)</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The weather of Chennai is hotter than <s>Bengaluru</s>. <i>(Compares weather to a city)</i> ✗</div>
+      <div class="pn-ibracket-right">The weather of Chennai is hotter than <b>that of</b> Bengaluru. <i>(that of = Bengaluru's weather)</i> ✓</div>
+    </div>
+    <div class="pn-t5-st-points">• <b>Those of:</b> Used for plural comparison pronouns.</div>
+
+    <div class="pn-t5-subhead">6) Such — Can be Singular / Plural (Used to point at something)</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Such <ud = S.Verb (X)><s>was</s></ud> <ud = Plural>the bugs</ud> in the legacy code. ✗</div>
+      <div class="pn-ibracket-right">Such <b>were</b> the bugs in the legacy code. ✓</div>
+    </div>
+  </box>
+
+  <box points = (166,59),(196,59),(196,72),(166,72) background-color = #FFFBEB color = #D97706>
+    <div class="pn-t5-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t5-trap-point">
+      • <b>"These"</b> and <b>"Those"</b> are only plural adjectives, so they also force the nouns they are referring to be <b>plural</b>.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Those <s>guy</s> are strong. ✗</div>
+      <div class="pn-ibracket-right">Those <b>guys</b> are strong. ✓</div>
+    </div>
+  </box>
+
+  <box points = (166,75),(196,75),(196,90),(166,90) background-color = #FFFBEB color = #D97706>
+    <div class="pn-t5-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t5-trap-point">
+      • If there are two items to be pointed, <b>"that"</b> is used to point the <b>former</b> one and <b>"this"</b> to point the <b>newer (latter)</b> one.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Both C++ and Python are popular; while <s>this</s> is older, <s>that</s> is easier to read. ✗</div>
+      <div class="pn-ibracket-right">Both C++ and Python are popular; while <b>that</b> <i>(former)</i> is older, <b>this</b> <i>(newer)</i> is easier to read. ✓</div>
+    </div>
+  </box>
+
+  <box points = (166,93),(196,93),(196,106),(166,106) background-color = #FFFBEB color = #D97706>
+    <div class="pn-t5-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t5-trap-point">
+      • In an adjective clause, when introducing a general group, always use <b>"Those"</b> (never <i>"They"</i>).
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong"><s>They</s> who practice win. ✗</div>
+      <div class="pn-ibracket-right"><b>Those</b> who practice win. ✓</div>
+    </div>
+  </box>
+
+  <box points = (166,109),(196,109),(196,122),(166,122) background-color = #FFFBEB color = #D97706>
+    <div class="pn-t5-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t5-trap-point">
+      • <b>"The same"</b> is treated as an adjective (<i>Eg: The same file</i>).<br>
+      • So <b>"the same"</b> can't function as a noun / pronoun.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Please verify the configuration and upload <s>the same</s> to the server. ✗</div>
+      <div class="pn-ibracket-right">Please verify the configuration and upload <b>it</b> to the server. ✓</div>
+    </div>
+  </box>
+
+  <box points = (175,125),(187,125),(187,128),(175,128) background-color = #E0F2FE color = #0284C7>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C6 : T6 — RELATIVE PRONOUNS (Bg-6 Warm Cyber-Sand Canvas X = 201..241, Y = 6..208)
+     Touches Bg-5 directly at X = 201; Inner bounds X = 206..236, Y = 11..203 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c6>
+
+  <!-- Bg-6 Outer Warm Cyber-Sand Container -->
+  <box points = (201,6),(241,6),(241,208),(201,208) background-color = #F3EFE6 color = #6366F1></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-6 (Center Spine X = 221) -->
+  <!-- Root PRONOUNS (41,4) -> T6 Head (221,11) -->
+  <line m color = #6366F1>(41,4),(41,5),(221,5),(221,11)</line m>
+
+  <!-- T6 Head (221,14) -> Id1 (221,16) -> ST1 (221,29) -->
+  <line m color = #C084FC>(221,14),(221,16)</line m>
+  <line m color = #22D3EE>(221,27),(221,29)</line m>
+
+  <!-- ST1 -> ST2 -> ST3 -> ST4 -> ST5 -> ST6 -> Trap 1 -> Quiz Placeholder -->
+  <line m color = #38BDF8>(221,46),(221,48)</line m>
+  <line m color = #38BDF8>(221,65),(221,67)</line m>
+  <line m color = #38BDF8>(221,77),(221,79)</line m>
+  <line m color = #38BDF8>(221,158),(221,160)</line m>
+  <line m color = #38BDF8>(221,168),(221,170)</line m>
+  <line m color = #F43F5E>(221,183),(221,185)</line m>
+  <line m color = #C084FC>(221,198),(221,200)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-6 -->
+  <!-- T6 Header (Single Blue Underline Main Heading) -->
+  <box points = (211,11),(231,11),(231,14),(211,14) background-color = #1E1035 color = #C084FC>
+    <div class="pn-t6-head">6) Relative Pronouns (T6)</div>
+  </box>
+
+  <!-- Id1: Identification (Global Signature Style) -->
+  <box points = (206,16),(236,16),(236,27),(206,27) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">
+        • Relative Pronoun sits after a noun and also acts as a <b>conjunction</b>.<br>
+        • <b>Relative Pronoun = Pronoun + Conjunction</b><br>
+        • Relative Pronouns usually sit on the <b>right of the noun</b>.<br>
+        • Relative Pronouns which are <b>subjective</b> require a <b>finite verb</b>.
+      </div>
+    </div>
+  </box>
+
+  <!-- ST1: Who -->
+  <box points = (206,29),(236,29),(236,46),(206,46) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST1: Who</div>
+    <div class="pn-t6-point">
+      • <b>Singular / Plural</b> — used in <b>Subjective Case</b>.<br>
+      • Requires a <b>finite verb</b>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">
+        Her opponent, <s>whom</s> the critics say lacks experience, lost the debate. ✗<br>
+        <span class="pn-t6-note">• critics → say (F.V) &nbsp;|&nbsp; Her opponent → lost (F.V) &nbsp;|&nbsp; ? → lacks (F.V) needs Subj. Case, but only has Obj. Case ("whom").</span>
+      </div>
+      <div class="pn-ibracket-dark-right">
+        Her opponent, <b>who</b> the critics say lacks experience, lost the debate. ✓<br>
+        <span class="pn-t6-note">→ Here all finite verbs are met with their subjective case.</span>
+      </div>
+    </div>
+  </box>
+
+  <!-- ST2: Whom -->
+  <box points = (206,48),(236,48),(236,65),(206,65) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST2: Whom</div>
+    <div class="pn-t6-point">
+      • <b>Singular / Plural</b><br>
+      • <b>Objective Case</b><br>
+      • Doesn't require a finite verb.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">
+        The witness <s>who</s> the prosecutor believed to be reliable contradicted the suspect. ✗<br>
+        <span class="pn-t6-note">• The prosecutor → believed &nbsp;|&nbsp; The witness → contradicted &nbsp;|&nbsp; Who → ? ✗</span>
+      </div>
+      <div class="pn-ibracket-dark-right">
+        The witness <b>whom</b> the prosecutor believed to be reliable contradicted the suspect. ✓
+      </div>
+    </div>
+  </box>
+
+  <!-- ST3: Which -->
+  <box points = (206,67),(236,67),(236,77),(206,77) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST3: Which</div>
+    <div class="pn-t6-point">
+      • <b>Singular / Plural</b> &nbsp;|&nbsp; <b>Subjective / Objective Case</b><br>
+      • Used to refer to <b>things other than people</b>.
+    </div>
+    <div class="pn-t6-eg"><b>Eg:</b> The kite <u>which</u> you gave me was nice.</div>
+  </box>
+
+  <!-- ST4: That (Master Node with 1-Line, 2-Line, and 3-Line Underlines) -->
+  <box points = (206,79),(236,79),(236,158),(206,158) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST4: That</div>
+    <div class="pn-t6-point">
+      • <b>Singular / Plural</b> &nbsp;|&nbsp; <b>Subjective / Objective Case</b><br>
+      • Used to refer to <b>things and sometimes people</b>.<br>
+      • <b>Special Case Relative Pronoun (R.P).</b>
+    </div>
+
+    <!-- Double Underline Sub-Heading 1 -->
+    <div class="pn-t6-h2">Used When →</div>
+
+    <!-- Triple Underline Sub-Sub-Heading 1.1 -->
+    <div class="pn-t6-h3">1) Using Superlative Degree</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">This is the cleanest river <s>which</s> I have ever reviewed. ✗</div>
+      <div class="pn-ibracket-dark-right">This is the cleanest river <b>that</b> I have ever reviewed. ✓</div>
+    </div>
+
+    <!-- Triple Underline Sub-Sub-Heading 1.2 -->
+    <div class="pn-t6-h3">2) All-Inclusive / Limiting (all, the same, the only, none, nothing, anything, everything, something)</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">All <s>which</s> glitters is not gold. ✗</div>
+      <div class="pn-ibracket-dark-right">All <b>that</b> glitters is not gold. ✓</div>
+    </div>
+
+    <!-- Triple Underline Sub-Sub-Heading 1.3 -->
+    <div class="pn-t6-h3">3) Mixed Antecedent (Person + Animal / Person + Thing)</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">The rider and his horse <s>who</s> crossed the finish line won the trophy. ✗</div>
+      <div class="pn-ibracket-dark-right">The rider and his horse <b>that</b> crossed the finish line won the trophy. ✓</div>
+    </div>
+
+    <!-- Triple Underline Sub-Sub-Heading 1.4 -->
+    <div class="pn-t6-h3">4) After Interrogative Words</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Who is the person <s>who</s> leaked credentials? ✗</div>
+      <div class="pn-ibracket-dark-right">Who is the person <b>that</b> leaked credentials? ✓</div>
+    </div>
+
+    <!-- Double Underline Sub-Heading 2 -->
+    <div class="pn-t6-h2">Comma Ban on "That"</div>
+    <div class="pn-t6-point">
+      • When a relative clause adds extra non-essential information set off by a comma, <b>"that" is banned</b> — use <b>which</b> or <b>who / whom</b>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Python, <s>that</s> is dynamically typed, is widely used in AI. ✗</div>
+      <div class="pn-ibracket-dark-right">Python, <b>which</b> is dynamically typed, is widely used in AI. ✓</div>
+    </div>
+
+    <!-- Double Underline Sub-Heading 3 -->
+    <div class="pn-t6-h2">Placements of "That"</div>
+
+    <div class="pn-t6-h3">As Demonstrative Pronoun</div>
+    <div class="pn-t6-point">• Takes a concrete subject or object spot and doesn't act as a conjunction.</div>
+    <div class="pn-t6-eg"><b>Eg:</b> <u>That</u> is my car. — <b>(D.P)</b></div>
+
+    <div class="pn-t6-h3">As Demonstrative Adjective</div>
+    <div class="pn-t6-point">• Comes on the left of a noun (or between an article and a noun) and speaks about a noun.</div>
+    <div class="pn-t6-eg"><b>Eg:</b> <u>That</u> car is mine. — <b>(D.A)</b></div>
+
+    <div class="pn-t6-h3">As Relative Pronoun</div>
+    <div class="pn-t6-point">
+      • Comes to the right of the noun as a <b>Pronoun + Conjunction</b>.<br>
+      • Requires a <b>finite verb</b>.
+    </div>
+    <div class="pn-t6-eg"><b>Eg:</b> The car <ud = R.P (P + C)>that</ud> you <ud = F.V 1>gave</ud> me <ud = F.V 2>is</ud> fast.</div>
+
+    <div class="pn-t6-h3">As a Conjunction</div>
+    <div class="pn-t6-eg"><b>Eg:</b> She said <u>that</u> she would arrive early.</div>
+    <div class="pn-t6-point">
+      • <b>"That"</b> as a conjunction never occupies a subject/object position, so it can actually be <b>deleted</b> from a sentence and the sentence will still make sense.
+    </div>
+  </box>
+
+  <!-- ST5: Whose -->
+  <box points = (206,160),(236,160),(236,168),(206,168) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST5: Whose</div>
+    <div class="pn-t6-point">
+      • <b>Possessive Adjective + Conjunction</b><br>
+      • Doesn't have S / P of its own — depends on the <b>antecedent</b>.
+    </div>
+  </box>
+
+  <!-- ST6: What -->
+  <box points = (206,170),(236,170),(236,183),(206,183) background-color = #131629 color = #38BDF8>
+    <div class="pn-t6-h1">ST6: What</div>
+    <div class="pn-t6-point">
+      • An R.P which has an <b>antecedent built in</b>.<br>
+      • <b>Never place a noun directly before "what".</b>
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Please send me the document <s>what</s> you edited. ✗</div>
+      <div class="pn-ibracket-dark-right">Please send me the document <b>that</b> you edited. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 1 (T1) -->
+  <box points = (206,185),(236,185),(236,198),(206,198) background-color = #2D0A1B color = #F43F5E>
+    <div class="pn-t6-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t6-trap-point">
+      • A Relative Pronoun has no singular or plural number of its own; the <b>finite verb</b> sitting after it must <b>agree with its antecedent</b>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">It is I who <s>is</s> responsible for deployment. ✗</div>
+      <div class="pn-ibracket-dark-right">It is I who <b>am</b> responsible for deployment. ✓</div>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C6 -->
+  <box points = (215,200),(227,200),(227,203),(215,203) background-color = #1E1035 color = #C084FC>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C7 : T7 — DISTRIBUTIVE PRONOUNS (Bg-7 Sky-Blue Dart Canvas X = 241..281, Y = 6..210)
+     Touches Bg-6 directly at X = 241; Inner bounds X = 246..276, Y = 11..205 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c7>
+
+  <!-- Bg-7 Outer Sky-Blue Dart Container with Crimson Border -->
+  <box points = (241,6),(281,6),(281,210),(241,210) background-color = #0284C7 color = #DC2626></box>
+
+  <!-- Sub-Tree Outer Containers for ST2 (Each), ST3 (Neither), ST4 (Either), ST5 (Every) -->
+  <box points = (246,25),(276,25),(276,47),(246,47) background-color = #082F49 color = #38BDF8></box>
+  <box points = (246,49),(276,49),(276,71),(246,71) background-color = #082F49 color = #38BDF8></box>
+  <box points = (246,73),(276,73),(276,95),(246,95) background-color = #082F49 color = #38BDF8></box>
+  <box points = (246,97),(276,97),(276,113),(246,113) background-color = #082F49 color = #38BDF8></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-7 (Center Spine X = 261) -->
+  <!-- Root PRONOUNS (41,4) -> T7 Head (261,11) -->
+  <line m color = #EF4444>(41,4),(41,5),(261,5),(261,11)</line m>
+
+  <!-- T7 Head (261,14) -> ST1 (261,16) -> ST2 Head (261,27) -->
+  <line m color = #FCA5A5>(261,14),(261,16)</line m>
+  <line m color = #7DD3FC>(261,23),(261,27)</line m>
+
+  <!-- Inside ST2 (Each): Head (261,30) -> Split to Adjective (253,33) and Pronoun (269,33) -->
+  <line m color = #38BDF8>(261,30),(261,31),(253,31),(253,33)</line m>
+  <line m color = #38BDF8>(261,31),(269,31),(269,33)</line m>
+  <line m color = #4ADE80>(253,38),(253,40)</line m>
+  <line m color = #4ADE80>(269,38),(269,40)</line m>
+
+  <!-- ST2 Outer Bottom (261,47) -> ST3 Head (261,51) -->
+  <line m color = #7DD3FC>(261,47),(261,51)</line m>
+
+  <!-- Inside ST3 (Neither): Head (261,54) -> Split to Adjective (253,57) and Pronoun (269,57) -->
+  <line m color = #38BDF8>(261,54),(261,55),(253,55),(253,57)</line m>
+  <line m color = #38BDF8>(261,55),(269,55),(269,57)</line m>
+  <line m color = #4ADE80>(253,62),(253,64)</line m>
+  <line m color = #4ADE80>(269,62),(269,64)</line m>
+
+  <!-- ST3 Outer Bottom (261,71) -> ST4 Head (261,75) -->
+  <line m color = #7DD3FC>(261,71),(261,75)</line m>
+
+  <!-- Inside ST4 (Either): Head (261,78) -> Split to Adjective (253,81) and Pronoun (269,81) -->
+  <line m color = #38BDF8>(261,78),(261,79),(253,79),(253,81)</line m>
+  <line m color = #38BDF8>(261,79),(269,79),(269,81)</line m>
+  <line m color = #4ADE80>(253,86),(253,88)</line m>
+  <line m color = #4ADE80>(269,86),(269,88)</line m>
+
+  <!-- ST4 Outer Bottom (261,95) -> ST5 Head (261,99) -->
+  <line m color = #7DD3FC>(261,95),(261,99)</line m>
+
+  <!-- Inside ST5 (Every): Head (261,104) -> Eg (261,106) -->
+  <line m color = #4ADE80>(261,104),(261,106)</line m>
+
+  <!-- ST5 Outer Bottom (261,113) -> Id1 (261,115) -> Trap 1..4 -> Quiz Placeholder -->
+  <line m color = #22D3EE>(261,113),(261,115)</line m>
+  <line m color = #EF4444>(261,127),(261,129)</line m>
+  <line m color = #EF4444>(261,151),(261,153)</line m>
+  <line m color = #EF4444>(261,166),(261,168)</line m>
+  <line m color = #EF4444>(261,183),(261,185)</line m>
+  <line m color = #FCA5A5>(261,199),(261,202)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-7 -->
+  <!-- T7 Header (Crimson-Ruby Box) -->
+  <box points = (251,11),(271,11),(271,14),(251,14) background-color = #7F1D1D color = #FCA5A5>
+    <div class="pn-t7-head">7) Distributive Pronouns (T7)</div>
+  </box>
+
+  <!-- ST1: Core Definition -->
+  <box points = (246,16),(276,16),(276,23),(246,23) background-color = #082F49 color = #38BDF8>
+    <div class="pn-t7-st-head">ST1: Distributive Pronouns</div>
+    <div class="pn-t7-st-point">
+      • Distributive Pronouns refer to people or things <b>one at a time individually</b>, so they always take a <b>singular verb</b> and <b>singular possessive adjective</b>.
+    </div>
+  </box>
+
+  <!-- ST2 Sub-Tree Inner Boxes: Each (2 or 2+) -->
+  <box points = (253,27),(269,27),(269,30),(253,30) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-head">ST2: Each (2 or 2+)</div>
+  </box>
+  <box points = (248,33),(259,33),(259,38),(248,38) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Adjective</b><br>(has a noun after it)</div>
+  </box>
+  <box points = (263,33),(274,33),(274,38),(263,38) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Pronoun</b><br>(S or O &amp; no noun after it)</div>
+  </box>
+  <box points = (248,40),(259,40),(259,45),(248,45) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Each</u> cow is good.</div>
+  </box>
+  <box points = (263,40),(274,40),(274,45),(263,45) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Each</u> of the boys is good.</div>
+  </box>
+
+  <!-- ST3 Sub-Tree Inner Boxes: Neither (Used for 2 things) -->
+  <box points = (251,51),(271,51),(271,54),(251,54) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-head">ST3: Neither (Used for 2 things)</div>
+  </box>
+  <box points = (248,57),(259,57),(259,62),(248,62) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Adjective</b><br>(has noun near it)</div>
+  </box>
+  <box points = (263,57),(274,57),(274,62),(263,62) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Pronoun</b><br>(standalone in S or O place)</div>
+  </box>
+  <box points = (248,64),(259,64),(259,69),(248,69) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Neither</u> boy is good.</div>
+  </box>
+  <box points = (263,64),(274,64),(274,69),(263,69) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Neither</u> of the boys...</div>
+  </box>
+
+  <!-- ST4 Sub-Tree Inner Boxes: Either (Used for 2 things) -->
+  <box points = (251,75),(271,75),(271,78),(251,78) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-head">ST4: Either (Used for 2 things)</div>
+  </box>
+  <box points = (248,81),(259,81),(259,86),(248,86) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Adjective</b><br>(has a noun near it)</div>
+  </box>
+  <box points = (263,81),(274,81),(274,86),(263,86) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-node"><b>Pronoun</b><br>(standalone)</div>
+  </box>
+  <box points = (248,88),(259,88),(259,93),(248,93) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Either</u> boy...</div>
+  </box>
+  <box points = (263,88),(274,88),(274,93),(263,93) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Either</u> of the boys...</div>
+  </box>
+
+  <!-- ST5 Sub-Tree Inner Boxes: Every -->
+  <box points = (250,99),(272,99),(272,104),(250,104) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t7-tree-head">ST5: Every</div>
+    <div class="pn-t7-tree-node">Only has an <b>Adjective form</b></div>
+  </box>
+  <box points = (250,106),(272,106),(272,111),(250,111) background-color = #F0FDF4 color = #16A34A>
+    <div class="pn-t7-tree-eg"><b>Eg:</b> <u>Every</u> boy should come.</div>
+  </box>
+
+  <!-- Id1: Either or Neither Identification (Global Signature Style) -->
+  <box points = (246,115),(276,115),(276,127),(246,127) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Either or Neither Identification</div>
+      <div class="pn-t6-h2">Correlative Conjunction</div>
+      <div class="pn-id-point">• Has <b>"or"</b> for <i>either</i> and <b>"nor"</b> for <i>neither</i>.</div>
+      <div class="pn-t6-h2">Distributive Pronoun &amp; Adjective</div>
+      <div class="pn-id-point">• Has <b>NO "or" (or) "nor"</b>.</div>
+    </div>
+  </box>
+
+  <!-- Trap - 1 (Crimson-Wine Box) -->
+  <box points = (246,129),(276,129),(276,151),(246,151) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t7-trap-point">
+      • If we need to refer to <b>2+ things</b>:<br>
+      • In a <b>negative statement</b>, <b>"None"</b> is used:
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong"><s>Neither</s> of the five servers responded. ✗</div>
+      <div class="pn-ibracket-dark-right"><b>None</b> of the five servers responded. ✓</div>
+    </div>
+    <div class="pn-t7-trap-point">• In a <b>positive statement</b>, <b>"Any"</b> is used:</div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">You may pick <s>either</s> of the four themes. ✗</div>
+      <div class="pn-ibracket-dark-right">You may pick <b>any</b> of the four themes. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 2 -->
+  <box points = (246,153),(276,153),(276,166),(246,166) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t7-trap-point">
+      • If <b>"each"</b> sits after a plural subject, the verb takes the <b>plural subject's form</b>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">The developers each <s>has</s> decided. ✗</div>
+      <div class="pn-ibracket-dark-right">The developers each <b>have</b> decided. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 3 -->
+  <box points = (246,168),(276,168),(276,183),(246,183) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t7-trap-point">
+      • Even when two singular nouns are joined by <b>"and"</b>, placing <b>Each (or Every)</b> before them keeps the focus upon the individuals → <b>Singular Verb + Singular Possessive</b>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Each boy and each girl was asked to bring <s>their</s> ID card. ✗</div>
+      <div class="pn-ibracket-dark-right">Each boy and each girl was asked to bring <b>his or her</b> ID card. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 4 -->
+  <box points = (246,185),(276,185),(276,199),(246,199) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t7-trap-point">
+      • Because <b>"Neither"</b> already carries a built-in negative (<i>not + either</i>), <b>never add "not" (or "never")</b> to the same clause.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Neither of the two scripts <s>did not compile</s> without warning. ✗</div>
+      <div class="pn-ibracket-dark-right">Neither of the two scripts <b>compiled</b> without warnings. ✓</div>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C7 -->
+  <box points = (255,202),(267,202),(267,205),(255,205) background-color = #7F1D1D color = #FCA5A5>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C8 : T8 — INDEFINITE PRONOUNS (Bg-8 Blazing Crimson-Red Canvas X = 281..321, Y = 6..155)
+     Touches Bg-7 directly at X = 281; Inner bounds X = 286..316, Y = 11..150 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c8>
+
+  <!-- Bg-8 Outer Blazing Crimson-Red Container with Sky-Blue Dart Border -->
+  <box points = (281,6),(321,6),(321,155),(281,155) background-color = #7F1D1D color = #38BDF8></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-8 (Center Spine X = 301) -->
+  <!-- Root PRONOUNS (41,4) -> T8 Head (301,11) -->
+  <line m color = #38BDF8>(41,4),(41,5),(301,5),(301,11)</line m>
+
+  <!-- T8 Head (301,14) -> ST1 (301,16) -> Id1 (301,54) -->
+  <line m color = #38BDF8>(301,14),(301,16)</line m>
+  <line m color = #22D3EE>(301,52),(301,54)</line m>
+
+  <!-- Id1 -> Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Quiz Placeholder -->
+  <line m color = #38BDF8>(301,66),(301,68)</line m>
+  <line m color = #38BDF8>(301,83),(301,85)</line m>
+  <line m color = #38BDF8>(301,100),(301,102)</line m>
+  <line m color = #38BDF8>(301,117),(301,119)</line m>
+  <line m color = #38BDF8>(301,144),(301,147)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-8 -->
+  <!-- T8 Header (Deep Sky-Dart Navy Box) -->
+  <box points = (291,11),(311,11),(311,14),(291,14) background-color = #082F49 color = #38BDF8>
+    <div class="pn-t8-head">8) Indefinite Pronouns (T8)</div>
+  </box>
+
+  <!-- ST1: Indefinite Pronouns -->
+  <box points = (286,16),(316,16),(316,52),(286,52) background-color = #082F49 color = #38BDF8>
+    <div class="pn-t6-h1">ST1: Indefinite Pronouns</div>
+    <div class="pn-t7-st-point">
+      • Indefinite pronouns refer to people, places, or things in a <b>general / non-specific / unspecified</b> way without referring to an antecedent.
+    </div>
+
+    <div class="pn-t6-h2">1) Always Singular</div>
+    <div class="pn-t7-st-point">
+      • <b>-body</b> (<i>everybody, nobody, anybody, somebody</i>)<br>
+      • <b>-one</b> (<i>everyone, no one, anyone, someone</i>)<br>
+      • <b>-thing</b> (<i>everything, nothing, anything, something</i>)<br>
+      • Always takes <b>Singular Possessive Adjective</b> and <b>Singular Verb</b>.
+    </div>
+
+    <div class="pn-t6-h2">2) Always Plural</div>
+    <div class="pn-t7-st-point">
+      • <b>Several, Others, Few, Fewer, Many</b><br>
+      • Always takes <b>Plural Verb + Plural Possessive Adjective</b>.
+    </div>
+
+    <div class="pn-t6-h2">3) Chameleon (S &amp; P)</div>
+    <div class="pn-t7-st-point">
+      • <b>SANAMM</b> — <b>Some, Any, None, All, More, Most</b><br>
+      • Depends upon the noun.
+    </div>
+  </box>
+
+  <!-- Id1: Identification (Global Signature Style) -->
+  <box points = (286,54),(316,54),(316,66),(286,66) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">
+        • All <b>"Always Singular"</b> are <b>Pronouns only</b>.<br>
+        • <b>Chameleons</b> can either be an <b>Adjective</b> or a <b>Pronoun</b>:<br>
+        &nbsp;&nbsp;• <b>Adjective</b> — before a noun &nbsp;|&nbsp; <b>Pronoun</b> — standalone.
+      </div>
+    </div>
+  </box>
+
+  <!-- Trap - 1 (Ice-Sky Dart Box on Crimson Canvas) -->
+  <box points = (286,68),(316,68),(316,83),(286,83) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t8-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t8-trap-point">
+      • For <b>-one / -body</b>, the main verb stays singular, but the question tag pronoun flips to plural <b>"they"</b>.<br>
+      <span class="pn-t5-eg-inline"><b>Eg:</b> Everyone has logged in, <b>haven't they? ✓</b></span><br>
+      • For <b>-thing</b>, both main verb and question tag stay singular (<b>"it"</b>).<br>
+      <span class="pn-t5-eg-inline"><b>Eg:</b> Everything is fine, <b>isn't it? ✓</b></span>
+    </div>
+  </box>
+
+  <!-- Trap - 2 -->
+  <box points = (286,85),(316,85),(316,100),(286,100) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t8-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t8-trap-point">
+      • When <b>"one"</b> means "any person in general", keep <b>one, one's</b> (with apostrophe), and <b>oneself</b> throughout the entire sentence.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">One should always keep <s>his</s> promise to <s>himself</s>. ✗</div>
+      <div class="pn-ibracket-right">One should always keep <b>one's</b> promise to <b>oneself</b>. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 3 -->
+  <box points = (286,102),(316,102),(316,117),(286,117) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t8-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t8-trap-point">
+      • Unlike normal nouns (where adj sits before the noun), a descriptive adjective sits <b>immediately AFTER</b> words ending in <b>-thing, -one, -body</b>.
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The team built <s>innovative something</s> for the hackathon. ✗</div>
+      <div class="pn-ibracket-right">The team built <b>something innovative</b> for the hackathon. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 4 -->
+  <box points = (286,119),(316,119),(316,144),(286,144) background-color = #E0F2FE color = #0284C7>
+    <div class="pn-t8-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t5-subhead">Another — Used with +1 case</div>
+    <div class="pn-t8-trap-point"><span class="pn-t5-eg-inline"><b>Eg:</b> Give me <b>another</b> pen.</span></div>
+
+    <div class="pn-t5-subhead">The other — Used in a fixed quantity case</div>
+    <div class="pn-t8-trap-point"><span class="pn-t5-eg-inline"><b>Eg:</b> My charger broke, give <b>the other</b>.</span></div>
+
+    <div class="pn-t5-subhead">Others / Others' — General remaining people</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">We should respect <s>others</s> opinion. ✗</div>
+      <div class="pn-ibracket-right">We should respect <b>others'</b> opinion. ✓</div>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C8 -->
+  <box points = (295,147),(307,147),(307,150),(295,150) background-color = #082F49 color = #38BDF8>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C9 : T9 — INTERROGATIVE PRONOUNS (Bg-9 Warm Sunset-Alabaster Gold Canvas X = 321..361, Y = 6..182)
+     Touches Bg-8 directly at X = 321; Inner bounds X = 326..356, Y = 11..177 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c9>
+
+  <!-- Bg-9 Outer Warm Sunset-Alabaster Gold Container (Contrasts with Blazing Crimson Bg-8) -->
+  <box points = (321,6),(361,6),(361,182),(321,182) background-color = #FFFBEB color = #D97706></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-9 (Center Spine X = 341) -->
+  <!-- Root PRONOUNS (41,4) -> T9 Head (341,11) -->
+  <line m color = #D97706>(41,4),(41,5),(341,5),(341,11)</line m>
+
+  <!-- T9 Head (341,14) -> Id1 (341,16) -> ST1 (341,36) -->
+  <line m color = #22D3EE>(341,14),(341,16)</line m>
+  <line m color = #6366F1>(341,34),(341,36)</line m>
+
+  <!-- ST1 -> ST2 -> ST3 -> ST4 -> ST5 -> Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Quiz Placeholder -->
+  <line m color = #6366F1>(341,51),(341,53)</line m>
+  <line m color = #6366F1>(341,68),(341,70)</line m>
+  <line m color = #6366F1>(341,81),(341,83)</line m>
+  <line m color = #6366F1>(341,98),(341,100)</line m>
+  <line m color = #EF4444>(341,114),(341,116)</line m>
+  <line m color = #EF4444>(341,129),(341,131)</line m>
+  <line m color = #EF4444>(341,146),(341,148)</line m>
+  <line m color = #EF4444>(341,163),(341,165)</line m>
+  <line m color = #D97706>(341,172),(341,174)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-9 -->
+  <!-- T9 Header (Deep Obsidian-Slate Box) -->
+  <box points = (331,11),(351,11),(351,14),(331,14) background-color = #0F172A color = #38BDF8>
+    <div class="pn-t9-head">9) Interrogative Pronouns (T9)</div>
+  </box>
+
+  <!-- Id1: Identification (Global Signature Style with Finite Verb Distinction) -->
+  <box points = (326,16),(356,16),(356,34),(326,34) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">
+        • Used to ask a direct or indirect question (<b>Who, Whom, Whose, Which, What</b>).
+      </div>
+      <div class="pn-t6-h2">1) Interrogative Pronoun vs Relative Pronoun</div>
+      <div class="pn-id-point">
+        • <b>Interrogative Pronoun:</b> Has <b>NO antecedent noun</b> before it and governs <b>1 Finite Verb (F.V)</b> in a simple question → <i><b>Who</b> <ud = F.V>broke</ud> the server?</i><br>
+        • <b>Relative Pronoun:</b> Sits after an <b>antecedent noun</b> as a <b>Pronoun + Conjunction</b> joining <b>2 Finite Verbs (F.Vs)</b> → <i>The engineer <b>who</b> <ud = F.V 1>broke</ud> the server <ud = F.V 2>fixed</ud> it.</i>
+      </div>
+      <div class="pn-t6-h2">2) Interrogative Pronoun vs Interrogative Adjective</div>
+      <div class="pn-id-point">
+        • <b>Pronoun:</b> Stands alone before a <b>Finite Verb (F.V)</b> → <i><b>Which</b> <ud = F.V>is</ud> your laptop?</i><br>
+        • <b>Adjective:</b> Sits directly before a <b>noun</b> → <i><b>Which</b> <u>laptop</u> <ud = F.V>is</ud> yours?</i>
+      </div>
+    </div>
+  </box>
+
+  <!-- ST1: Who (Subjective Case — Requires an Unpaired Finite Verb) -->
+  <box points = (326,36),(356,36),(356,51),(326,51) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t6-h1">ST1: Who (Subjective Case — Persons)</div>
+    <div class="pn-t6-point">
+      • Asks about the <b>Subject (Doer)</b> of the action.<br>
+      • Because <b>"Who"</b> is in the <b>Subjective Case</b>, it <b>requires a Finite Verb (F.V)</b> that lacks its own subject.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">
+        <s>Whom</s> <ud = F.V (No Subject)>authorized</ud> this transaction? ✗<br>
+        <span class="pn-t6-note">• authorized (F.V) has NO subjective pronoun; "Whom" is Objective Case.</span>
+      </div>
+      <div class="pn-ibracket-dark-right">
+        <b>Who</b> <ud = F.V (Matched)>authorized</ud> this transaction? ✓<br>
+        <span class="pn-t6-note">→ "Who" (Subj. Case) satisfies the subject requirement of the finite verb "authorized".</span>
+      </div>
+    </div>
+  </box>
+
+  <!-- ST2: Whom (Objective Case — Does NOT Require a Finite Verb) -->
+  <box points = (326,53),(356,53),(356,68),(326,68) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t6-h1">ST2: Whom (Objective Case — Persons)</div>
+    <div class="pn-t6-point">
+      • Asks about the <b>Object (Receiver)</b> of a transitive verb or preposition.<br>
+      • <b>Does NOT require a Finite Verb (F.V)</b> — the Finite Verb in the clause already has its own subject!
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">
+        <s>Who</s> did the committee select? ✗<br>
+        <span class="pn-t6-note">• the committee (Subj) → did select (F.V). The finite verb already has its subject!</span>
+      </div>
+      <div class="pn-ibracket-dark-right">
+        <b>Whom</b> did the committee select? ✓<br>
+        <span class="pn-t6-note">→ Since the finite verb "did select" already has its subject ("the committee"), only Objective Case ("Whom") is needed for the object slot.</span>
+      </div>
+    </div>
+  </box>
+
+  <!-- ST3: Whose (Possessive Case — Persons) -->
+  <box points = (326,70),(356,70),(356,81),(326,81) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t6-h1">ST3: Whose (Possessive Case — Persons)</div>
+    <div class="pn-t6-point">
+      • Asks about <b>ownership / possession</b>.<br>
+      • <b>Possessive Pronoun (Udayathu):</b> Stands alone before a <b>Finite Verb (F.V)</b> → <i><b>Whose</b> <ud = F.V>is</ud> this unsigned file?</i><br>
+      • <b>Possessive Adjective (Udaya):</b> Sits directly before a <b>noun</b> → <i><b>Whose</b> <u>signature</u> <ud = F.V>is</ud> on this file?</i>
+    </div>
+  </box>
+
+  <!-- ST4: Which (Selective Choice — Persons OR Things) -->
+  <box points = (326,83),(356,83),(356,98),(326,98) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t6-h1">ST4: Which (Selective Choice — Persons OR Things)</div>
+    <div class="pn-t6-point">
+      • Used when selecting from a <b>definite, limited, or known group</b> (applies to <b>both people and things</b>).
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong"><s>Who</s> of the two candidates scored higher? ✗</div>
+      <div class="pn-ibracket-dark-right"><b>Which</b> of the two candidates scored higher? ✓ <i>("of the two candidates" = restricted set → Which)</i></div>
+    </div>
+  </box>
+
+  <!-- ST5: What (Open-Ended Inquiry — Things or Profession) -->
+  <box points = (326,100),(356,100),(356,114),(326,114) background-color = #1E1B4B color = #818CF8>
+    <div class="pn-t6-h1">ST5: What (Open Inquiry — Things or Profession)</div>
+    <div class="pn-t6-h2">1) For Things (Unlimited / General Choice)</div>
+    <div class="pn-t6-point">• <b>Eg:</b> <b>What</b> do you want to read? <i>(Wide open, no restricted list)</i></div>
+    <div class="pn-t6-h2">2) For People's Profession vs Identity</div>
+    <div class="pn-t6-point">
+      • <b>Who is he?</b> → Asks for his <b>name / identity</b> (<i>He is Rahul</i>).<br>
+      • <b>What is he?</b> → Asks for his <b>profession / rank</b> (<i>He is a Senior Architect</i>).
+    </div>
+  </box>
+
+  <!-- Trap - 1 (Preposition + Whom) -->
+  <box points = (326,116),(356,116),(356,129),(326,129) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 1 (T1)</div>
+    <div class="pn-t7-trap-point">
+      • A preposition always forces the <b>Objective Case (PO)</b> and never takes a <b>Finite Verb (F.V)</b>. Immediately after a preposition (<i>By, To, With, For</i>), always use <b>"Whom"</b>, never <i>"Who"</i>.
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">By <s>who</s> was the ancient manuscript translated? ✗</div>
+      <div class="pn-ibracket-dark-right">By <b>whom</b> was the ancient manuscript translated? ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 2 (Embedded / Indirect Questions — Subject + Finite Verb Order) -->
+  <box points = (326,131),(356,131),(356,146),(326,146) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 2 (T2)</div>
+    <div class="pn-t7-trap-point">
+      • When an interrogative word joins a clause <b>inside a statement</b> (Indirect Question), the embedded clause must follow <b>normal Subject + Finite Verb (F.V) order</b> — never invert the finite/helping verb before the subject!
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">Can you tell me what <ud = F.V before Subj (X)><s>is</s></ud> <ud = Subject>the root cause</ud> of the outage? ✗</div>
+      <div class="pn-ibracket-dark-right">Can you tell me what <ud = Subject>the root cause</ud> of the outage <ud = F.V after Subj (✓)><b>is</b></ud>? ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 3 (Parenthetical "Do you think / Suppose" — Finite Verb Count!) -->
+  <box points = (326,148),(356,148),(356,163),(326,163) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 3 (T3)</div>
+    <div class="pn-t7-trap-point">
+      • When an interrupting clause like <i>"do you think / suppose / believe"</i> is inserted, <b>count the Finite Verbs (F.Vs) and their Subjects</b>! If a Finite Verb is still missing its Subject, use <b>"Who"</b> (never <i>"Whom"</i>).
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong">
+        <s>Whom</s> do you think will win the championship? ✗<br>
+        <span class="pn-t6-note">• you (Subj 1) → do think (F.V 1) &nbsp;|&nbsp; ? (No Subj 2) → will win (F.V 2) lacks a Subject!</span>
+      </div>
+      <div class="pn-ibracket-dark-right">
+        <b>Who</b> do you think will win the championship? ✓<br>
+        <span class="pn-t6-note">→ "Who" (Subj 2) provides the required Subject for the finite verb "will win" (F.V 2).</span>
+      </div>
+    </div>
+  </box>
+
+  <!-- Trap - 4 (Contraction "Who's" = Hidden Finite Verb vs Possessive "Whose") -->
+  <box points = (326,165),(356,165),(356,172),(326,172) background-color = #450A0A color = #EF4444>
+    <div class="pn-t7-trap-head">Trap - 4 (T4)</div>
+    <div class="pn-t7-trap-point">
+      • <b>"Who's"</b> contains a built-in <b>Finite Verb</b> (<i>Who is / Who has</i>), whereas <b>"Whose"</b> is pure possessive. Never use <i>"Who's"</i> when the clause already has its own Finite Verb!
+    </div>
+    <div class="pn-ibracket-dark-pair">
+      <div class="pn-ibracket-dark-wrong"><s>Who's</s> turn <ud = F.V>is</ud> it to audit the database? <i>(2 F.Vs crash: is + is)</i> ✗</div>
+      <div class="pn-ibracket-dark-right"><b>Whose</b> turn <ud = F.V>is</ud> it to audit the database? ✓</div>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C9 -->
+  <box points = (335,174),(347,174),(347,177),(335,177) background-color = #0F172A color = #38BDF8>
+    <qn all></qn all>
+  </box>
+
+</mid>
+
+<!-- =========================================================================
+     MID = C10 : T10 — RECIPROCAL PRONOUNS (Bg-10 Deep Cyber-Teal Canvas X = 361..401, Y = 6..176)
+     Touches Bg-9 directly at X = 361; Inner bounds X = 366..396, Y = 11..171 (5-box gap on all 4 sides)
+     ========================================================================= -->
+<mid = c10>
+
+  <!-- Bg-10 Outer Deep Cyber-Teal Container with Crimson-Rose Border (Contrasts with Gold Bg-9) -->
+  <box points = (361,6),(401,6),(401,176),(361,176) background-color = #042F2E color = #F43F5E></box>
+
+  <!-- PRIORITY WIRING INSIDE Bg-10 (Center Spine X = 381) -->
+  <!-- Root PRONOUNS (41,4) -> T10 Head (381,11) -->
+  <line m color = #F43F5E>(41,4),(41,5),(381,5),(381,11)</line m>
+
+  <!-- T10 Head (381,14) -> Id1 (381,16) -> ST1 (381,34) -->
+  <line m color = #22D3EE>(381,14),(381,16)</line m>
+  <line m color = #2DD4BF>(381,32),(381,34)</line m>
+
+  <!-- ST1 -> ST2 -> Trap 1 -> Trap 2 -> Trap 3 -> Trap 4 -> Quiz Placeholder -->
+  <line m color = #2DD4BF>(381,50),(381,52)</line m>
+  <line m color = #F43F5E>(381,68),(381,70)</line m>
+  <line m color = #F43F5E>(381,89),(381,91)</line m>
+  <line m color = #F43F5E>(381,106),(381,108)</line m>
+  <line m color = #F43F5E>(381,142),(381,144)</line m>
+  <line m color = #2DD4BF>(381,165),(381,168)</line m>
+
+  <!-- CONTENT BOXES INSIDE Bg-10 -->
+  <!-- T10 Header (Deep Crimson-Rose Box) -->
+  <box points = (371,11),(391,11),(391,14),(371,14) background-color = #881337 color = #FDA4AF>
+    <div class="pn-t10-head">10) Reciprocal Pronouns (T10)</div>
+  </box>
+
+  <!-- Id1: Identification (Global Signature Style) -->
+  <box points = (366,16),(396,16),(396,32),(366,32) background-color = #0C353D color = #22D3EE>
+    <div class="pn-id-box">
+      <div class="pn-id-head">Id1: Identification</div>
+      <div class="pn-id-point">
+        • Expresses a <b>two-way / mutual action</b> (<i>ஒருவருக்கொருவர்</i>) where <b>Subject A acts on Subject B</b>, and <b>Subject B simultaneously acts on Subject A</b> (<b>A ↔ B</b>).<br>
+        • <b>Finite Verb &amp; Subject Lock:</b> Because mutual action requires at least 2 participants, the <b>Subject</b> before the <b>Finite Verb (F.V)</b> must always be <b>Plural</b> (or a compound subject like <i>A and B</i>).<br>
+        • <b>Syntactic Slot Lock:</b> Reciprocal pronouns <b>ONLY</b> sit in <b>Object (O)</b>, <b>Prepositional Object (PO)</b>, or <b>Possessive Adjective ('s + Noun)</b> slots — <b>never</b> as the Subject of a Finite Verb!
+      </div>
+    </div>
+  </box>
+
+  <!-- ST1: Each other (Strictly for 2 People / Things) -->
+  <box points = (366,34),(396,34),(396,50),(366,50) background-color = #F0FDFA color = #0D9488>
+    <div class="pn-t10-st-head">ST1: Each other (Strictly Used for 2)</div>
+    <div class="pn-t10-st-point">
+      • Used when a mutual action occurs between <b>exactly 2 people or things</b>.
+    </div>
+    <div class="pn-t5-subhead">1) Direct Object of Transitive Finite Verb (F.V)</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> Rahul and Priya <ud = Transitive F.V>helped</ud> <b>each other</b>.</span></div>
+    <div class="pn-t5-subhead">2) Prepositional Object (PO) after Intransitive F.V + Prep</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> The two servers <ud = Intransitive F.V>communicate</ud> <ud = Prep>with</ud> <b>each other</b>.</span></div>
+    <div class="pn-t5-subhead">3) Possessive Adjective Slot (Each other's + Noun)</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> Both developers <ud = F.V>reviewed</ud> <b>each other's</b> <u>code</u>.</span></div>
+  </box>
+
+  <!-- ST2: One another (Strictly for 2+ / 3 or More People or Things) -->
+  <box points = (366,52),(396,52),(396,68),(366,68) background-color = #F0FDFA color = #0D9488>
+    <div class="pn-t10-st-head">ST2: One another (Used for 2+ / 3 or More)</div>
+    <div class="pn-t10-st-point">
+      • Used when a mutual action occurs among <b>more than 2 (3 or more) people or things</b>, or a general group.
+    </div>
+    <div class="pn-t5-subhead">1) Direct Object of Transitive Finite Verb (F.V)</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> All ten team members <ud = Transitive F.V>congratulated</ud> <b>one another</b>.</span></div>
+    <div class="pn-t5-subhead">2) Prepositional Object (PO) after Intransitive F.V + Prep</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> The five nations <ud = Intransitive F.V>traded</ud> <ud = Prep>with</ud> <b>one another</b>.</span></div>
+    <div class="pn-t5-subhead">3) Possessive Adjective Slot (One another's + Noun)</div>
+    <div class="pn-t10-st-point"><span class="pn-t5-eg-inline"><b>Eg:</b> All the students <ud = F.V>checked</ud> <b>one another's</b> <u>notes</u>.</span></div>
+  </box>
+
+  <!-- Trap - 1 (Quantity Swap Trap: 2 = Each other vs 2+ = One another) -->
+  <box points = (366,70),(396,70),(396,89),(366,89) background-color = #FFF1F2 color = #E11D48>
+    <div class="pn-t10-trap-head">Trap - 1 (T1): Quantity Count (2 vs 2+)</div>
+    <div class="pn-t10-trap-point">
+      • Count the Subject before the Finite Verb (F.V):<br>
+      &nbsp;&nbsp;• <b>Count = 2</b> (<i>both, two, twins, couple, A and B</i>) → <b>each other</b><br>
+      &nbsp;&nbsp;• <b>Count = 2+</b> (<i>three, four, all, citizens, players</i>) → <b>one another</b>
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The two rival CEOs shook hands with <s>one another</s>. ✗</div>
+      <div class="pn-ibracket-right">The two rival CEOs shook hands with <b>each other</b>. ✓</div>
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The four finalists competed fiercely against <s>each other</s>. ✗</div>
+      <div class="pn-ibracket-right">The four finalists competed fiercely against <b>one another</b>. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 2 (Never Use as Subject of a Finite Verb) -->
+  <box points = (366,91),(396,91),(396,106),(366,106) background-color = #FFF1F2 color = #E11D48>
+    <div class="pn-t10-trap-head">Trap - 2 (T2): Never Use as Subject of a Finite Verb (F.V)</div>
+    <div class="pn-t10-trap-point">
+      • Because a Finite Verb (F.V) requires a <b>Subjective Pronoun/Noun</b>, <b>"each other"</b> and <b>"one another"</b> can <b>never sit before a Finite Verb as its Subject</b>. Split them into <b>each ... the other</b>!
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">They know that <s>each other</s> <ud = F.V (Needs Subj)>is</ud> hiding the truth. ✗</div>
+      <div class="pn-ibracket-right">They <b>each</b> know that <b>the other</b> <ud = F.V (Matched)>is</ud> hiding the truth. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 3 (Detailed Breakdown: Reflexive "Themselves" vs Reciprocal "Each Other / One Another") -->
+  <box points = (366,108),(396,108),(396,142),(366,142) background-color = #FFF1F2 color = #E11D48>
+    <div class="pn-t10-trap-head">Trap - 3 (T3): Reflexive (Themselves) vs Reciprocal (Each Other)</div>
+    <div class="pn-t10-trap-point">
+      • Both <b>"themselves"</b> and <b>"each other / one another"</b> sit in the <b>Object slot</b> after a Plural Subject + Transitive Finite Verb (F.V), which causes exam traps. Check the <b>direction of action</b>:
+    </div>
+
+    <div class="pn-t5-subhead">1) Reflexive ("themselves") → Individual Self-Loop (A → A &amp; B → B)</div>
+    <div class="pn-t10-trap-point">
+      • Person A acts on <b>Person A</b>, and Person B acts on <b>Person B</b> (<i>தன்னையே / தங்களையே</i> — no cross-interaction between A and B).<br>
+      <span class="pn-t5-eg-inline"><b>Eg:</b> Rahul and Priya <ud = F.V>prepared</ud> <b>themselves</b> for the interview. <i>(Rahul prepared himself + Priya prepared herself)</i> ✓</span>
+    </div>
+
+    <div class="pn-t5-subhead">2) Reciprocal ("each other") → Cross-Transfer Action (A → B &amp; B → A)</div>
+    <div class="pn-t10-trap-point">
+      • Person A acts on <b>Person B</b>, and Person B acts on <b>Person A</b> (<i>ஒருவருக்கொருவர்</i> — two-way exchange).<br>
+      • <b>Exam Trap:</b> Using <i>"themselves"</i> with mutual verbs (<i>help, love, hate, blame in a fight, exchange, greet, marry, argue with, know</i>) changes the meaning to self-action or makes it logically impossible!
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">Rahul and Priya <ud = F.V>have known</ud> <s>themselves</s> since childhood. <i>(Means Rahul only knows Rahul!)</i> ✗</div>
+      <div class="pn-ibracket-right">Rahul and Priya <ud = F.V>have known</ud> <b>each other</b> since childhood. <i>(Rahul knows Priya &amp; Priya knows Rahul)</i> ✓</div>
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The two captains <ud = F.V>exchanged</ud> jerseys with <s>themselves</s>. <i>(A person cannot exchange with himself!)</i> ✗</div>
+      <div class="pn-ibracket-right">The two captains <ud = F.V>exchanged</ud> jerseys with <b>each other</b>. ✓</div>
+    </div>
+  </box>
+
+  <!-- Trap - 4 (Possessive Apostrophe Lock & Intransitive F.V Preposition Lock) -->
+  <box points = (366,144),(396,144),(396,165),(366,165) background-color = #FFF1F2 color = #E11D48>
+    <div class="pn-t10-trap-head">Trap - 4 (T4): Possessive ('s) &amp; Preposition Lock</div>
+    <div class="pn-t5-subhead">1) Always Use Singular Apostrophe ('s) — Never (s')</div>
+    <div class="pn-t10-trap-point">
+      • Treat <b>each other</b> and <b>one another</b> as singular compound units → always write <b>each other's</b> and <b>one another's</b> (never <i>each others'</i>).
+    </div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The two partners always respect <s>each others'</s> opinions. ✗</div>
+      <div class="pn-ibracket-right">The two partners always respect <b>each other's</b> opinions. ✓</div>
+    </div>
+    <div class="pn-t5-subhead">2) Intransitive Finite Verb (F.V) Must Keep Its Preposition Before "Each Other"</div>
+    <div class="pn-ibracket-pair">
+      <div class="pn-ibracket-wrong">The two brothers have not <ud = Intransitive F.V>spoken</ud> <s>each other</s> for years. ✗</div>
+      <div class="pn-ibracket-right">The two brothers have not <ud = Intransitive F.V>spoken</ud> <b>to each other</b> for years. ✓</div>
+    </div>
+  </box>
+
+  <!-- Mandatory Empty Quiz Placeholder Box for MID = C10 -->
+  <box points = (375,168),(387,168),(387,171),(375,171) background-color = #881337 color = #FDA4AF>
+    <qn all></qn all>
+  </box>
+
+</mid>

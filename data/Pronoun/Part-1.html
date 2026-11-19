@@ -1,0 +1,264 @@
+<!-- angles-root-mid: PN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 0.3: Pronouns — Part 1 of 3 Master MKML</title>
+  <link-css-id: 123>
+</head>
+<body mid="PN">
+
+  <h1>Chapter 0.3: Pronouns (பிரதி பெயர்ச்சொல்) — Part 1 of 3</h1>
+  <p class="subtitle">Master Architecture: Case Matrix, State/Action Locks, Dual-Role "But", Udaya vs. Udayathu, and Self-Case</p>
+
+  <!-- ==========================================
+       CONCEPT 1: THE 3 PERSONS & FULL CASE MATRIX
+       ========================================== -->
+  <mid = c1>
+    <h2 id="p1-matrix">1. The 3 Persons &amp; Complete Memory Slot Matrix</h2>
+
+    <rule == Every Personal Pronoun locks into a strict syntactic slot: Subject Case (S or State Complement) | Object Case (Action Verb Object O or Prepositional Object PO) | Possessive Adj (Udaya Case + Immediate Noun) | Possessive Pronoun (Udayathu Case standalone, NO Noun after it) | Self Case (Reflexive when Doer equals Receiver, or Emphatic Adjective).>
+
+    <table r = 8 c = 6>
+      <c11 = PERSON &amp; NUMBER> <c12 = SUBJECT (S)> <c13 = OBJECT / PO (O / PO)> <c14 = POSSESSIVE ADJ (உடைய + Noun)> <c15 = POSSESSIVE PRONOUN (உடையது - No Noun)> <c16 = SELF CASE (Reflexive / Emphatic)>
+      <c21 = <b>1st Person Singular</b> (Speaker)> <c22 = <ok = I>> <c23 = <ok = me>> <c24 = <b>my</b> + Noun> <c25 = <ok = mine>> <c26 = <b>myself</b>>
+      <c31 = <b>1st Person Plural</b> (Speakers)> <c32 = <ok = We>> <c33 = <ok = us>> <c34 = <b>our</b> + Noun> <c35 = <ok = ours>> <c36 = <b>ourselves</b>>
+      <c41 = <b>2nd Person (Sing / Pl)</b> (Listener)> <c42 = <ok = You>> <c43 = <ok = you>> <c44 = <b>your</b> + Noun> <c45 = <ok = yours>> <c46 = <b>yourself / yourselves</b>>
+      <c51 = <b>3rd Person Male (Sing)</b>> <c52 = <ok = He>> <c53 = <ok = him>> <c54 = <b>his</b> + Noun> <c35 = <ok = his>> <c56 = <b>himself</b>>
+      <c61 = <b>3rd Person Female (Sing)</b>> <c62 = <ok = She>> <c63 = <ok = her>> <c64 = <b>her</b> + Noun> <c65 = <ok = hers>> <c66 = <b>herself</b>>
+      <c71 = <b>3rd Person Neutral (Sing)</b>> <c72 = <ok = It>> <c73 = <ok = it>> <c74 = <b>its</b> + Noun (<x = it's>)> <c75 = <i>N/A (No standalone form)</i>> <c76 = <b>itself</b>>
+      <c81 = <b>3rd Person Plural</b>> <c82 = <ok = They>> <c83 = <ok = them>> <c84 = <b>their</b> + Noun> <c85 = <ok = theirs>> <c86 = <b>themselves</b>>
+    </table>
+  </mid>
+
+  <!-- ==========================================
+       CONCEPT 2: STATE VERB IMMUNITY (FINITE & NON-FINITE)
+       ========================================== -->
+  <mid = c2>
+    <h2 id="p2-state-verbs">2. State Verbs (Finite &amp; Non-Finite "Be" Family)</h2>
+
+    <rule == "Be" Verbs Conjugation Tree: V1 (be, am, is, are) | V2 (was, were) | V3 (been) | V+ing (being) | Infinitive (to be). All of these are pure State Verbs!>
+
+    <trap == State Verbs (whether Finite like "was / has been" or Non-Finite like "to be / being") NEVER take an Object! You must place a Subjective Pronoun (I, we, he, she, they) after a State Verb.>
+
+    <chain == Check Verb / Wrapper -> State Verb (be / was / been / to be) = SUBJECT CASE -> Action Verb or Preposition = OBJECT CASE>
+
+    <table r = 5 c = 4>
+      <c11 = TRIGGER TYPE> <c12 = RAW SENTENCE TRAP> <c13 = COMPILED FIX> <c14 = CORE LOGIC>
+      <c21 = <b>Finite State Verb (was)</b>> <c22 = It was <x = them>.> <c23 = It <ud = State Verb>was</ud> <ok = they>.> <c24 = <code>was</code> is a state verb; objects are blocked.>
+      <c31 = <b>Finite State Verb (has been)</b>> <c32 = It has always been <x = him>.> <c33 = It <ud = State Verb>has always been</ud> <ok = he>.> <c34 = <code>been</code> is V3 of <code>be</code> (State Verb) &rarr; no object allowed.>
+      <c41 = <b>State Verb + Relative Clause</b>> <c42 = It was <x = me> who brought you home.> <c43 = It <ud = State Verb>was</ud> <ok = I> who brought you home.> <c44 = State verb forces subjective pronoun <code>I</code>.>
+      <c51 = <b>Non-Finite State Verb (to be)</b>> <c52 = We want the teacher to be <x = him> who has the best rapport...> <c53 = We want the teacher <ud = Non-Finite State Verb>to be</ud> <ok = he> who has...> <c54 = <code>to be</code> is a non-finite state verb &rarr; blocks objective case <code>him</code>.>
+    </table>
+
+    <qn all>
+      <Qn>
+        <mid = PN.C2>
+        <qn type = error spotting>
+        <text = We want the teacher <ud = Non-Finite State Verb **rl**>to be</ud> <ud = Complement Slot **rl**>him</ud> who has the best rapport with the students.>
+        <Options>
+          <A = Replace "want" with "wants">
+          <B = Replace "to be him" with "to be he">
+          <C = Replace "who" with "whom">
+          <D = No error>
+        </Options>
+        <answer = B>
+        <explanation = [PN.C2] "To be" is a non-finite state verb. Neither finite nor non-finite state verbs can take an object, so "him" must be replaced with the subjective case "he".>
+      </Qn>
+
+      <Qn>
+        <mid = PN.C2 / PN.C4>
+        <qn type = fill in the blanks>
+        <text = Choose the correct pair: "It <ud = State Verb **rl**>was</ud> <ud = Subj 1 **rl**>[ he / him ]</ud>, not <ud = Subj 2 **rl**>[ I / me ]</ud>, who put forth the proposition.">
+        <Options>
+          <A = him, me>
+          <B = he, me>
+          <C = he, I>
+          <D = him, I>
+        </Options>
+        <answer = C>
+        <explanation = [PN.C2 / PN.C4] "Was" is a state verb (requires subjective pronoun "he"), and conjunction parallelism ("not") requires the second pronoun to match the subjective case ("I").>
+      </Qn>
+    
+<Qn>
+  <mid = PN.C2>
+  <type = error spotting>
+  <text = If I were <ud = State Verb Complement Trap **rl**>him</ud> (A) / I would never accept (B) / such an unfair proposal from the board. (C) / No error (D)>
+  <Options>
+    <A = (A)>
+    <B = (B)>
+    <C = (C)>
+    <D = (D)>
+  </Options>
+  <answer = A>
+  <explanation = [PN.C2] "Were" is a State Verb (subjunctive mood of the "be" family). State verbs never take an Object; replace the objective pronoun "him" with the subjective pronoun "he" ("If I were he").>
+</Qn>
+</qn all>
+  </mid>
+
+  <!-- ==========================================
+       CONCEPT 3: ACTION VERBS & PREPOSITIONAL OBJECTS (PO)
+       ========================================== -->
+  <mid = c3>
+    <h2 id="p3-action-po">3. Action Verbs &amp; Prepositional Object (PO) Locks</h2>
+
+    <rule == Action Verbs (told, scolded, called) transfer action to an Object, and Prepositions (to, with, between, except) bind a Prepositional Object [P + PO]. When Doer is not the Receiver, both strictly require the Objective Case (me, us, you, him, her, it, them).>
+
+    <table r = 3 c = 4>
+      <c11 = TRIGGER TYPE> <c12 = RAW SENTENCE TRAP> <c13 = COMPILED FIX> <c14 = CORE LOGIC>
+      <c21 = <b>Preposition Wrapper (except)</b>> <c22 = Everyone except <x = he> was present.> <c23 = Everyone <ud = Preposition>except</ud> <ok = him> was present.> <c24 = <code>except</code> is a preposition &rarr; requires a Prepositional Object (PO).>
+      <c31 = <b>Action Verb (told / scolded)</b>> <c32 = She told <x = I> a story. / She scolded you and <x = I>.> <c33 = She <ud = Action Verb>told</ud> <ok = me> a story. / She <ud = Action Verb>scolded</ud> you and <ok = me>.> <c34 = Action verbs answering "Whom?" require Objective case.>
+    </table>
+  </mid>
+
+  <!-- ==========================================
+       CONCEPT 4: CONJUNCTION PARALLELISM & "BUT" ENGINE
+       ========================================== -->
+  <mid = c4>
+    <h2 id="p4-conj">4. Conjunction Parallelism &amp; The "But" Dual-Role Engine</h2>
+
+    <rule == Conjunction Balance (and / or / not): Both sides connected by a conjunction must match the exact same slot: either [Subject + Subject] or [Object + Object]. Example: "It was he, not I." (never "him, not me").>
+
+    <trap == "BUT" Dual-Meaning Test: Translate "but" into Tamil! If it means "ஆனாலும்" (however), it is a Conjunction &rarr; takes a Subject. If it means "தவிர" (except), it is a Preposition &rarr; takes a Prepositional Object (PO)!>
+
+    <table r = 3 c = 4>
+      <c11 = MEANING OF "BUT"> <c12 = GRAMMATICAL ROLE> <c13 = REQUIRED SLOT> <c14 = VERIFIED EXAMPLE>
+      <c21 = <b>ஆனாலும் (Aanalum / However)</b>> <c22 = Conjunction (Starts a new clause)> <c23 = <ok = Subject Pronoun>> <c24 = She is rich <ud = Conjunction (ஆனாலும்)>but</ud> <x = her> <ok = she> is worst.>
+      <c31 = <b>தவிர (Thavira / Except)</b>> <c32 = Preposition (Wraps a PO)> <c33 = <ok = Object Pronoun (PO)>> <c34 = Everyone has studied English <ud = Preposition (தவிர)>but</ud> <x = I> <ok = me>.>
+    </table>
+
+    <qn all>
+      <Qn>
+        <mid = PN.C2 / PN.C4>
+        <qn type = fill in the blanks>
+        <text = Choose the correct pair: "It <ud = State Verb **rl**>was</ud> <ud = Subj 1 **rl**>[ he / him ]</ud>, not <ud = Subj 2 **rl**>[ I / me ]</ud>, who put forth the proposition.">
+        <Options>
+          <A = him, me>
+          <B = he, me>
+          <C = he, I>
+          <D = him, I>
+        </Options>
+        <answer = C>
+        <explanation = [PN.C2 / PN.C4] "Was" is a state verb (requires subjective pronoun "he"), and conjunction parallelism ("not") requires the second pronoun to match the subjective case ("I").>
+      </Qn>
+    
+<Qn>
+  <mid = PN.C4 / PN.C5>
+  <type = sentence improvement>
+  <text = Your performance in the final round was far more consistent than <ud = Target Segment **rl**>my</ud>.>
+  <Options>
+    <A = mine>
+    <B = me>
+    <C = myself>
+    <D = No improvement>
+  </Options>
+  <answer = A>
+  <explanation = [PN.C4 / PN.C5] Conjunction parallelism ("than") compares "Your performance" with "my performance". Since no noun follows at the end of the sentence, the standalone Possessive Pronoun (Udayathu case) "mine" (= my performance) is required.>
+</Qn>
+</qn all>
+  </mid>
+
+  <!-- ==========================================
+       CONCEPT 5: UDAYA (POSSESSIVE ADJ) VS. UDAYATHU (POSSESSIVE PRONOUN)
+       ========================================== -->
+  <mid = c5>
+    <h2 id="p5-poss">5. Udaya Case (Possessive Adj) vs. Udayathu Case (Possessive Pronoun) &amp; Apostrophes</h2>
+
+    <rule == Udaya Case (உடைய — my, our, your, his, her, its, their) acts strictly as an Adjective and MUST have an immediate Noun after it [Possessive Adj + Noun]. Udayathu Case (உடையது — mine, ours, yours, his, hers, theirs) is formed by adding "-s" and equals [Possessive Adjective + Noun]; a Noun is NEVER allowed immediately after a Possessive Pronoun!>
+
+    <trap == Crash Check: Possessive Pronoun + Noun ("Mine understanding") is ALWAYS WRONG &rarr; Change to "My understanding". Standalone Possessive Adj before a Verb ("Her is the perfect case") is ALWAYS WRONG &rarr; Change to "Hers is the perfect case" or "Her case is...".>
+
+    <div class="angles-callout rule">
+      📘 <b>Key Distinctions &amp; Orthography Checks:</b>
+      <ul>
+        <li><b>Formula Lock:</b> <code>Udayathu Case (mine/ours/yours/his/hers/theirs) = Udaya Case (my/our/your/his/her/their) + Noun</code>. (Note: <code>his</code> works for both slots!).</li>
+        <li><b><code>Her</code> vs. <code>Hers</code> Slot Check:</b>
+          <br>&bull; <i><ud = Possessive Adj (Udaya)>Her</ud> <ud = Noun>car</ud> is big.</i> (Followed immediately by noun <code>car</code>).
+          <br>&bull; <i>He spoke <ud = Preposition>to</ud> <ud = Object Pronoun (PO)>her</ud>.</i> (No noun after <code>her</code>; sits in object/PO space).
+          <br>&bull; <i><ud = Possessive Pronoun (Udayathu)>Hers</ud> is the perfect case.</i> (Stands alone as Subject; equals <code>Her case</code>).
+        </li>
+        <li><b><code>It's</code> vs. <code>Its</code>:</b>
+          <br>&bull; <code>It's</code> = Contraction of <b>It is / It has</b> &rarr; <i><ok = It's> a great day.</i>
+          <br>&bull; <code>Its</code> = <b>அதனுடைய (Adhanudaya)</b> Possessive Adjective &rarr; <i>The camel has water in <ok = its> hump.</i>
+        </li>
+        <li><b>Singular vs. Plural Apostrophe:</b>
+          <br>&bull; Singular Noun: <code>student's</code> (ஒரு மாணவனுடைய).
+          <br>&bull; Plural Noun ending in <code>-s</code>: <code>students'</code> (மாணவர்களுடைய — apostrophe only after <code>s</code>).
+        </li>
+      </ul>
+    </div>
+
+    <qn all>
+      <Qn>
+        <mid = PN.C5>
+        <qn type = error spotting>
+        <text = <ud = Possessive Pronoun Trap **rl**>Mine</ud> <ud = Noun (Gerund) **rl**>understanding</ud> of the subject (A) / deepened further after the elaborate (B) / lecture delivered by the professor. (C) / No error (D)>
+        <Options>
+          <A = (A)>
+          <B = (B)>
+          <C = (C)>
+          <D = (D)>
+        </Options>
+        <answer = A>
+        <explanation = [PN.C5] "Understanding" is a noun acting as the subject. "Mine" is in the Udayathu case (Possessive Pronoun = Possessive Adj + Noun) and cannot take a noun after it. Replace "Mine" with the Udaya case Possessive Adjective "My".>
+      </Qn>
+
+      <Qn>
+        <mid = PN.C5>
+        <qn type = error spotting>
+        <text = <ud = Standalone Possessive Adj Trap **rl**>Her</ud> is the perfect case (A) / that should be taken up (B) / on priority for consideration. (C) / No error (D)>
+        <Options>
+          <A = (A)>
+          <B = (B)>
+          <C = (C)>
+          <D = (D)>
+        </Options>
+        <answer = A>
+        <explanation = [PN.C5] "Her" is a Possessive Adjective (Udaya case) which requires an immediate noun after it. To stand alone before the verb "is", replace "Her" with the Possessive Pronoun "Hers" (Udayathu case) or "Her case".>
+      </Qn>
+    
+<Qn>
+  <mid = PN.C4 / PN.C5>
+  <type = sentence improvement>
+  <text = Your performance in the final round was far more consistent than <ud = Target Segment **rl**>my</ud>.>
+  <Options>
+    <A = mine>
+    <B = me>
+    <C = myself>
+    <D = No improvement>
+  </Options>
+  <answer = A>
+  <explanation = [PN.C4 / PN.C5] Conjunction parallelism ("than") compares "Your performance" with "my performance". Since no noun follows at the end of the sentence, the standalone Possessive Pronoun (Udayathu case) "mine" (= my performance) is required.>
+</Qn>
+</qn all>
+  </mid>
+
+  <!-- ==========================================
+       CONCEPT 6: SELF CASE (REFLEXIVE VS. EMPHATIC)
+       ========================================== -->
+  <mid = c6>
+    <h2 id="p6-self">6. The "Self" Case Engine (Reflexive Pronouns vs. Emphatic Adjectives)</h2>
+
+    <rule == Self Forms: Singular (-self: myself, yourself, himself, herself, itself) | Plural (-selves: ourselves, yourselves, themselves). Used as a Reflexive Pronoun in the Object or Prepositional Object (PO) slot when Doer equals Receiver, OR as an Emphatic Adjective when the Tamil meaning is "நானே / அவனே / அவர்களே / நீங்களே" (e.g., "I myself did the work").>
+
+    <trap == Doer Equals Receiver Check: If Subject is different from Object &rarr; Use Objective Pronoun ("He killed him"). If Subject equals Object or PO &rarr; MUST use Self Case ("He killed himself" / "They spoke among themselves"). A Self pronoun can NEVER act as a standalone Subject ("Myself Manoj" is wrong &rarr; "I am Manoj").>
+
+    <table r = 4 c = 4>
+      <c11 = SELF-CASE MODE> <c12 = SYNTACTIC CONDITION> <c13 = TAMIL SENSE> <c14 = VERIFIED STRUCTURE>
+      <c21 = <b>1. Reflexive Object (Verb Object)</b>> <c22 = Doer (Subject) == Receiver (Object)> <c23 = தன்னையே / என்னையே> <c24 = He hurt <x = him> <ok = himself>.>
+      <c31 = <b>2. Reflexive PO (Prepositional Object)</b>> <c32 = Doer (Subject) == Prepositional Object> <c33 = தங்களுக்குள்ளேயே / தனக்குத்தானே> <c34 = She spoke to <x = her> <ok = herself>. / They argued among <x = them> <ok = themselves>.>
+      <c41 = <b>3. Emphatic (Adjective Emphasis)</b>> <c42 = Immediately emphasizes the Doer/Noun> <c43 = நானே / அவனே / அவர்களே / நீங்களே> <c44 = <b>I</b> <ud = Emphatic (நானே)>myself</ud> did the work.>
+    </table>
+  </mid>
+<table r = 7 c = 6>
+  <c11 = CASE> <c12 = P.O.S> <c13 = S> <c14 = O> <c15 = P.O> <c16 = [ &nbsp; ]>
+  <c21 = <b>Subjective</b>> <c22 = Pronoun> <c23 = <ok = ✓>> <c24 = —> <c25 = —> <c26 = —>
+  <c31 = <b>Objective</b>> <c32 = Pronoun> <c33 = —> <c34 = <ok = ✓>> <c35 = <ok = ✓>> <c36 = —>
+  <c41 = <b>உடைய</b>> <c42 = Adj> <c43 = —> <c44 = —> <c45 = —> <c46 = —>
+  <c51 = <b>உடையது</b>> <c52 = Pronoun> <c53 = <ok = ✓>> <c54 = <ok = ✓>> <c55 = <ok = ✓>> <c56 = —>
+  <c61 = <b>Self case</b>> <c62 = Pronoun> <c63 = <ok = ✓>> <c64 = <ok = ✓>> <c65 = <ok = ✓>> <c66 = —>
+  <c71 = <b>Self case (Emph)</b>> <c72 = Adj> <c73 = —> <c74 = —> <c75 = —> <c76 = —>
+</table>
+</body>
+</html>

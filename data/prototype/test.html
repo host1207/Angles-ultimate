@@ -1,0 +1,316 @@
+<Domain == QA>
+<Chapter == QA-TRG>
+<link-css-id: qa-trg>
+
+<!-- Root Square Box for Trigonometry -->
+<box points = (35,1),(65,1),(65,4),(35,4) background-color = #0F172A color = #FFFFFF>
+  TRIGONOMETRY (QA-TRG)
+</box>
+
+<!-- SUBTOPIC 1: BASICS (QA-TRG-BS) -->
+<Subtopic == QA-TRG-BS>
+  <box points = (4,6),(96,6),(96,88),(4,88) background-color = #0F172A color = #38BDF8>
+    Subtopic-1: Basics (QA-TRG-BS)
+  </box>
+
+  <!-- CONCEPT 1.1: FUNDAMENTAL RATIOS (QA-TRG-BS-FR) -->
+  <Concept == QA-TRG-BS-FR>
+    <box points = (7,10),(93,10),(93,85),(7,85) background-color = #1E293B color = #93C5FD>
+      Concept-1: Fundamental Ratios & Pythagorean Triplets (QA-TRG-BS-FR)
+    </box>
+
+    <!-- MICRO CONCEPT 1 (MC1 / T1) SQUARE -->
+    <MC == QA-TRG-BS-FR-MC1>
+      <box points = (10,14),(48,14),(48,32),(10,32) background-color = #0F172A color = #34D399>
+        MC1 (T1): Fundamental Right-Triangle Ratios
+        sin θ = oppo / hypo | cos θ = Adj / hypo
+        tan θ = sin θ / cos θ = oppo / Adj
+        cosec θ = 1 / sin θ = hypo / oppo
+        sec θ = 1 / cos θ = hypo / Adj
+        cot θ = 1 / tan θ = Adj / oppo
+        3-4-5 Warm-up: (i) sin α + cos β = 3/5 + 3/5 = 6/5 (ii) tan²α + cot²β = 9/16 + 9/16 = 9/8
+      </box>
+    </MC>
+
+    <!-- MICRO CONCEPT 2 (MC2 / T2) SQUARE -->
+    <MC == QA-TRG-BS-FR-MC2>
+      <box points = (52,14),(90,14),(90,32),(52,32) background-color = #0F172A color = #FBBF24>
+        MC2 (T2): Pythagorean Triplets Generator
+        Odd numbers: square it -> divide by 2 -> two nearest whole numbers are triplets (eg: 5 -> 25/2 = 12.5 -> 5, 12, 13)
+        Even numbers: square y -> divide by 2 to obtain A -> substitute A in 2x + 2 = A -> x and x+2 are triplets (eg: 6 -> 36/2 = 18 -> 6, 8, 10)
+      </box>
+    </MC>
+
+    <!-- MICRO CONCEPT 3 (MC3 / T3) SQUARE -->
+    <MC == QA-TRG-BS-FR-MC3>
+      <box points = (10,34),(48,34),(48,44),(10,44) background-color = #0F172A color = #F472B6>
+        MC3 (T3): Dual-Vertex / Complementary Angle Switch (A vs C & θ vs 90°-θ)
+        In right ΔABC (∠B = 90°), switching vertex A <-> C swaps opposite and adjacent legs (sin A = cos C, cos A = sin C).
+      </box>
+    </MC>
+
+    <!-- MICRO CONCEPT 4 (TG) SQUARE -->
+    <MC == QA-TRG-BS-FR-TG>
+      <box points = (52,34),(90,34),(90,44),(52,44) background-color = #0F172A color = #A78BFA>
+        TG: Target Algebraic Substitution & Fraction Simplification
+        Homogeneous sin/cos substitution, radical rationalization, and target fraction reduction.
+      </box>
+    </MC>
+
+    <qn all>
+      <Qn>
+        <id == QA-TRG-BS-FR-1>
+        <text = 1) If tan A = 4/3, 0° ≤ A ≤ 90°, then find the value of sin A.>
+        <Options>
+          <A = 4/5>
+          <B = 3/5>
+          <C = 3/4>
+          <D = 5/4>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-2>
+        <text = 2) If sin θ = 9/41, 0° < θ < 90°, then find cot θ. [SSC CGL Mains 2022]>
+        <Options>
+          <A = 9/40>
+          <B = 40/9>
+          <C = 41/40>
+          <D = 40/41>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-3>
+        <text = 3) If tan A = 2/5, find sec²A / cosec²A ? [SSC CPO]>
+        <Options>
+          <A = 2/5>
+          <B = 4/25>
+          <C = 25/4>
+          <D = 4/29>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-4>
+        <text = 4) If sin β = 1/3, find (sec β - tan β)³ = ?>
+        <Options>
+          <A = 1 / √8>
+          <B = 1 / 8>
+          <C = √8 / 3>
+          <D = 2 / √8>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-5>
+        <text = 5) If cos θ = √3 / 2, find tan²θ × cos²θ = ? [SSC CGL 2023]>
+        <Options>
+          <A = 1/2>
+          <B = 1/3>
+          <C = 1/4>
+          <D = 3/4>
+        </Options>
+        <answer = C>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-6>
+        <text = 6) If 5 sin θ - 4 cos θ = 0, 0° < θ < 90°, then find (5 sin θ + 2 cos θ) / (5 sin θ + 3 cos θ) = ? [SSC CGL 2023]>
+        <Options>
+          <A = 5/7>
+          <B = 6/7>
+          <C = 4/7>
+          <D = 3/7>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-7>
+        <text = 7) If tan θ = 3/4, then find (1 + sin θ) / (1 - sin θ) = ?>
+        <Options>
+          <A = 2>
+          <B = 3>
+          <C = 4>
+          <D = 5>
+        </Options>
+        <answer = C>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-8>
+        <text = 8) If 5 cot θ = 3, then find (6 sin θ - 3 cos θ) / (7 sin θ + 3 cos θ) = ? [SSC CGL Prelims 2023]>
+        <Options>
+          <A = 21/44>
+          <B = 39/44>
+          <C = 21/35>
+          <D = 19/44>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-9>
+        <text = 9) If sin A = 2/5, find the value of (5 sin A + 2 cosec A) / (√21 sec A) = ? [SSC CHSL 2023]>
+        <Options>
+          <A = 5/7>
+          <B = 7/5>
+          <C = 2/5>
+          <D = 7/21>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-10>
+        <text = 10) If sec A = 17/8, find the value of (34 sin A + 15 cot A) / (68 cos A - 16 tan A) = ?>
+        <Options>
+          <A = 17>
+          <B = 19>
+          <C = 21>
+          <D = 38>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-11>
+        <text = 11) If (3 sin θ - cos θ) / (cos θ + sin θ) = 1, then find cot θ = ?>
+        <Options>
+          <A = 0>
+          <B = 1>
+          <C = 1/2>
+          <D = 2>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-12>
+        <text = 12) If (sin θ - cos θ) / (sin θ + cos θ) = 4/5, find cosec²θ / (2 - cosec²θ) = ? [SSC CHSL]>
+        <Options>
+          <A = 40/41>
+          <B = 41/40>
+          <C = 82/81>
+          <D = 81/80>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-13>
+        <text = 13) If sec θ = a/b, then find (1 - tan²θ) / (2 - sin²θ) = ? [SSC CGL Mains]>
+        <Options>
+          <A = a²(2b² - a²) / [b²(a² + b²)]>
+          <B = b²(2a² - b²) / [a²(a² + b²)]>
+          <C = a²(a² - 2b²) / [b²(a² + b²)]>
+          <D = (2b² - a²) / (a² + b²)>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-14>
+        <text = 14) If sin²θ / (tan²θ - sin²θ) = 5, find (24 sin²θ - 15 sec²θ) / (6 cosec²θ - 7 cot²θ) = ?>
+        <Options>
+          <A = 14>
+          <B = -14>
+          <C = -12>
+          <D = 12>
+        </Options>
+        <answer = B>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-15>
+        <text = 15) If (sec θ - tan θ) / (sec θ + tan θ) = 1/7, find (cosec θ + cot²θ) / (cosec θ - cot²θ) = ?>
+        <Options>
+          <A = 19/5>
+          <B = 5/19>
+          <C = 17/5>
+          <D = 19/9>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-16>
+        <text = 15b) In ΔABC right-angled at B, if tan A = 1 / √3, find sin A cos C + cos A sin C = ?>
+        <Options>
+          <A = 0>
+          <B = 1/2>
+          <C = 1>
+          <D = √3 / 2>
+        </Options>
+        <answer = C>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-17>
+        <text = 16) In ΔABC right-angled at B, if tan A = 1/2, then find [sin A (cos C + cos A)] / [cos C (sin C - sin A)] = ?>
+        <Options>
+          <A = 1>
+          <B = 2>
+          <C = 3>
+          <D = 5>
+        </Options>
+        <answer = C>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-18>
+        <text = 17) In ΔABC, ∠B = 90° and AB : BC = 1 : 2. What is the value of cos A + tan C ?>
+        <Options>
+          <A = (2 + √5) / (2√5)>
+          <B = (1 + √5) / (2√5)>
+          <C = 3 / √5>
+          <D = √5 / 2>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-19>
+        <text = 18) If sin A = 5/13 and 7 cot B = 24, find (sec A cos B)(cosec B tan A) = ?>
+        <Options>
+          <A = 65/42>
+          <B = 42/65>
+          <C = 13/14>
+          <D = 25/12>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-20>
+        <text = 19) If sin 23° = a/b, find sec 23° - sin 67° = ?>
+        <Options>
+          <A = a² / [b √(b² - a²)]>
+          <B = b² / [a √(b² - a²)]>
+          <C = a / √(b² - a²)>
+          <D = √(b² - a²) / b>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-21>
+        <text = 20) If sec 31° = x, find sin² 59° + (1 / sec² 31°) - [1 / (sin² 59° cosec² 59°)] = ?>
+        <Options>
+          <A = (2 - x²) / x²>
+          <B = (x² - 2) / x²>
+          <C = 2 / x²>
+          <D = 1 / x²>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-22>
+        <text = 21) If tan B = 5/3, find (cosec B + sin B) / (cos B - sec B) = ?>
+        <Options>
+          <A = -177 / 125>
+          <B = 177 / 125>
+          <C = -59 / 25>
+          <D = 59 / 125>
+        </Options>
+        <answer = A>
+      </Qn>
+      <Qn>
+        <id == QA-TRG-BS-FR-23>
+        <text = 22) If cos θ = 12/13, find [sin θ (1 - tan θ)] / [tan θ (1 + cosec θ)] = ?>
+        <Options>
+          <A = 35 / 234>
+          <B = 25 / 234>
+          <C = 35 / 156>
+          <D = 7 / 18>
+        </Options>
+        <answer = A>
+      </Qn>
+    </qn all>
+  </Concept>
+</Subtopic>

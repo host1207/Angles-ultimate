@@ -1,0 +1,15 @@
+{
+  "name": "angles-note-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first competitive exam note studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/mkml.test.js && node tests/question-engine.test.js && node tests/tracker.test.js && node tests/tracker-api.test.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

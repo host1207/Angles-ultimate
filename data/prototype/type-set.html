@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- angles-root-mid: PR -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 0.3: Pronouns — Master MKML Draft</title>
+  <link-css-id: 123>
+</head>
+<body>
+
+  <h1>Chapter 0.3: Pronouns (பிரதி பெயர்ச்சொல்) — Live Compilation</h1>
+  <p class="subtitle">Incremental Marathon Build: Case Slots, State Verb Locks, Dual-Role Operators, and Possessives</p>
+
+  <!-- ==========================================
+       PART 1: THE 3 PERSONS & CASE MATRIX
+       ========================================== -->
+  <h2 id="p1-matrix">1. The 3 Persons &amp; Memory Slot Matrix</h2>
+
+  <rule == A Pronoun can act as a Subject (S), Verb Object (O), or Prepositional Object (PO), and comes in Singular and Plural forms across 1st, 2nd, and 3rd Person.>
+
+  <table r = 8 c = 5>
+    <c11 = PERSON &amp; NUMBER> <c12 = ROLE> <c13 = SUBJECT SLOT (S)> <c14 = OBJECT / PO SLOT (O / PO)> <c15 = POSSESSIVE ADJ (Udaya Case + Noun)>
+    <c21 = <b>1st Person Singular</b>> <c22 = Speaker> <c23 = <ok = I>> <c24 = <ok = me>> <c25 = <b>my</b> + Noun>
+    <c31 = <b>1st Person Plural</b>> <c32 = Speakers> <c33 = <ok = We>> <c34 = <ok = us>> <c35 = <b>our</b> + Noun>
+    <c41 = <b>2nd Person (Sing / Pl)</b>> <c42 = Listener> <c43 = <ok = You>> <c44 = <ok = you>> <c45 = <b>your</b> + Noun>
+    <c51 = <b>3rd Person Male (Sing)</b>> <c52 = Spoken About> <c53 = <ok = He>> <c54 = <ok = him>> <c55 = <b>his</b> + Noun>
+    <c61 = <b>3rd Person Female (Sing)</b>> <c62 = Spoken About> <c63 = <ok = She>> <c64 = <ok = her> (Standalone Obj)> <c65 = <b>her</b> + Noun (Needs Noun)>
+    <c71 = <b>3rd Person Neutral (Sing)</b>> <c72 = Spoken About> <c73 = <ok = It>> <c74 = <ok = it>> <c75 = <b>its</b> + Noun (<x = it's>)>
+    <c81 = <b>3rd Person Plural</b>> <c82 = Spoken About> <c83 = <ok = They>> <c84 = <ok = them>> <c85 = <b>their</b> + Noun>
+  </table>
+
+  <!-- ==========================================
+       PART 2: STATE VERBS VS. ACTION VERBS & PO
+       ========================================== -->
+  <h2 id="p2-verbs">2. State Verbs (Finite &amp; Non-Finite) vs. Action Verbs &amp; Prepositions</h2>
+
+  <rule == "Be" Verbs Conjugation Tree: V1 (be, am, is, are) | V2 (was, were) | V3 (been) | V+ing (being) | Infinitive (to be). All of these are State Verbs!>
+
+  <trap == State Verbs (whether Finite like "was/has been" or Non-Finite like "to be/being") NEVER take an Object! You must place a Subjective Pronoun (I, we, he, she, they) after a State Verb.>
+
+  <chain == Check Verb / Wrapper -> State Verb (be/was/been/to be) = SUBJECT CASE -> Action Verb or Preposition = OBJECT CASE>
+
+  <table r = 7 c = 4>
+    <c11 = TRIGGER TYPE> <c12 = RAW SENTENCE TRAP> <c13 = COMPILED FIX> <c14 = CORE LOGIC>
+    <c21 = <b>Finite State Verb (was)</b>> <c22 = It was <x = them>.> <c23 = It <ud = State Verb>was</ud> <ok = they>.> <c24 = <code>was</code> is a state verb; objects are blocked.>
+    <c31 = <b>Finite State Verb (has been)</b>> <c32 = It has always been <x = him>.> <c33 = It <ud = State Verb>has always been</ud> <ok = he>.> <c34 = <code>been</code> is V3 of <code>be</code> (State Verb) &rarr; no object allowed.>
+    <c41 = <b>State Verb + Relative Clause</b>> <c42 = It was <x = me> who brought you home.> <c43 = It <ud = State Verb>was</ud> <ok = I> who brought you home.> <c44 = State verb forces subjective pronoun <code>I</code>.>
+    <c51 = <b>Non-Finite State Verb (to be)</b>> <c52 = We want the teacher to be <x = him> who has the best rapport...> <c53 = We want the teacher <ud = Non-Finite State Verb>to be</ud> <ok = he> who has...> <c54 = <code>to be</code> is a non-finite state verb &rarr; blocks objective case <code>him</code>.>
+    <c61 = <b>Preposition Wrapper (except)</b>> <c62 = Everyone except <x = he> was present.> <c63 = Everyone <ud = Preposition>except</ud> <ok = him> was present.> <c64 = <code>except</code> is a preposition &rarr; requires a Prepositional Object (PO).>
+    <c71 = <b>Action Verb (told / scolded)</b>> <c72 = She told <x = I> a story. / She scolded you and <x = I>.> <c73 = She <ud = Action Verb>told</ud> <ok = me> a story. / She <ud = Action Verb>scolded</ud> you and <ok = me>.> <c74 = Action verbs answering "Whom?" require Objective case.>
+  </table>
+
+  <!-- ==========================================
+       PART 3: CONJUNCTIONS & THE "BUT" DUAL-ROLE
+       ========================================== -->
+  <h2 id="p3-conj">3. Conjunction Parallelism &amp; The "But" Dual-Role Engine</h2>
+
+  <rule == Conjunction Balance (___ and / not ___): Both sides connected by a conjunction must match the exact same slot: either [Subject + Subject] or [Object + Object]. Example: "It was <ok = he>, not <ok = I>." (NOT <x = him, not me>).>
+
+  <trap == "BUT" Dual-Meaning Test: Translate "but" into Tamil! If it means "ஆனாலும்" (however), it is a Conjunction -> takes a Subject. If it means "தவிர" (except), it is a Preposition -> takes a Prepositional Object (PO)!>
+
+  <table r = 3 c = 4>
+    <c11 = MEANING OF "BUT"> <c12 = GRAMMATICAL ROLE> <c13 = REQUIRED SLOT> <c14 = VERIFIED EXAMPLE>
+    <c21 = <b>ஆனாலும் (Aanalum / However)</b>> <c22 = Conjunction (Starts a new clause)> <c23 = <ok = Subject Pronoun>> <c24 = She is rich <ud = Conjunction (ஆனாலும்)>but</ud> <x = her> <ok = she> is worst.>
+    <c31 = <b>தவிர (Thavira / Except)</b>> <c32 = Preposition (Wraps a PO)> <c33 = <ok = Object Pronoun (PO)>> <c34 = Everyone has studied English <ud = Preposition (தவிர)>but</ud> <x = I> <ok = me>.>
+  </table>
+
+  <!-- ==========================================
+       PART 4: POSSESSIVES & APOSTROPHE MECHANICS
+       ========================================== -->
+  <h2 id="p4-poss">4. Possessive Adjectives (Udaya Case) &amp; Apostrophe Mechanics</h2>
+
+  <rule == Possessive Adjectives (my, our, your, his, her, their, its) express the "உடைய" (Udaya) case and MUST have a Noun immediately after them. If "her" or "it" appears in the object space without a following noun, it is acting as an Objective Pronoun.>
+
+  <div class="angles-callout rule">
+    📘 <b>Key Distinctions &amp; Orthography Checks:</b>
+    <ul>
+      <li><b>Udaya Case (Possessive Adj + Noun) vs. Object Case (Standalone):</b>
+        <br>&bull; <i><ud = Possessive Adj (Udaya)>Her</ud> <ud = Noun>car</ud> is big.</i> (Attached to noun <code>car</code>).
+        <br>&bull; <i>He spoke <ud = Preposition>to</ud> <ud = Object Pronoun (PO)>her</ud>.</i> (No noun after <code>her</code>; sits in object space).
+      </li>
+      <li><b><code>It's</code> vs. <code>Its</code>:</b>
+        <br>&bull; <code>It's</code> = Contraction of <b>It is / It has</b> &rarr; <i><ok = It's> a great day.</i>
+        <br>&bull; <code>Its</code> = <b>அதனுடைய (Adhanudaya)</b> Possessive Adjective &rarr; <i>The camel has water in <ok = its> hump.</i>
+      </li>
+      <li><b>Singular vs. Plural Apostrophe:</b>
+        <br>&bull; Singular Noun: <code>student's</code> (ஒரு மாணவனுடைய).
+        <br>&bull; Plural Noun ending in <code>-s</code>: <code>students'</code> (மாணவர்களுடைய — apostrophe only after <code>s</code>).
+      </li>
+    </ul>
+  </div>
+
+  <!-- ==========================================
+       PART 5: DIAGNOSTIC CHECK (HOUR 1)
+       ========================================== -->
+  <h2 id="p5-quiz">5. Concept Check (Hour 1 Verification)</h2>
+
+  <qn all>
+    <Qn>
+      <text = 1. Spot the error: "We want the teacher <ud = Non-Finite State Verb **rl**>to be</ud> <ud = Complement Slot **rl**>him</ud> who has the best rapport with the students.">
+      <Options>
+        <A = Replace "want" with "wants">
+        <B = Replace "to be him" with "to be he">
+        <C = Replace "who" with "whom">
+        <D = No error>
+      </Options>
+      <answer = B>
+      <explanation = "To be" is a non-finite state verb. Neither finite nor non-finite state verbs can take an object, so "him" must be replaced with the subjective case "he".>
+    </Qn>
+
+    <Qn>
+      <text = 2. Choose the correct pair: "It <ud = State Verb **rl**>was</ud> <ud = Subj 1 **rl**>[ he / him ]</ud>, not <ud = Subj 2 **rl**>[ I / me ]</ud>, who put forth the proposition.">
+      <Options>
+        <A = him, me>
+        <B = he, me>
+        <C = he, I>
+        <D = him, I>
+      </Options>
+      <answer = C>
+      <explanation = "Was" is a state verb (requires subjective pronoun "he"), and conjunction parallelism ("not") requires the second pronoun to match the subjective case ("I").>
+    </Qn>
+  </qn all>
+
+  <!-- =========================================================
+       APPEND HOUR 2 RAW NOTES BELOW THIS LINE:
+       ========================================================= -->
+
+<p>udayathu case 
+this case is formed by adding "s" to udaya case (possesive adjective) 
+they are simply mine ours yours his hers its theirs 
+or udayathu case can also be possesive adjective + noun 
+so noun after possesive adjective is not possible
+
+self case they are myself ourselves yourself/yourselves himself herself themselves itself 
+basically it is used in obejects place when dor and receiver of the action is same this logic also applies to prepositional objects as well eg in prepositional object if both doer and receiver is same them self will be used insted of objective pronouns 
+self case can also come as adjectives eg I myself did the work here see the Tamil meaning is like naane , avaragalee , neengalee if the english meaning is like this then it means that self is actually emphasizing on the noun  
+summary of part  1 subjective case is always subject , objective case is always object , possessive adjective -always adjective 
+it requires an immediate noun after that
+noun for </p>
+
+
+need a new tab called Analyzer what is its job 
+<Qn>
+     <text = [MID.ConceptID] Question text goes here...>
+     <Options>
+       <A = option a text>
+       <B = option b text>
+       <C = option c text>
+       <D = option d text>
+     </Options>
+     <answer = [Correct Letter]>
+     <explanation = Detailed grammatical explanation adhering to our state-verb, case-matrix, or wrapper rules.>
+   </Qn>
+
+
+what is an mid an mid is an uique id given to topics and 
+
+</body>
+</html>

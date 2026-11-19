@@ -1,0 +1,255 @@
+<!-- angles-root-mid: BN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic 0: Basics — Verb &amp; Noun Spatial Dependency Graphs</title>
+  <link-css-id: 123>
+</head>
+<body mid="BN">
+
+  <!-- =====================================================================
+       PART A: THE VERB MASTER DEPENDENCY GRAPH (SPREAD 1 — ROWS 2 TO 62)
+       ===================================================================== -->
+  <mid = c2>
+
+    <!-- 1. WIRING FIRST (<line> LAYER) -->
+    <!-- Main Vertical Spine from VERB Root (Col 2, Row 3) down to Row 50 -->
+    <line color = #2563eb>(2,3),(2,50)</line>
+
+    <!-- Branch 1: Action Verb -> Subject -> Doer -> Object -> Yes -->
+    <line color = #2563eb>(2,4),(24,4)</line>
+
+    <!-- Branch 2: State Verb -> Subject -> Definition -> Object -> No -->
+    <line color = #dc2626>(2,8),(24,8)</line>
+
+    <!-- Branch 3: "Be" Verbs Conjugation Pipeline -->
+    <line color = #059669>(2,13),(24,13)</line>
+
+    <!-- Branch 4: "Do" Verbs Conjugation Pipeline -->
+    <line color = #059669>(2,17),(24,17)</line>
+
+    <!-- Branch 5: "Have" Verbs Conjugation Pipeline -->
+    <line color = #059669>(2,21),(24,21)</line>
+
+    <!-- Branch 6: Modal Verbs & Sub-branches (can/could, may/might, shall/should, will/would) -->
+    <line color = #7c3aed>(2,25),(8,25),(8,34)</line>
+    <line color = #7c3aed>(8,25),(16,25)</line>
+    <line color = #7c3aed>(8,28),(16,28)</line>
+    <line color = #7c3aed>(8,31),(16,31)</line>
+    <line color = #7c3aed>(8,34),(16,34)</line>
+
+    <!-- Branch 7 & 8: Singular vs. Plural Verb S-Rule -->
+    <line color = #d97706>(2,38),(18,38)</line>
+    <line color = #d97706>(2,41),(18,41)</line>
+
+    <!-- Branch 9, 10, 11: Person-Verb Alignment Matrix (F.P, S.P, T.P) -->
+    <line color = #1e40af>(2,45),(5,45)</line>
+    <line color = #1e40af>(2,48),(5,48)</line>
+    <line color = #1e40af>(2,50),(5,50)</line>
+
+
+    <!-- 2. CONTENT BOXES SECOND (<box> LAYER SITTING ON TOP OF LINES) -->
+    <!-- Root Node: VERB -->
+    <box points = (1,2),(5,2),(5,4),(1,4) background-color = #1e3a8a color = #ffffff>
+      <b>VERB (வினைச்சொல்)</b>
+    </box>
+
+    <!-- Branch 1 Nodes: Action Verb Chain -->
+    <box points = (6,3),(10,3),(10,5),(6,5) background-color = #eff6ff color = #1e3a8a>
+      <b>1. Action Verb</b>
+    </box>
+    <box points = (11,3),(17,3),(17,5),(11,5) background-color = #ffffff color = #0f172a>
+      <ud = Subject><b>Doer</b></ud> (செய்பவர்)
+    </box>
+    <box points = (19,3),(25,3),(25,5),(19,5) background-color = #ecfdf5 color = #065f46>
+      <b>Object:</b> <ok = YES> (Takes Object)
+    </box>
+
+    <!-- Branch 2 Nodes: State Verb Chain -->
+    <box points = (6,7),(10,7),(10,9),(6,9) background-color = #fef2f2 color = #991b1b>
+      <b>2. State Verb</b>
+    </box>
+    <box points = (11,6),(18,6),(18,10),(11,10) background-color = #ffffff color = #0f172a>
+      <b>Subject:</b> The person / thing being talked about
+    </box>
+    <box points = (19,7),(25,7),(25,9),(19,9) background-color = #fef2f2 color = #991b1b>
+      <b>Object:</b> <x = NO> (Blocks Object!)
+    </box>
+
+    <!-- Branch 3 Nodes: "Be" Verbs Row -->
+    <box points = (4,12),(8,12),(8,14),(4,14) background-color = #ecfdf5 color = #065f46>
+      <b>Be Verbs</b>
+    </box>
+    <box points = (9,12),(15,12),(15,15),(9,15) background-color = #ffffff color = #0f172a>
+      <b>V1:</b> <code>be, am, <ud = P>are</ud>, <ud = S>is</ud></code>
+    </box>
+    <box points = (16,12),(20,12),(20,15),(16,15) background-color = #ffffff color = #0f172a>
+      <b>V2:</b> <code><ud = S>was</ud>, <ud = P>were</ud></code>
+    </box>
+    <box points = (21,12),(25,12),(25,15),(21,15) background-color = #ffffff color = #0f172a>
+      <b>V3:</b> <code>been</code> | <b>V4:</b> <code>being</code>
+    </box>
+
+    <!-- Branch 4 Nodes: "Do" Verbs Row -->
+    <box points = (4,16),(8,16),(8,18),(4,18) background-color = #ecfdf5 color = #065f46>
+      <b>Do Verbs</b>
+    </box>
+    <box points = (9,16),(15,16),(15,19),(9,19) background-color = #ffffff color = #0f172a>
+      <b>V1:</b> <code><ud = P>do</ud> / <ud = S>does</ud></code>
+    </box>
+    <box points = (16,16),(20,16),(20,19),(16,19) background-color = #ffffff color = #0f172a>
+      <b>V2:</b> <code>did</code>
+    </box>
+    <box points = (21,16),(25,16),(25,19),(21,19) background-color = #ffffff color = #0f172a>
+      <b>V3:</b> <code>done</code> | <b>V4:</b> <code>doing</code>
+    </box>
+
+    <!-- Branch 5 Nodes: "Have" Verbs Row -->
+    <box points = (4,20),(8,20),(8,22),(4,22) background-color = #ecfdf5 color = #065f46>
+      <b>Have Verbs</b>
+    </box>
+    <box points = (9,20),(15,20),(15,23),(9,23) background-color = #ffffff color = #0f172a>
+      <b>V1:</b> <code><ud = S>has</ud> / <ud = P>have</ud></code>
+    </box>
+    <box points = (16,20),(20,20),(20,23),(16,23) background-color = #ffffff color = #0f172a>
+      <b>V2:</b> <code>had</code>
+    </box>
+    <box points = (21,20),(25,20),(25,23),(21,23) background-color = #ffffff color = #0f172a>
+      <b>V3:</b> <code>had</code> | <b>V4:</b> <code>having</code>
+    </box>
+
+    <!-- Branch 6 Nodes: Modal Verbs Tree -->
+    <box points = (4,24),(9,24),(9,26),(4,26) background-color = #f5f3ff color = #5b21b6>
+      <b>Modal Verbs</b>
+    </box>
+    <box points = (11,24),(18,24),(18,26),(11,26) background-color = #ffffff color = #0f172a>
+      &rarr; <code>can, could</code>
+    </box>
+    <box points = (11,27),(18,27),(18,29),(11,29) background-color = #ffffff color = #0f172a>
+      &rarr; <code>may, might</code>
+    </box>
+    <box points = (11,30),(18,30),(18,32),(11,32) background-color = #ffffff color = #0f172a>
+      &rarr; <code>shall, should</code>
+    </box>
+    <box points = (11,33),(18,33),(18,35),(11,35) background-color = #ffffff color = #0f172a>
+      &rarr; <code>will, would</code>
+    </box>
+
+    <!-- Branch 7 & 8 Nodes: Singular vs. Plural Verb S-Rule -->
+    <box points = (4,37),(22,37),(22,39),(4,39) background-color = #fffbeb color = #92400e>
+      <b>Singular Verb (S.V):</b> Always <b>contains 's'</b> at the end (<code>is, was, has, does, plays</code>) — <i>except <code>am</code></i>!
+    </box>
+    <box points = (4,40),(22,40),(22,42),(4,42) background-color = #fffbeb color = #92400e>
+      <b>Plural Verb (P.V):</b> Contains <b>NO 's'</b> at the end (<code>are, were, have, do, play</code>).
+    </box>
+
+    <!-- Branch 9, 10, 11: Master Person-to-Verb Alignment Matrix Box -->
+    <box points = (4,44),(25,44),(25,61),(4,61) background-color = #ffffff color = #0f172a>
+      <table r = 8 c = 6>
+        <c11 = PERSON &amp; PRONOUN> <c12 = BE (PRESENT)> <c13 = BE (PAST)> <c14 = HAVE VERBS> <c15 = DO VERBS> <c16 = GENERAL VERB>
+        <c21 = <b>F.P</b> &rarr; <code>I</code> (S)> <c22 = <ud = S.V>am</ud>> <c23 = <ud = S.V>was</ud>> <c24 = <ud = P.V>have</ud>> <c25 = <ud = P.V>do</ud>> <c26 = <ud = P.V>play</ud>>
+        <c31 = <b>F.P</b> &rarr; <code>We</code> (P)> <c32 = <ud = P.V>are</ud>> <c33 = <ud = P.V>were</ud>> <c34 = <ud = P.V>have</ud>> <c35 = <ud = P.V>do</ud>> <c36 = <ud = P.V>play</ud>>
+        <c41 = <b>S.P</b> &rarr; <code>You</code> (S / P)> <c42 = <ud = P.V>are</ud>> <c43 = <ud = P.V>were</ud>> <c44 = <ud = P.V>have</ud>> <c45 = <ud = P.V>do</ud>> <c46 = <ud = P.V>play</ud>>
+        <c51 = <b>T.P</b> &rarr; <code>He</code> (S)> <c52 = <ok = is>> <c53 = <ok = was>> <c54 = <ok = has>> <c55 = <ok = does>> <c56 = <ok = plays>>
+        <c61 = <b>T.P</b> &rarr; <code>She</code> (S)> <c62 = <ok = is>> <c63 = <ok = was>> <c64 = <ok = has>> <c65 = <ok = does>> <c66 = <ok = plays>>
+        <c71 = <b>T.P</b> &rarr; <code>It</code> (S)> <c72 = <ok = is>> <c73 = <ok = was>> <c74 = <ok = has>> <c75 = <ok = does>> <c76 = <ok = plays>>
+        <c81 = <b>T.P</b> &rarr; <code>They</code> (P)> <c82 = <ud = P.V>are</ud>> <c83 = <ud = P.V>were</ud>> <c84 = <ud = P.V>have</ud>> <c85 = <ud = P.V>do</ud>> <c86 = <ud = P.V>play</ud>>
+      </table>
+    </box>
+
+  </mid>
+
+
+  <!-- =====================================================================
+       PART B: THE NOUN MASTER DEPENDENCY GRAPH (SPREAD 2 — ROWS 65 TO 112)
+       ===================================================================== -->
+  <mid = c3>
+
+    <!-- 1. WIRING FIRST (<line> LAYER) -->
+    <!-- Main Vertical Spine from NOUN Root (Col 2, Row 66) down to Row 85 -->
+    <line color = #2563eb>(2,66),(2,85)</line>
+
+    <!-- 5 Horizontal Branches for the 5 Types of Noun -->
+    <line color = #2563eb>(2,69),(14,69)</line>
+    <line color = #2563eb>(2,73),(14,73)</line>
+    <line color = #2563eb>(2,77),(14,77)</line>
+    <line color = #d97706>(2,81),(14,81)</line>
+    <line color = #d97706>(2,85),(14,85)</line>
+
+    <!-- Grouping Bracket 1: Proper + Common + Collective -> COUNTABLE NOUN -> Quantifiers -->
+    <line color = #059669>(14,69),(16,69),(16,77),(14,77)</line>
+    <line color = #059669>(16,73),(18,73)</line>
+    <line color = #059669>(21,76),(21,80),(24,80)</line>
+
+    <!-- Grouping Bracket 2: Abstract + Material -> UNCOUNTABLE NOUN -> Quantifiers -->
+    <line color = #dc2626>(14,81),(16,81),(16,85),(14,85)</line>
+    <line color = #dc2626>(16,83),(18,83)</line>
+    <line color = #dc2626>(21,86),(21,90),(24,90)</line>
+
+    <!-- Plural Feedback Loop: Countable Noun -> Plural Noun Rule -->
+    <line color = #7c3aed>(9,73),(9,95),(4,95)</line>
+
+
+    <!-- 2. CONTENT BOXES SECOND (<box> LAYER SITTING ON TOP OF LINES) -->
+    <!-- Root Node: NOUN + Definition -->
+    <box points = (1,65),(18,65),(18,67),(1,67) background-color = #1e3a8a color = #ffffff>
+      <b>NOUN (பெயர்ச்சொல்):</b> Anything that we name to call it
+    </box>
+
+    <!-- The 5 Noun Type Boxes -->
+    <box points = (4,68),(15,68),(15,70),(4,70) background-color = #eff6ff color = #1e3a8a>
+      <b>1. Proper Noun</b> &rarr; Contains specific name (e.g., <i>Manoj</i>)
+    </box>
+
+    <box points = (4,72),(15,72),(15,74),(4,74) background-color = #eff6ff color = #1e3a8a>
+      <b>2. Common Noun</b> &rarr; Called as a generic class (e.g., <i>boy</i>)
+    </box>
+
+    <box points = (4,76),(15,76),(15,78),(4,78) background-color = #eff6ff color = #1e3a8a>
+      <b>3. Collective Noun</b> &rarr; Collection of things (e.g., <i>team, army</i>)
+    </box>
+
+    <box points = (4,80),(15,80),(15,82),(4,82) background-color = #fffbeb color = #92400e>
+      <b>4. Abstract Noun</b> &rarr; Feelings / qualities (e.g., <i>bravery, honesty</i>)
+    </box>
+
+    <box points = (4,84),(15,84),(15,86),(4,86) background-color = #fffbeb color = #92400e>
+      <b>5. Material Noun</b> &rarr; Raw materials (e.g., <i>gold, water, iron</i>)
+    </box>
+
+    <!-- Right-Side Merged Nodes: Countable vs. Uncountable + Quantifiers -->
+    <box points = (17,70),(25,70),(25,76),(17,76) background-color = #ecfdf5 color = #065f46>
+      <b>COUNTABLE NOUN</b><br>
+      The noun which makes sense when a <b>number prefix</b> is added (1 boy, 2 boys).
+    </box>
+
+    <box points = (18,78),(25,78),(25,81),(18,81) background-color = #d1fae5 color = #065f46>
+      <b>Determiners:</b> <ok = few>, <ok = many>, <ok = some>, <ok = any>
+    </box>
+
+    <box points = (17,81),(25,81),(25,87),(17,87) background-color = #fef2f2 color = #991b1b>
+      <b>UNCOUNTABLE NOUN</b><br>
+      The noun which does <b>NOT</b> make sense when a number prefix is added (e.g., <x = 5 milk>, <x = 5 water>).
+    </box>
+
+    <box points = (18,88),(25,88),(25,91),(18,91) background-color = #fee2e2 color = #991b1b>
+      <b>Determiners:</b> <ok = little>, <ok = much>, <ok = some>, <ok = any>
+    </box>
+
+    <!-- Bottom Law Boxes: Plurality & Subject/Object Lock -->
+    <box points = (2,93),(16,93),(16,98),(2,98) background-color = #f5f3ff color = #5b21b6>
+      <b>Plural Noun Law:</b><br>
+      &bull; Only <b>Countable Nouns</b> (Common / Collective) have plurals!<br>
+      &bull; In Nouns, the presence of <b>'s' / 'es'</b> signifies <b>Plurality</b> (opposite of Verbs!).
+    </box>
+
+    <box points = (2,100),(25,100),(25,103),(2,103) background-color = #fef3c7 color = #92400e>
+      <rule == Fundamental Slot Lock: Both SUBJECT (S) and OBJECT (O / PO) in any sentence MUST always be a NOUN (or a Pronoun / Gerund / Infinitive acting as a Noun)!>
+    </box>
+
+  </mid>
+
+</body>
+</html>

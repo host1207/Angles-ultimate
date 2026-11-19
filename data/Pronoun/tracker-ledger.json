@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "chapterMid": "PN",
+  "topic": "Pronoun",
+  "lastUpdated": null,
+  "timingConfig": {
+    "locked": false,
+    "fastLimit": null,
+    "mediumLimit": null,
+    "slowLimit": null
+  },
+  "concepts": {
+    "C2": {
+      "PN-CN2-q1": [],
+      "PN-CN2-q2": [],
+      "PN-CN2-q3": []
+    },
+    "C4": {
+      "PN-CN4-q1": []
+    },
+    "C5": {
+      "PN-CN5-q1": [],
+      "PN-CN5-q2": []
+    },
+    "C7": {
+      "PN-CN7-q1": [],
+      "PN-CN7-q2": [],
+      "PN-CN7-q3": [],
+      "PN-CN7-q4": [],
+      "PN-CN7-q5": [],
+      "PN-CN7-q6": [],
+      "PN-CN7-q7": [],
+      "PN-CN7-q8": [],
+      "PN-CN7-q9": [],
+      "PN-CN7-q10": [],
+      "PN-CN7-q11": [],
+      "PN-CN7-q12": [],
+      "PN-CN7-q13": [],
+      "PN-CN7-q14": []
+    },
+    "UN": {
+      "PN-UN-q1": []
+    },
+    "C1": {},
+    "C3": {},
+    "C6": {}
+  },
+  "questionMeta": {
+    "PN-CN2-q1": {
+      "conceptMid": "C2",
+      "sourceFile": "Part-1.html",
+      "type": "ERROR SPOTTING",
+      "text": "We want the teacher <ud = Non-Finite State Verb **rl**>to be</ud> <ud = Complement Slot **rl**>him</ud> who has the best rapport with the students.",
+      "mids": [
+        "PN.C2"
+      ],
+      "signature": "7a080aeadc8ec617711c9cbbf750f8d2967639536b1f2144c48ff0fda6ead3aa",
+      "active": true
+    },
+    "PN-CN2-q2": {
+      "conceptMid": "C2",
+      "sourceFile": "Part-1.html",
+      "type": "FILL IN THE BLANKS",
+      "text": "Choose the correct pair: \"It <ud = State Verb **rl**>was</ud> <ud = Subj 1 **rl**>[ he / him ]</ud>, not <ud = Subj 2 **rl**>[ I / me ]</ud>, who put forth the proposition.\"",
+      "mids": [
+        "PN.C2",
+        "PN.C4"
+      ],
+      "signature": "6152de8c497b37864d601a4d5df255a310f22d5b68f369d0d34fd988488ced70",
+      "active": true
+    },
+    "PN-CN2-q3": {
+      "conceptMid": "C2",
+      "sourceFile": "Part-1.html",
+      "type": "ERROR SPOTTING",
+      "text": "If I were <ud = State Verb Complement Trap **rl**>him</ud> (A) / I would never accept (B) / such an unfair proposal from the board. (C) / No error (D)",
+      "mids": [
+        "PN.C2"
+      ],
+      "signature": "81cc98b31abcc76efeeb22d2d8afe6f249dfc1eedcc0a9ff7d89642b7a94e48a",
+      "active": true
+    },
+    "PN-CN4-q1": {
+      "conceptMid": "C4",
+      "sourceFile": "Part-1.html",
+      "type": "SENTENCE IMPROVEMENT",
+      "text": "Your performance in the final round was far more consistent than <ud = Target Segment **rl**>my</ud>.",
+      "mids": [
+        "PN.C4",
+        "PN.C5"
+      ],
+      "signature": "93611aed06647c5c7f30eee9a3381449137683389bccba5cb784844c03080512",
+      "active": true
+    },
+    "PN-CN5-q1": {
+      "conceptMid": "C5",
+      "sourceFile": "Part-1.html",
+      "type": "ERROR SPOTTING",
+      "text": "<ud = Possessive Pronoun Trap **rl**>Mine</ud> <ud = Noun (Gerund) **rl**>understanding</ud> of the subject (A) / deepened further after the elaborate (B) / lecture delivered by the professor. (C) / No error (D)",
+      "mids": [
+        "PN.C5"
+      ],
+      "signature": "c9cbe90a38807f53cb8de151faca0f27a21d7bd90cda8d75ee68879a90913c40",
+      "active": true
+    },
+    "PN-CN5-q2": {
+      "conceptMid": "C5",
+      "sourceFile": "Part-1.html",
+      "type": "ERROR SPOTTING",
+      "text": "<ud = Standalone Possessive Adj Trap **rl**>Her</ud> is the perfect case (A) / that should be taken up (B) / on priority for consideration. (C) / No error (D)",
+      "mids": [
+        "PN.C5"
+      ],
+      "signature": "b19f3ac1a67e842656e0d959320d26b1c809ab1c3dff1fbe499f375e732642e9",
+      "active": true
+    },
+    "PN-CN7-q1": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "ERROR SPOTTING",
+      "text": "<ud = Distributive Trap **rl**>Either</ud> of the three roads (A) / leads directly to the central railway station (B) / during peak traffic hours. (C) / No error (D)",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "9f8a63eb8937500e8221ac4acb7d37b729c65fea460281e16841bf3e8bd42115",
+      "active": true
+    },
+    "PN-CN7-q2": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "ERROR SPOTTING",
+      "text": "<ud = Negative Count Trap **rl**>Neither</ud> of the four accused (A) / could be convicted by the court (B) / due to lack of solid evidence. (C) / No error (D)",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "b17f84c8d76e00ae8dd8e1032b417630d85ff7feb440dd3b35fd95ae8a387cf8",
+      "active": true
+    },
+    "PN-CN7-q3": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "ERROR SPOTTING",
+      "text": "The five members of the committee (A) / argued with <ud = Reciprocal Trap **rl**>each other</ud> (B) / over the draft budget allocation. (C) / No error (D)",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "13d21ae4a0dc608b10bc3702456475d0702284464abb311adcdf73ef67576770",
+      "active": true
+    },
+    "PN-CN7-q4": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "FILL IN THE BLANKS",
+      "text": "_______ of the two sisters has been selected to represent the state in the national chess championship.",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "f0816a70aff4095e6956294bf00842781e0eb07df5ebe0b9479bb8605fc99bef",
+      "active": true
+    },
+    "PN-CN7-q5": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "MULTIPLE CHOICE",
+      "text": "Which of the following words in the distributive family functions <b>purely as an adjective</b> and can <b>never</b> stand alone as a pronoun?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "ad3a9d5a9c40ac4655aeb9dcc0643385827f74a3813ffb2b7fffdb278af7b20c",
+      "active": true
+    },
+    "PN-CN7-q6": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL REASONING",
+      "text": "Why does the pronoun <b>\"none\"</b> strictly demand a singular verb in formal grammar and competitive exams?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "0389f740f5ec57f999046001311694d97fa060b4e4825eb5914ec6fac4857857",
+      "active": true
+    },
+    "PN-CN7-q7": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL CHECKING",
+      "text": "The distributive pronoun <b>\"either\"</b> is strictly restricted to a choice or group size of how many items?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "20fd0ea64e9c752fc6e76ddd5dfe7b7bc8afd73fe6d81addc74c7a7355580d66",
+      "active": true
+    },
+    "PN-CN7-q8": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL CHECKING",
+      "text": "The phrase <b>\"each one\"</b> is utilized to emphasize individual members specifically from a group size of:",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "35923abbb8f2e574dc21367fac26ea44bed4c64c5422c22a39029696c12898b7",
+      "active": true
+    },
+    "PN-CN7-q9": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL CHECKING",
+      "text": "The standalone distributive pronoun <b>\"each\"</b> can be used for a group size of:",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "a52742c6f9e0ce6cedfeeea4517686c45c03d5c7b5b74ced674d8d564c292d3d",
+      "active": true
+    },
+    "PN-CN7-q10": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL CHECKING",
+      "text": "The reciprocal pronoun <b>\"one another\"</b> is grammatically reserved for interactions occurring among a group size of:",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "e70279169b1e13397a0ef8ab8aa0d71d7a07b5d4332efef3d1ccb3fc6c81386a",
+      "active": true
+    },
+    "PN-CN7-q11": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL ANALYSIS",
+      "text": "Why is the sentence <i>\"Every of the candidates submitted their application\"</i> grammatically invalid in standard English?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "31c2b056968597aa52458cc28b57742c390e67e3302bb3f85ffa24d6f7f62598",
+      "active": true
+    },
+    "PN-CN7-q12": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "CONCEPTUAL ANALYSIS",
+      "text": "When a distributive pronoun like \"each\" or \"neither\" is followed by \"of the [Plural Noun]\", why does the verb remain strictly singular (e.g., <i>has</i> instead of <i>have</i>)?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "8fb6e63871237e3b0657516565b217f1bd8bf56b6479e221d7b37a19b3829651",
+      "active": true
+    },
+    "PN-CN7-q13": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "STRUCTURAL MECHANICS",
+      "text": "Can reciprocal pronouns like <b>\"each other\"</b> or <b>\"one another\"</b> ever be placed in the Subject (S) slot at the very beginning of a clause?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "5402fa55435a11215a9709fc9bd0c2bf64870d5b52a3e19b14dc6191f3f0fe64",
+      "active": true
+    },
+    "PN-CN7-q14": {
+      "conceptMid": "C7",
+      "sourceFile": "part-two.html",
+      "type": "TRAP IDENTIFICATION",
+      "text": "What structural difference occurs when \"either\" is used in a correlative conjunction pairing (<i>Either A or B</i>) versus a distributive pronoun (<i>Either of them</i>)?",
+      "mids": [
+        "PN.C7"
+      ],
+      "signature": "c01ad3230a2f274b134e739c9030d46edf0f7c271a17956ddc335424c7fb7fb3",
+      "active": true
+    },
+    "PN-UN-q1": {
+      "conceptMid": "UN",
+      "sourceFile": "unmapped.html",
+      "type": "ERROR SPOTTING",
+      "text": "He is the same passenger (A) / <ud = Relative Pronoun Trap **rl**>whom</ud> we met (B) / at the railway platform yesterday. (C) / No error (D)",
+      "mids": [
+        "PN.UN"
+      ],
+      "signature": "46428323d090c74d36bb0933742f1c4b1534b641152ac14f4652c5eea36a972d",
+      "active": true
+    }
+  },
+  "identity": {
+    "nextIndexByConcept": {
+      "C2": 4,
+      "C4": 2,
+      "C5": 3,
+      "C7": 15,
+      "UN": 2
+    },
+    "signatureToId": {
+      "C2": {
+        "7a080aeadc8ec617711c9cbbf750f8d2967639536b1f2144c48ff0fda6ead3aa": "PN-CN2-q1",
+        "6152de8c497b37864d601a4d5df255a310f22d5b68f369d0d34fd988488ced70": "PN-CN2-q2",
+        "81cc98b31abcc76efeeb22d2d8afe6f249dfc1eedcc0a9ff7d89642b7a94e48a": "PN-CN2-q3"
+      },
+      "C4": {
+        "93611aed06647c5c7f30eee9a3381449137683389bccba5cb784844c03080512": "PN-CN4-q1"
+      },
+      "C5": {
+        "c9cbe90a38807f53cb8de151faca0f27a21d7bd90cda8d75ee68879a90913c40": "PN-CN5-q1",
+        "b19f3ac1a67e842656e0d959320d26b1c809ab1c3dff1fbe499f375e732642e9": "PN-CN5-q2"
+      },
+      "C7": {
+        "9f8a63eb8937500e8221ac4acb7d37b729c65fea460281e16841bf3e8bd42115": "PN-CN7-q1",
+        "b17f84c8d76e00ae8dd8e1032b417630d85ff7feb440dd3b35fd95ae8a387cf8": "PN-CN7-q2",
+        "13d21ae4a0dc608b10bc3702456475d0702284464abb311adcdf73ef67576770": "PN-CN7-q3",
+        "f0816a70aff4095e6956294bf00842781e0eb07df5ebe0b9479bb8605fc99bef": "PN-CN7-q4",
+        "ad3a9d5a9c40ac4655aeb9dcc0643385827f74a3813ffb2b7fffdb278af7b20c": "PN-CN7-q5",
+        "0389f740f5ec57f999046001311694d97fa060b4e4825eb5914ec6fac4857857": "PN-CN7-q6",
+        "20fd0ea64e9c752fc6e76ddd5dfe7b7bc8afd73fe6d81addc74c7a7355580d66": "PN-CN7-q7",
+        "35923abbb8f2e574dc21367fac26ea44bed4c64c5422c22a39029696c12898b7": "PN-CN7-q8",
+        "a52742c6f9e0ce6cedfeeea4517686c45c03d5c7b5b74ced674d8d564c292d3d": "PN-CN7-q9",
+        "e70279169b1e13397a0ef8ab8aa0d71d7a07b5d4332efef3d1ccb3fc6c81386a": "PN-CN7-q10",
+        "31c2b056968597aa52458cc28b57742c390e67e3302bb3f85ffa24d6f7f62598": "PN-CN7-q11",
+        "8fb6e63871237e3b0657516565b217f1bd8bf56b6479e221d7b37a19b3829651": "PN-CN7-q12",
+        "5402fa55435a11215a9709fc9bd0c2bf64870d5b52a3e19b14dc6191f3f0fe64": "PN-CN7-q13",
+        "c01ad3230a2f274b134e739c9030d46edf0f7c271a17956ddc335424c7fb7fb3": "PN-CN7-q14"
+      },
+      "UN": {
+        "46428323d090c74d36bb0933742f1c4b1534b641152ac14f4652c5eea36a972d": "PN-UN-q1"
+      }
+    },
+    "retiredAttemptsByConcept": {
+      "C2": {},
+      "C4": {},
+      "C5": {},
+      "C7": {},
+      "UN": {},
+      "C1": {},
+      "C3": {},
+      "C6": {}
+    }
+  }
+}

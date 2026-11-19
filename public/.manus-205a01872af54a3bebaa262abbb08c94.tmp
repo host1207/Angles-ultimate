@@ -1,0 +1,330 @@
+/* Angles MKML compiler. Canonical syntax is documented in MKML-SYNTAX.md. */
+(function (root, factory) {
+  const api = factory();
+  if (typeof module === 'object' && module.exports) module.exports = api;
+  if (root) root.MKML = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+
+  const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+
+  function toTex(expression) {
+    const tokens = String(expression).match(/\/\/|~=|<=|>=|!=|[A-Za-z][A-Za-z0-9]*(?:_(?:\{[^}]*\}|[A-Za-z0-9]+))?(?:\^(?:\{[^}]*\}|\([^()]*\)|[A-Za-z0-9]+))?|\d+(?:\.\d+)?|[+\-*/=()[\]{}_,]|[^\s]/g) || [];
+    let cursor = 0;
+    const precedence = { '~=': 0, '=': 0, '!=': 0, '<=': 0, '>=': 0, '+': 1, '-': 1, '/': 2, '//': 2, '*': 2, div: 2 };
+    const greek = { theta: '\\theta', pi: '\\pi', inf: '\\infty', infinity: '\\infty' };
+
+    function parsePrimary() {
+      const token = tokens[cursor++];
+      if (token === undefined) return '';
+      const lower = token.toLowerCase();
+      if ((lower === 'sqrt' || lower === 'cbrt') && tokens[cursor] === '(') {
+        cursor++;
+        const inner = parseExpression(0);
+        if (tokens[cursor] === ')') cursor++;
+        return lower === 'cbrt' ? `\\sqrt[3]{${inner}}` : `\\sqrt{${inner}}`;
+      }
+      const groups = { '(': [')', '\\left(', '\\right)'], '[': [']', '\\left[', '\\right]'], '{': ['}', '\\left\\{', '\\right\\}'] };
+      if (groups[token]) {
+        const [closing, left, right] = groups[token];
+        const inner = parseExpression(0);
+        if (tokens[cursor] === closing) cursor++;
+        return `${left}${inner}${right}`;
+      }
+      if (lower === 'tri') return '\\triangle';
+      if (greek[lower]) return greek[lower];
+      if (token === '≅') return '\\cong';
+      return token;
+    }
+
+    function startsPrimary(token) {
+      return token !== undefined && ![')', ']', '}', '+', '-', '*', '/', '//', 'div', '~=', '=', '!=', '<=', '>=', ','].includes(token.toLowerCase());
+    }
+
+    function parseExpression(minPrecedence = 0) {
+      let left = parsePrimary();
+      while (cursor < tokens.length) {
+        const op = tokens[cursor];
+        if ([')', ']', '}'].includes(op)) break;
+        if (op === ',') { cursor++; left += ', '; continue; }
+        const opPrecedence = Object.prototype.hasOwnProperty.call(precedence, op.toLowerCase()) ? precedence[op.toLowerCase()] : null;
+        if (opPrecedence === null) {
+          if (!startsPrimary(op)) break;
+          const right = parsePrimary();
+          left += (left === '\\triangle' ? ' ' : '') + right;
+          continue;
+        }
+        if (opPrecedence < minPrecedence) break;
+        cursor++;
+        const right = parseExpression(opPrecedence + 1);
+        if (op === '/') left = `\\dfrac{${left}}{${right}}`;
+        else if (op === '*' ) left = `${left} \\times ${right}`;
+        else if (op === '//' || op.toLowerCase() === 'div') left = `${left} \\div ${right}`;
+        else if (op === '~=' || op === '≅') left = `${left} \\cong ${right}`;
+        else if (op === '!=') left = `${left} \\ne ${right}`;
+        else if (op === '<=') left = `${left} \\le ${right}`;
+        else if (op === '>=') left = `${left} \\ge ${right}`;
+        else left = `${left} ${op} ${right}`;
+      }
+      return left;
+    }
+
+    return parseExpression().trim();
+  }
+
+  function compileInline(source) {
+    const token = /<math\s*==\s*([\s\S]*?)>|<(ok|x)\s*=\s*([\s\S]*?)>|<hide\s*==\s*([\s\S]*?)>|<b>([\s\S]*?)<\/b>/gi;
+    return String(source).replace(token, (whole, math, correction, correctedText, hidden, bold) => {
+      if (math !== undefined) return `<span class="mkml-math" data-tex="${escapeHtml(toTex(math))}">${escapeHtml(math)}</span>`;
+      if (correction) return `<span class="mkml-${correction.toLowerCase()}">${escapeHtml(correctedText)}</span>`;
+      if (hidden !== undefined) return `<span class="mkml-spoiler" role="button" tabindex="0" aria-label="Reveal hidden text">${escapeHtml(hidden)}</span>`;
+      return `<b>${bold}</b>`;
+    });
+  }
+
+  function readAttribute(attributes, name) {
+    const match = String(attributes).match(new RegExp(`(?:^|\\s)${name}\\s*=\\s*["']?([^"'>]+?)["']?(?=\\s+[\\w-]+\\s*=|$)`, 'i'));
+    return match ? match[1].trim() : '';
+  }
+
+  function gridMarkup(attributes, content) {
+    const pair = (name, defaults) => {
+      const values = readAttribute(attributes, name).split(',').map(value => Number.parseInt(value.trim(), 10));
+      return [Number.isSafeInteger(values[0]) && values[0] > 0 ? values[0] : defaults[0], Number.isSafeInteger(values[1]) && values[1] > 0 ? values[1] : defaults[1]];
+    };
+    const pos = pair('pos', [1, 1]);
+    const span = pair('span', [12, 5]);
+    const col = pos[0];
+    const row = pos[1];
+    const colSpan = Math.max(1, span[0]);
+    const rowSpan = Math.max(1, span[1]);
+    const hasPos = /(?:^|\s)pos\s*=/i.test(attributes);
+    const hasSpan = /(?:^|\s)span\s*=/i.test(attributes);
+    const placement = hasPos || hasSpan ? ` style="--grid-col:${col};--grid-row:${row};--grid-col-span:${colSpan};--grid-row-span:${rowSpan}"` : '';
+    const id = readAttribute(attributes, 'id');
+    const customClass = readAttribute(attributes, 'class').split(/\s+/).filter(Boolean).map(escapeHtml).join(' ');
+    return `<div${id ? ` id="${escapeHtml(id)}"` : ''} class="grid-box${customClass ? ` ${customClass}` : ''}"${placement}>${content}</div>`;
+  }
+
+  function compileCss(source) {
+    const css = String(source == null ? '' : source);
+    let output = '';
+    let index = 0;
+    let depth = 0;
+    while (index < css.length) {
+      if (css.startsWith('/*', index)) {
+        const end = css.indexOf('*/', index + 2);
+        const stop = end < 0 ? css.length : end + 2;
+        output += css.slice(index, stop);
+        index = stop;
+        continue;
+      }
+      if (css[index] === '"' || css[index] === "'") {
+        const quote = css[index];
+        let stop = index + 1;
+        while (stop < css.length) {
+          if (css[stop] === '\\') { stop += 2; continue; }
+          if (css[stop++] === quote) break;
+        }
+        output += css.slice(index, stop);
+        index = stop;
+        continue;
+      }
+      if (css[index] === '{') { depth++; output += css[index++]; continue; }
+      if (css[index] === '}') { depth = Math.max(0, depth - 1); output += css[index++]; continue; }
+
+      const declaration = depth > 0 ? css.slice(index).match(/^grid-text-align\s*:\s*\(\s*(\d+)\s*,\s*(\d+)\s*\)(\s*!important)?\s*;?/i) : null;
+      let previous = index - 1;
+      while (previous >= 0) {
+        if (/\s/.test(css[previous])) { previous--; continue; }
+        if (previous > 0 && css.slice(previous - 1, previous + 1) === '*/') {
+          const commentStart = css.lastIndexOf('/*', previous - 1);
+          if (commentStart >= 0) { previous = commentStart - 1; continue; }
+        }
+        break;
+      }
+      if (declaration && (previous < 0 || css[previous] === '{' || css[previous] === ';')) {
+        const parsedColumn = Number(declaration[1]);
+        const parsedRow = Number(declaration[2]);
+        if (!Number.isSafeInteger(parsedColumn) || !Number.isSafeInteger(parsedRow)) {
+          output += declaration[0];
+          index += declaration[0].length;
+          continue;
+        }
+        const column = Math.max(1, parsedColumn);
+        const row = Math.max(1, parsedRow);
+        const important = declaration[3] ? ' !important' : '';
+        const top = 47 + (row - 1) * 32;
+        output += `position: absolute${important}; margin: 0 !important; left: calc((${column} - 1) * var(--grid-cell-width))${important}; top: ${top}px${important}; translate: 0 -100% !important; --grid-required-col:${column}; --grid-required-row:${row};`;
+        index += declaration[0].length;
+        continue;
+      }
+      output += css[index++];
+    }
+    return output;
+  }
+
+  function linkedCss(cssSources, htmlSource) {
+    const linked = new Set([...String(htmlSource == null ? '' : htmlSource).matchAll(/<link-css-id\s*:\s*([\w.-]+)\s*>|<link\s*=\s*([\w.-]+)\s*>/gi)].map(match => match[1] || match[2]));
+    const output = [];
+    for (const source of Array.isArray(cssSources) ? cssSources : []) {
+      const css = String(source || '');
+      const marker = /<css-id\s*:\s*([\w.-]+)\s*>/gi;
+      let markers = [];
+      try { markers = [...css.matchAll(marker)]; } catch { continue; }
+      if (!markers.length) { output.push(css); continue; }
+      if (css.slice(0, markers[0].index).trim()) output.push(css.slice(0, markers[0].index));
+      markers.forEach((entry, index) => {
+        if (!linked.has(entry[1])) return;
+        const start = entry.index + entry[0].length;
+        const end = index + 1 < markers.length ? markers[index + 1].index : css.length;
+        output.push(css.slice(start, end));
+      });
+    }
+    return output.join('\n');
+  }
+
+  function stripCssLinks(html) {
+    return String(html == null ? '' : html).replace(/<link-css-id\s*:\s*[\w.-]+\s*>|<link\s*=\s*[\w.-]+\s*>/gi, '');
+  }
+
+  function cleanCss(source) {
+    return String(source == null ? '' : source).replace(/<qn\s+all\b[\s\S]*?<\/qn\s+all\s*>/gi, '');
+  }
+
+  // MKML shorthand uses angle delimiters inside ordinary HTML. Parse these
+  // blocks with a stack so nested MKML callouts close last-in/first-out, and
+  // do not mistake the `>` in an arrow (`->`) for the end of a block.
+  function compileSemanticBlocks(source) {
+    const input = String(source);
+    const openerAt = (from) => {
+      const matcher = /<(rule|trap|chain)\s*==/ig;
+      matcher.lastIndex = from;
+      return matcher.exec(input);
+    };
+    function closeAt(from) {
+      for (let index = from; index < input.length; index++) {
+        if (input[index] === '>' && input[index - 1] !== '-') return index;
+      }
+      return -1;
+    }
+    function parseAt(start, depth = 0) {
+      if (depth > 64) return null;
+      const match = openerAt(start);
+      if (!match || match.index !== start) return null;
+      const tag = match[1].toLowerCase();
+      const bodyStart = match.index + match[0].length;
+      let cursor = bodyStart;
+      let body = '';
+      while (cursor < input.length) {
+        const delimiter = closeAt(cursor);
+        const nested = openerAt(cursor);
+        if (!nested || (delimiter >= 0 && nested.index >= delimiter)) {
+          if (delimiter < 0) return null;
+          body += input.slice(cursor, delimiter);
+          cursor = delimiter + 1;
+          const content = compileInline(body.trim());
+          const compiled = tag === 'rule'
+            ? `<aside class="mkml-callout mkml-rule"><strong>Rule:</strong> ${content}</aside>`
+            : tag === 'trap'
+              ? `<aside class="mkml-callout mkml-trap"><strong>SSC Trap:</strong> ${content}</aside>`
+              : '<div class="mkml-chain">' + content.split(/\s*(?:->|➔|&rarr;)\s*/).map((step, index) => (index ? '<span class="mkml-chain-arrow">➔</span>' : '') + '<span class="mkml-chain-step">' + step + '</span>').join('') + '</div>';
+          return { html: compiled, end: cursor };
+        }
+        const inner = parseAt(nested.index, depth + 1);
+        if (!inner) { body += input.slice(cursor, delimiter); cursor = delimiter + 1; continue; }
+        body += input.slice(cursor, nested.index) + inner.html;
+        cursor = inner.end;
+      }
+      return null;
+    }
+    let result = '';
+    let cursor = 0;
+    while (cursor < input.length) {
+      const match = openerAt(cursor);
+      if (!match) break;
+      const parsed = parseAt(match.index);
+      if (!parsed) { result += input.slice(cursor, match.index + match[0].length); cursor = match.index + match[0].length; continue; }
+      result += input.slice(cursor, match.index) + parsed.html;
+      cursor = parsed.end;
+    }
+    return result + input.slice(cursor);
+  }
+
+  function compileUnderline(source) {
+    return String(source).replace(/<ud\s*=\s*([^>]+?)\s*>([\s\S]*?)(?:<\/ud\s*>|<ud\s*>)/gi, (_whole, rawLabel, text) => {
+      const isRevealLocked = /\*\*rl\*\*/i.test(rawLabel);
+      const label = rawLabel.replace(/\*\*rl\*\*/gi, '').trim();
+      const revealClass = isRevealLocked ? ' mkml-rl-target is-rl-hidden' : '';
+      return `<span class="angles-ud${revealClass}"${isRevealLocked ? ' data-rl-target="true"' : ''}><span class="angles-ud-word">${compileInline(text)}</span><span class="angles-ud-label">${escapeHtml(label)}</span></span>`;
+    });
+  }
+
+  function compileTable(match, rowsText, colsText, body) {
+    const rows = Math.max(1, Math.min(35, Number(rowsText)));
+    const cols = Math.max(1, Math.min(25, Number(colsText)));
+    const cellPattern = /<c(\d+)(\d+)\s*=\s*/gi;
+    const markers = [...body.matchAll(cellPattern)];
+    const cells = new Map();
+    markers.forEach((marker, index) => {
+      const start = marker.index + marker[0].length;
+      const end = index + 1 < markers.length ? markers[index + 1].index : body.length;
+      let value = body.slice(start, end).trim();
+      if (value.endsWith('>')) value = value.slice(0, -1).trim();
+      const row = Number(marker[1]);
+      const col = Number(marker[2]);
+      if (row >= 1 && row <= rows && col >= 1 && col <= cols) cells.set(`${row}-${col}`, compileInline(value));
+    });
+    const tableRows = Array.from({ length: rows }, (_, row) => `<tr>${Array.from({ length: cols }, (_, col) => `<td>${cells.get(`${row + 1}-${col + 1}`) || ''}</td>`).join('')}</tr>`).join('');
+    return `<table class="angle-table" data-rows="${rows}" data-cols="${cols}"><tbody>${tableRows}</tbody></table>`;
+  }
+
+  function trimTagBoundary(value) {
+    return String(value).trim().replace(/>\s*$/, '').trim();
+  }
+
+  function takeField(source, tag, stopPattern, preserveMarkup = false) {
+    const opener = new RegExp(`<${tag}\\s*=\\s*`, 'i');
+    const found = opener.exec(source);
+    if (!found) return { value: '', source };
+    const start = found.index + found[0].length;
+    const tail = source.slice(start);
+    const stop = stopPattern.exec(tail);
+    const end = stop ? stop.index : tail.length;
+    const rawValue = tail.slice(0, end);
+    const value = preserveMarkup ? rawValue.trim() : trimTagBoundary(rawValue);
+    const removeEnd = stop ? start + end : source.length;
+    return { value, source: source.slice(0, found.index) + source.slice(removeEnd) };
+  }
+
+  function takeAnswer(source) {
+    const pattern = /<(?:answer|ans)\s*=\s*([A-D])\s*>|<(?:answer|ans)\s*>\s*([A-D])\s*<\/(?:answer|ans)\s*>/i;
+    const match = pattern.exec(source);
+    return { answer: match ? (match[1] || match[2]).toLowerCase() : '', source: match ? source.slice(0, match.index) + source.slice(match.index + match[0].length) : source };
+  }
+
+  function compileQuestion(body, mode) {
+    const midMatch = /<mid\s*=\s*([^>]+)>/i.exec(body);
+    const gapMatch = /<gap\s*=\s*([^>]+)>/i.exec(body);
+    const typeMatch = /<type\s*=\s*([^>]+)>/i.exec(body);
+    const badges = [typeMatch ? `<span class="mkml-question-type">${escapeHtml(typeMatch[1].trim().replace(/\s+/g, ' ').toUpperCase())}</span>` : '', midMatch ? `<span class="mkml-question-mid">${escapeHtml(midMatch[1].trim())}</span>` : '', gapMatch ? `<span class="mkml-question-gap">GAP · ${escapeHtml(gapMatch[1].trim())}</span>` : ''].filter(Boolean).join('');
+    body = body.replace(/<mid\s*=\s*[^>]+>|<gap\s*=\s*[^>]+>|<type\s*=\s*[^>]+>/gi, '');
+    const answerResult = takeAnswer(body);
+    const explanationResult = takeField(answerResult.source, 'explanation', /<\/Qn\s*>|<\/qn\s+all\s*>/i, true);
+    let remaining = explanationResult.source.replace(/<\/?Options\s*>/gi, '');
+    const promptResult = takeField(remaining, 'text', /<(?:Options)\s*>|<[A-D](?:\s*=|\s+)|<(?:answer|ans|explanation)\s*=/i);
+    remaining = promptResult.source;
+    const options = [];
+    const marker = /<([A-D])(?:\s*=\s*|\s+)/gi;
+    let item;
+    const boundaries = [...remaining.matchAll(marker)];
+    boundaries.forEach((entry, index) => {
+      const start = entry.index + entry[0].length;
+      const nextBoundary = index + 1 < boundaries.length ? boundaries[index + 1].index : remaining.length;
+      const structural = /<(?:answer|ans|explanation)\s*=|<\/Options\s*>|<\/Qn\s*>|<\/qn\s+all\s*>/i.exec(remaining.slice(start, nextBoundary));
+      const end = structural ? start + structural.index : nextBoundary;
+      const text = trimTagBoundary(remaining.slice(start, end));
+      options.push(`<button type="button" class="answer-option" data-answer="${entry[1].toLowerCase()}"><span class="option-letter">${entry[1].toUpperCase()}</span>${compileInline(text)}</button>`);
+    });
+    const details = explanationResult.value ? `<div class="explanation">${compileQuestionExplanation(explanationResult.value)}</div>` : '<div class="explanation"></div>';
+    const normalizedMode = /^(exam|serious)$/i.test(

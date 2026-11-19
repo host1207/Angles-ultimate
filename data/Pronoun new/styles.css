@@ -1,0 +1,703 @@
+<css-id: pn-t1>
+
+.pn-root-title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+/* ==========================================
+   T1 STYLES (Dark Bg-1 + Light Inner Boxes)
+   ========================================== */
+.pn-t1-head {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0C4A6E;
+  line-height: 1.25;
+}
+
+.pn-st-head {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1E3A8A;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.pn-st-points {
+  font-size: 17px;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.45;
+}
+
+.pn-trap-head {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1E1B4B;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.pn-trap-point {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3B0764;
+  line-height: 1.45;
+}
+
+.pn-trap-eg {
+  font-size: 17px;
+  font-weight: 600;
+  color: #065F46;
+  margin-top: 4px;
+  line-height: 1.45;
+}
+
+/* ==========================================
+   T2 STYLES (Light Bg-2 + Dark Inner Boxes)
+   Main Headings = White Underlined
+   Subheadings = Small Font Light Grey Double-Underlined
+   Points = Light Blue
+   Examples = Light Green
+   ========================================== */
+.pn-t2-head {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 1.25;
+}
+
+.pn-t2-box-head {
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.pn-t2-subhead {
+  font-size: 16px;
+  font-weight: 700;
+  color: #CBD5E1;
+  text-decoration: underline double #94A3B8;
+  text-underline-offset: 3px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  line-height: 1.3;
+}
+
+.pn-t2-point {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7DD3FC;
+  line-height: 1.45;
+}
+
+.pn-t2-eg {
+  font-size: 17px;
+  font-weight: 600;
+  color: #6EE7B7;
+  margin-top: 3px;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   GLOBAL SIGNATURE STYLE FOR Id1 (IDENTIFICATION)
+   ========================================================================== */
+.pn-id-box {
+  width: 100%;
+  border: 2px solid #22D3EE;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background-color: #0C353D;
+}
+
+.pn-id-head {
+  font-size: 21px;
+  font-weight: 800;
+  color: #67E8F9;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.pn-id-point {
+  font-size: 17px;
+  font-weight: 500;
+  color: #F0FDFA;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   I-BRACKET DUAL EXAMPLE COMPONENTS (Light Mode for T3 / Dark Mode for T4)
+   ========================================================================== */
+.pn-ibracket-pair {
+  position: relative;
+  margin-top: 7px;
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 3px solid #94A3B8;
+  width: calc(100% - 14px);
+  text-align: left;
+}
+.pn-ibracket-pair::before,
+.pn-ibracket-pair::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  width: 9px;
+  height: 2px;
+  background-color: #94A3B8;
+}
+.pn-ibracket-pair::before { top: 0; }
+.pn-ibracket-pair::after { bottom: 0; }
+
+.pn-ibracket-wrong {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.pn-ibracket-right {
+  background-color: #DCFCE7;
+  color: #166534;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.pn-ibracket-dark-pair {
+  position: relative;
+  margin-top: 7px;
+  margin-left: 10px;
+  padding-left: 12px;
+  border-left: 3px solid #94A3B8;
+  width: calc(100% - 14px);
+  text-align: left;
+}
+.pn-ibracket-dark-pair::before,
+.pn-ibracket-dark-pair::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  width: 9px;
+  height: 2px;
+  background-color: #94A3B8;
+}
+.pn-ibracket-dark-pair::before { top: 0; }
+.pn-ibracket-dark-pair::after { bottom: 0; }
+
+.pn-ibracket-dark-info {
+  background-color: rgba(148, 163, 184, 0.16);
+  color: #F8FAFC;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.pn-ibracket-dark-wrong {
+  background-color: rgba(244, 63, 94, 0.22);
+  color: #FCA5A5;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 3px;
+  line-height: 1.4;
+}
+
+.pn-ibracket-dark-right {
+  background-color: rgba(16, 185, 129, 0.22);
+  color: #4ADE80;
+  font-size: 16.5px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   T3 STYLES (Bg-3 Dark Emerald #061B17 Canvas)
+   ========================================================================== */
+.pn-t3-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #064E3B;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t3-st-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #065F46;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.pn-t3-st-points {
+  font-size: 17px;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t3-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #78350F;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t3-trap-point {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1E293B;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   T4 STYLES (Bg-4 Light Warm Alabaster #F6F4F0 Canvas)
+   ========================================================================== */
+.pn-t4-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t4-st-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #F5D0FE;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.pn-t4-st-points {
+  font-size: 17px;
+  font-weight: 500;
+  color: #FAF5FF;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t4-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FECDD3;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t4-trap-point {
+  font-size: 17px;
+  font-weight: 500;
+  color: #FFF1F2;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t4-subhead {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FDA4AF;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-underline-offset: 3px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t4-trap-eg {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #4ADE80;
+  margin-top: 3px;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   T5 STYLES (Bg-5 Deep Midnight Indigo #0B1120 Canvas)
+   ========================================================================== */
+.pn-t5-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #0C4A6E;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t5-st-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0369A1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.pn-t5-subhead {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #1E3A8A;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-underline-offset: 3px;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t5-st-points {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #0F172A;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t5-eg-inline {
+  color: #065F46;
+  font-weight: 600;
+}
+
+.pn-t5-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #92400E;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t5-trap-point {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1E293B;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+/* ==========================================================================
+   T6 STYLES (Bg-6 Warm Cyber-Sand #F3EFE6 Canvas, Obsidian Synth-Slate Boxes)
+   1-Line Blue Underline (Main) | 2-Line Underline (Sub) | 3-Line Underline (Sub-Sub)
+   ========================================================================== */
+.pn-t6-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #F3E8FF;
+  text-decoration: underline;
+  text-decoration-color: #38BDF8;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+/* Single Blue Underline — Main Heading (ST1..ST6) */
+.pn-t6-h1 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #38BDF8;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #38BDF8;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Double Underline — Sub Heading (Used When, Comma Ban, Placements of That) */
+.pn-t6-h2 {
+  font-size: 17.5px;
+  font-weight: 800;
+  color: #F472B6;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: #38BDF8;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Triple Underline — Sub-Sub Heading (1..4 under Used When & 4 Roles of That) */
+.pn-t6-h3 {
+  display: inline-block;
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #FBBF24;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: #38BDF8;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  border-bottom: 3px double #38BDF8;
+  padding-bottom: 2px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.pn-t6-point {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #E2E8F0;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t6-eg {
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #6EE7B7;
+  margin-top: 4px;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t6-note {
+  font-size: 15px;
+  font-weight: 500;
+  color: #E2E8F0;
+  opacity: 0.92;
+}
+
+.pn-t6-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FECDD3;
+  text-decoration-line: underline;
+  text-decoration-color: #38BDF8;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t6-trap-point {
+  font-size: 17px;
+  font-weight: 500;
+  color: #FFF1F2;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   T7 STYLES (Bg-7 Vibrant Sky-Blue Dart #0284C7 Canvas + Crimson-Red Boxes)
+   ========================================================================== */
+.pn-t7-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-decoration-color: #38BDF8;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t7-st-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #38BDF8;
+  text-decoration: underline;
+  text-decoration-color: #38BDF8;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t7-st-point {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #F0F9FF;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+.pn-t7-tree-head {
+  font-size: 19px;
+  font-weight: 800;
+  color: #0C4A6E;
+  text-decoration: underline;
+  text-decoration-color: #0284C7;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t7-tree-node {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0F172A;
+  line-height: 1.35;
+  text-align: center;
+  width: 100%;
+}
+
+.pn-t7-tree-eg {
+  font-size: 16.5px;
+  font-weight: 700;
+  color: #166534;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
+}
+
+.pn-t7-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FECACA;
+  text-decoration: underline;
+  text-decoration-color: #38BDF8;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t7-trap-point {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #FFF1F2;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+/* ==========================================================================
+   T8 STYLES (Bg-8 Blazing Crimson-Red #7F1D1D Canvas + Sky-Blue Dart Boxes)
+   ========================================================================== */
+.pn-t8-head {
+  font-size: 23px;
+  font-weight: 800;
+  color: #7DD3FC;
+  text-decoration: underline;
+  text-decoration-color: #F43F5E;
+  text-underline-offset: 4px;
+  text-align: center;
+}
+
+.pn-t8-trap-head {
+  font-size: 20px;
+  font-weight: 800;
+  color: #991B1B;
+  text-decoration: underline;
+  text-decoration-color: #0284C7;
+  text-underline-offset: 4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.pn-t8-trap-point {
+  font-size: 16.5px;
+  font-weight: 500;
+  color: #0F172A;
+  line-height: 1.45;
+  text-align: left;
+  width: 100%;
+}
+
+/* --- T9: INTERROGATIVE PRONOUNS (WARM SUNSET-ALABASTER GOLD CANVAS) --- */
+  .pn-t9-head {
+    font-weight: 900;
+    color: #F8FAFC;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #38BDF8;
+    letter-spacing: 0.04em;
+  }
+
+/* --- T10: RECIPROCAL PRONOUNS (DEEP CYBER-TEAL CANVAS) --- */
+  .pn-t10-head {
+    font-weight: 900;
+    color: #FFF1F2;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #FDA4AF;
+    letter-spacing: 0.04em;
+  }
+
+  .pn-t10-st-head {
+    font-weight: 900;
+    color: #0F766E;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #0D9488;
+    margin-bottom: 4px;
+  }
+
+  .pn-t10-st-point {
+    color: #0F172A;
+    line-height: 1.45;
+  }
+
+  .pn-t10-trap-head {
+    font-weight: 900;
+    color: #9F1239;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #E11D48;
+    margin-bottom: 4px;
+  }
+
+  .pn-t10-trap-point {
+    color: #1E293B;
+    line-height: 1.45;
+  }

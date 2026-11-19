@@ -1,0 +1,41 @@
+<!-- Main Canvas Safe Coordinates (Starts >= 1,1) -->
+<box points = (1,1),(43,1),(43,23),(1,23) background-color = #FFFFFF>
+
+  <!-- 1. The Sentence Row -->
+  <box points = (3,3),(13,3),(13,5),(3,5) background-color = #F1F5F9 color = #0F172A>
+    <p>She [studied]</p>
+  </box>
+  <box points = (14,3),(21,3),(21,5),(14,5) background-color = #FFF4CC color = #78350F>
+    <p><b>under</b></p>
+  </box>
+  <box points = (22,3),(31,3),(31,5),(22,5) background-color = #FFF4CC color = #78350F>
+    <p><b>the sun</b></p>
+  </box>
+
+  <!-- 2. Word-Level Labels (Preposition + Object) -->
+  <line m color = #0F172A>(17,5),(17,8)</line m>
+  <box points = (13,8),(21,8),(21,10),(13,10) background-color = #F1F5F9 color = #0F172A>
+    <p>Preposition</p>
+  </box>
+
+  <line m color = #0F172A>(26,5),(26,8)</line m>
+  <box points = (22,8),(30,8),(30,10),(22,10) background-color = #F1F5F9 color = #0F172A>
+    <p>Object (P.O)</p>
+  </box>
+
+  <!-- 3. Phrase Merge Bracket -> Prepositional Phrase -->
+  <line m color = #2563EB>(14,6),(30,6),(30,12),(32,12)</line m>
+  <box points = (32,11),(42,11),(42,14),(32,14) background-color = #2563EB color = #FFFFFF>
+    <p><b>Prepositional Phrase</b></p>
+  </box>
+
+  <!-- 4. Functional Test Branch -> Adverbial Prepositional Phrase -->
+  <line m color = #0D9488>(22,6),(22,16),(25,16),(22,16),(22,20),(25,20)</line m>
+  <box points = (25,15),(39,15),(39,17),(25,17) background-color = #F1F5F9 color = #0F172A>
+    <p>She studied <b>where?</b></p>
+  </box>
+  <box points = (25,19),(42,19),(42,22),(25,22) background-color = #DCFCE7 color = #14532D>
+    <p>Answers "Where" &rarr; <b>Adverbial Prep. Phrase</b></p>
+  </box>
+
+</box>

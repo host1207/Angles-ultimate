@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "chapterMid": "BS",
+  "topic": "Basics",
+  "lastUpdated": null,
+  "timingConfig": {
+    "locked": false,
+    "fastLimit": null,
+    "mediumLimit": null,
+    "slowLimit": null
+  },
+  "concepts": {
+    "UN": {
+      "BS-UN-q1": [],
+      "BS-UN-q2": [],
+      "BS-UN-q3": [],
+      "BS-UN-q4": [],
+      "BS-UN-q5": [],
+      "BS-UN-q6": [],
+      "BS-UN-q7": [],
+      "BS-UN-q8": [],
+      "BS-UN-q9": [],
+      "BS-UN-q10": [],
+      "BS-UN-q11": [],
+      "BS-UN-q12": [],
+      "BS-UN-q13": []
+    }
+  },
+  "questionMeta": {
+    "BS-UN-q1": {
+      "conceptMid": "UN",
+      "sourceFile": "noun.html",
+      "type": "UNTYPED",
+      "text": "1. Identify the noun types: \"<ud = Specific Name **rl**>Manoj</ud> bought a <ud = General Name **rl**>pen</ud>.\"",
+      "mids": [],
+      "signature": "e3592d9313916070a9b4263e854ca34b6a4e172d008e9be36c21db4980084236",
+      "active": true
+    },
+    "BS-UN-q2": {
+      "conceptMid": "UN",
+      "sourceFile": "noun.html",
+      "type": "UNTYPED",
+      "text": "2. Why is the sentence \"She gave me <ud = Error: Uncountable **rl**>many advices</ud>\" grammatically wrong?",
+      "mids": [],
+      "signature": "87dea53707e2751932f38b0faa811b86d4425d685ee30ee0eb54ce9d378042fb",
+      "active": true
+    },
+    "BS-UN-q3": {
+      "conceptMid": "UN",
+      "sourceFile": "noun.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Material Noun (Uncountable) **rl**>Gold</ud> and <ud = Abstract Noun (Uncountable) **rl**>honesty</ud> — Which group do these two belong to?",
+      "mids": [],
+      "signature": "49e660c823c16c16fabacf6c6ef6a837f2a36f003c275f599ee2cfdd8e92572a",
+      "active": true
+    },
+    "BS-UN-q4": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "1. Identify the pattern: <ud = S **rl**>She</ud> <ud = V (Action) **rl**>sleeps</ud> <ud = A (How?) **rl**>peacefully</ud>.",
+      "mids": [],
+      "signature": "52cb82cc3132d45f4d1e305a1f89b2311dbd41570dd9d3f9c004fbb0ff156f5d",
+      "active": true
+    },
+    "BS-UN-q5": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "2. Identify the pattern: <ud = S (Noun 1) **rl**>My brother</ud> <ud = V (Action) **rl**>gave</ud> <ud = IO (To whom? Noun 2) **rl**>me</ud> <ud = DO (What? Noun 3) **rl**>a watch</ud>.",
+      "mids": [],
+      "signature": "345aa908d42d48f27efa84f170b87a78520e1185658fe33095e460b8a44c5739",
+      "active": true
+    },
+    "BS-UN-q6": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "3. Identify the pattern: <ud = S **rl**>The milk</ud> <ud = V (State) **rl**>turned</ud> <ud = C (Milk = sour) **rl**>sour</ud>.",
+      "mids": [],
+      "signature": "41e04a52405ed43b19fc20d9b671480b3ff04c4ffb07414c4b4f99c192982554",
+      "active": true
+    },
+    "BS-UN-q7": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "4. Identify the pattern: <ud = S (Entity 1) **rl**>They</ud> <ud = V (Action) **rl**>painted</ud> <ud = O (Entity 2) **rl**>the house</ud> <ud = C (House = green) **rl**>green</ud>.",
+      "mids": [],
+      "signature": "69d6637d952f10d4390ce4a55078e6db027d3c7aeca760f45597df0e4533629d",
+      "active": true
+    },
+    "BS-UN-q8": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "5. Identify the pattern: <ud = S **rl**>Ravi</ud> <ud = V (Action) **rl**>bought</ud> <ud = O (Single Noun Phrase) **rl**>a new laptop</ud> <ud = A (When?) **rl**>yesterday</ud>.",
+      "mids": [],
+      "signature": "e753672107f92d7845ec5428a16c19e05a28093c2d3f5cca84d39ab46b2471fc",
+      "active": true
+    },
+    "BS-UN-q9": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "6. Identify the pattern: <ud = S (Entity 1) **rl**>The committee</ud> <ud = V **rl**>elected</ud> <ud = O (Entity 2) **rl**>Priya</ud> <ud = C (Priya = president) **rl**>president</ud>.",
+      "mids": [],
+      "signature": "6621ddef01593327c4e6d91090e656fdf19d005467f076ea95016cbee911b95e",
+      "active": true
+    },
+    "BS-UN-q10": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "7. Identify the pattern: <ud = S **rl**>Birds</ud> <ud = V **rl**>fly</ud> <ud = A (Where?) **rl**>in the sky</ud>.",
+      "mids": [],
+      "signature": "89ac29ac470eac55db77e5ab7dc93c9e9f61a6080317ff0599642c22e38187a4",
+      "active": true
+    },
+    "BS-UN-q11": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "8. Identify the pattern: <ud = S (Gerund Noun) **rl**>Swimming</ud> <ud = V (State) **rl**>is</ud> <ud = C (Swimming = passion) **rl**>my passion</ud>.",
+      "mids": [],
+      "signature": "ba9f23de6c2e41848e690a74902623de9ce73aa28aca5b87b2354c65e29e176e",
+      "active": true
+    },
+    "BS-UN-q12": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "9. Identify the pattern: <ud = S (Noun 1) **rl**>The teacher</ud> <ud = V **rl**>showed</ud> <ud = IO (To whom? Noun 2) **rl**>the students</ud> <ud = DO (What? Noun 3) **rl**>a video</ud>.",
+      "mids": [],
+      "signature": "cc444f0da5e8a6d5e5c6a70f4ff8a1cd652f601b48f3e17d5a733f7eb9f5f0f0",
+      "active": true
+    },
+    "BS-UN-q13": {
+      "conceptMid": "UN",
+      "sourceFile": "sentence-pattern.html",
+      "type": "UNTYPED",
+      "text": "10. Identify the pattern: <ud = S (Entity 1) **rl**>The manager</ud> <ud = V **rl**>called</ud> <ud = O (Entity 2) **rl**>him</ud> <ud = C (him = genius) **rl**>a genius</ud>.",
+      "mids": [],
+      "signature": "a4b77e3a93e333740d1e1a8ad05001aaa194a386616a7317909bea2629b54b61",
+      "active": true
+    }
+  },
+  "identity": {
+    "nextIndexByConcept": {
+      "UN": 14
+    },
+    "signatureToId": {
+      "UN": {
+        "e3592d9313916070a9b4263e854ca34b6a4e172d008e9be36c21db4980084236": "BS-UN-q1",
+        "87dea53707e2751932f38b0faa811b86d4425d685ee30ee0eb54ce9d378042fb": "BS-UN-q2",
+        "49e660c823c16c16fabacf6c6ef6a837f2a36f003c275f599ee2cfdd8e92572a": "BS-UN-q3",
+        "52cb82cc3132d45f4d1e305a1f89b2311dbd41570dd9d3f9c004fbb0ff156f5d": "BS-UN-q4",
+        "345aa908d42d48f27efa84f170b87a78520e1185658fe33095e460b8a44c5739": "BS-UN-q5",
+        "41e04a52405ed43b19fc20d9b671480b3ff04c4ffb07414c4b4f99c192982554": "BS-UN-q6",
+        "69d6637d952f10d4390ce4a55078e6db027d3c7aeca760f45597df0e4533629d": "BS-UN-q7",
+        "e753672107f92d7845ec5428a16c19e05a28093c2d3f5cca84d39ab46b2471fc": "BS-UN-q8",
+        "6621ddef01593327c4e6d91090e656fdf19d005467f076ea95016cbee911b95e": "BS-UN-q9",
+        "89ac29ac470eac55db77e5ab7dc93c9e9f61a6080317ff0599642c22e38187a4": "BS-UN-q10",
+        "ba9f23de6c2e41848e690a74902623de9ce73aa28aca5b87b2354c65e29e176e": "BS-UN-q11",
+        "cc444f0da5e8a6d5e5c6a70f4ff8a1cd652f601b48f3e17d5a733f7eb9f5f0f0": "BS-UN-q12",
+        "a4b77e3a93e333740d1e1a8ad05001aaa194a386616a7317909bea2629b54b61": "BS-UN-q13"
+      }
+    },
+    "retiredAttemptsByConcept": {
+      "UN": {}
+    }
+  }
+}

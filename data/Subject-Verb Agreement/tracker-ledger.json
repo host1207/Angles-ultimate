@@ -1,0 +1,778 @@
+{
+  "schemaVersion": 1,
+  "chapterMid": "SVA",
+  "topic": "Subject Verb Agreement",
+  "lastUpdated": null,
+  "timingConfig": {
+    "locked": true,
+    "fastLimit": 40,
+    "mediumLimit": 60,
+    "slowLimit": 80
+  },
+  "concepts": {
+    "UN": {
+      "SVA-UN-q1": [],
+      "SVA-UN-q2": [],
+      "SVA-UN-q3": [],
+      "SVA-UN-q4": [],
+      "SVA-UN-q5": [],
+      "SVA-UN-q6": [],
+      "SVA-UN-q7": [],
+      "SVA-UN-q8": [],
+      "SVA-UN-q9": [],
+      "SVA-UN-q10": [],
+      "SVA-UN-q11": [],
+      "SVA-UN-q12": [],
+      "SVA-UN-q13": [],
+      "SVA-UN-q14": [],
+      "SVA-UN-q15": [],
+      "SVA-UN-q16": [],
+      "SVA-UN-q17": [],
+      "SVA-UN-q18": [],
+      "SVA-UN-q19": [],
+      "SVA-UN-q20": [],
+      "SVA-UN-q21": [],
+      "SVA-UN-q22": [],
+      "SVA-UN-q23": [],
+      "SVA-UN-q24": [],
+      "SVA-UN-q25": [],
+      "SVA-UN-q26": [],
+      "SVA-UN-q27": [],
+      "SVA-UN-q28": [],
+      "SVA-UN-q29": [],
+      "SVA-UN-q30": [],
+      "SVA-UN-q31": [],
+      "SVA-UN-q32": [],
+      "SVA-UN-q33": [],
+      "SVA-UN-q34": [],
+      "SVA-UN-q35": [],
+      "SVA-UN-q36": [],
+      "SVA-UN-q37": [],
+      "SVA-UN-q38": [],
+      "SVA-UN-q39": [],
+      "SVA-UN-q40": [],
+      "SVA-UN-q41": [],
+      "SVA-UN-q42": [],
+      "SVA-UN-q43": [],
+      "SVA-UN-q44": [],
+      "SVA-UN-q45": [],
+      "SVA-UN-q46": [],
+      "SVA-UN-q47": [],
+      "SVA-UN-q48": [],
+      "SVA-UN-q49": [],
+      "SVA-UN-q50": [],
+      "SVA-UN-q51": [],
+      "SVA-UN-q52": [],
+      "SVA-UN-q53": [],
+      "SVA-UN-q54": [],
+      "SVA-UN-q55": [],
+      "SVA-UN-q56": [],
+      "SVA-UN-q57": [],
+      "SVA-UN-q58": [],
+      "SVA-UN-q59": [],
+      "SVA-UN-q60": [],
+      "SVA-UN-q61": [],
+      "SVA-UN-q62": [],
+      "SVA-UN-q63": [],
+      "SVA-UN-q64": [],
+      "SVA-UN-q65": [],
+      "SVA-UN-q66": [],
+      "SVA-UN-q67": [],
+      "SVA-UN-q68": []
+    }
+  },
+  "questionMeta": {
+    "SVA-UN-q1": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "1. Ramya <math == [ want / wants ]> to participate in the competition.",
+      "mids": [],
+      "signature": "b80b03c881b7f4ef0436d2b5663c8b5da95ee1b053e4217e7fcf0f87a5f46fb6",
+      "active": true
+    },
+    "SVA-UN-q2": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "2. My son <math == [ complete / completes ]> his homework on time.",
+      "mids": [],
+      "signature": "406d81c77da36813ac02e2e9b2c7c4dde3ca584e7f76d199f2d6e0c2f22f7e7c",
+      "active": true
+    },
+    "SVA-UN-q3": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "3. It <math == [ is / are ]> necessary to maintain hygiene.",
+      "mids": [],
+      "signature": "ecd26325dc8c25384f1c475144b0c9d18b39743d8c3c37a6cc6678bf259b32a9",
+      "active": true
+    },
+    "SVA-UN-q4": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "4. They <math == [ is / are ]> not coming today.",
+      "mids": [],
+      "signature": "6f00de99237d9d5b8fdc48c2ac33bb4bcebee2107c73390b6c7ab2239f13e360",
+      "active": true
+    },
+    "SVA-UN-q5": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "5. I <math == [ was / were ]> a doctor.",
+      "mids": [],
+      "signature": "b965fb4e93a080934ea5a377c73970e4633a624aacf0b1be453a44c81b49600a",
+      "active": true
+    },
+    "SVA-UN-q6": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Two Separate People>The Secretary and the Principal</ud> of the college <math == [ is / are ]> attending the District Development Council Meeting.",
+      "mids": [],
+      "signature": "3d0b31a56051c3fec37b50fb0aae79d103e802b7db15306f625948e94e0a1749",
+      "active": true
+    },
+    "SVA-UN-q7": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Group>The Principal and staff</ud> <math == [ is / are ]> waiting for the chief guest.",
+      "mids": [],
+      "signature": "3bd35684d3f24baeb8edb5f9b8e191ac85b9598e24590bc1af0fe00c25792e2f",
+      "active": true
+    },
+    "SVA-UN-q8": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Same Person>The artist and writer</ud> <math == [ has / have ]> died.",
+      "mids": [],
+      "signature": "de792d3a44592d76722bd8de15afb1567e70f2171bfa789e9a805219298337ce",
+      "active": true
+    },
+    "SVA-UN-q9": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Two Separate Springs>A hot and a cold spring</ud> <math == [ was / were ]> found near each other.",
+      "mids": [],
+      "signature": "20dd84043a4f1830d0be6b61aac7a256d311f9c151a30d0445064134a5a202b8",
+      "active": true
+    },
+    "SVA-UN-q10": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "5. <ud = Same Person>The trustee and principal</ud> <math == [ is / are ]> at loggerheads.",
+      "mids": [],
+      "signature": "bccb76d18c19e720664d831c49f11498ce302161af55480c4c050386f010f2e2",
+      "active": true
+    },
+    "SVA-UN-q11": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "6. <ud = One Person>My friend, philosopher and guide</ud> <math == [ has / have ]> come.",
+      "mids": [],
+      "signature": "96d36728b42de94f420dd58f370eccee7674faab74e05f56ce725aad8f9af138",
+      "active": true
+    },
+    "SVA-UN-q12": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = 1st Subject (Singular)>The Prime Minister</ud> along with his Cabinet colleagues <math == [ has / have ]> been welcomed by the Chief Minister.",
+      "mids": [],
+      "signature": "881affb008a15bef2884f1557dcf7d9c45a04056dd299e58742c51eb170dbc62",
+      "active": true
+    },
+    "SVA-UN-q13": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = 1st Subject (Singular)>He</ud> as well as you <math == [ like / likes ]> to go.",
+      "mids": [],
+      "signature": "5633b7d990188e0d4d12bf2b08bdc0665e56059e4190f8f4262949ca140b7b7c",
+      "active": true
+    },
+    "SVA-UN-q14": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = 1st Subject (Singular)>The captain</ud> along with his team <math == [ is / are ]> practising very hard for the forthcoming match.",
+      "mids": [],
+      "signature": "bc55aaa898e1effc9cebdb6a07fe1408e30a0d73b493d27050df5e9f7b5aacb1",
+      "active": true
+    },
+    "SVA-UN-q15": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "4. Either Prashant or <ud = Nearest Subject (Singular)>Jyoti</ud> <math == [ has / have ]> done the crime.",
+      "mids": [],
+      "signature": "6c22bacbd4b3d9f06a97cd42a61b76750232c9f070f366769452e7d5253e76c7",
+      "active": true
+    },
+    "SVA-UN-q16": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "5. Neither the girl nor <ud = Nearest Subject (Plural)>her parents</ud> <math == [ was / were ]> present to receive the award.",
+      "mids": [],
+      "signature": "6204cad9b5faacfe99aa2c470fcc9392eda5ba77dda747caf5c6b0163e3cc397",
+      "active": true
+    },
+    "SVA-UN-q17": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "6. Electronic mail or <ud = Nearest Subject (Singular)>E-mail</ud> <math == [ is / are ]> a method of exchanging digital messages.",
+      "mids": [],
+      "signature": "29ad1458b572be7d3e0dcfcd69cbefc439b336bccd6b09e871c2c4684d04a66c",
+      "active": true
+    },
+    "SVA-UN-q18": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "7. The light bulbs <math == [ or / in ]> the hall <math == [ need / needs ]> to be changed.",
+      "mids": [],
+      "signature": "8d218036b426fe3680f69a5553798f5562d915d0cff45246be766be236de4471",
+      "active": true
+    },
+    "SVA-UN-q19": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "8. Neither Mohit nor <ud = Nearest Subject (Singular)>Rohit</ud> <math == [ was / were ]> there at the shop when I went there.",
+      "mids": [],
+      "signature": "1eb7b77a596b015527d352138e1d417d95822af4afa9ded02a34ea7ad90a813b",
+      "active": true
+    },
+    "SVA-UN-q20": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "9. Either Abi or <ud = Nearest Subject (Singular)>Nikhil</ud> <math == [ is / are ]> going to win the prize in the handwriting competition.",
+      "mids": [],
+      "signature": "9b1cfd2a0d3182b51bac693d9b739eca2dc61381ad7c093904cb9b08de360b89",
+      "active": true
+    },
+    "SVA-UN-q21": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = All brave people (Plural)>The brave</ud> <math == [ is / are ]> rewarded.",
+      "mids": [],
+      "signature": "d50630c8bccdbc59f66c6f5d52f00a77ee5039904bf5c69c0e79c54a9024452f",
+      "active": true
+    },
+    "SVA-UN-q22": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Rich people (Plural)>The rich</ud> <math == [ exploit / exploits ]> the poor.",
+      "mids": [],
+      "signature": "69b88e3eb89fefb3b46b51b612f576ba106a5991be82aa1f296250f0a932a09a",
+      "active": true
+    },
+    "SVA-UN-q23": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "3. Cowards die many a death, <ud = Brave people (Plural)>the brave</ud> <math == [ die / dies ]> but once.",
+      "mids": [],
+      "signature": "030286149a90d8920e8f7032a56a136be27d65a2fbb8061c0d91604d66274620",
+      "active": true
+    },
+    "SVA-UN-q24": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Poor people (Plural)>The Poor</ud> always <math == [ work / works ]> hard.",
+      "mids": [],
+      "signature": "3c836c23a7367bcf86a28b7e77bb6b4bdbb8652680176e48dcd5fe6e4797b3e9",
+      "active": true
+    },
+    "SVA-UN-q25": {
+      "conceptMid": "UN",
+      "sourceFile": "01-start-here.html",
+      "type": "UNTYPED",
+      "text": "5. <ud = Blind people (Plural)>The Blind</ud> <math == [ struggle / struggles ]> everyday.",
+      "mids": [],
+      "signature": "2fee1314644f4e96c707ae8f0ae7d19d33d673aca329e6014540a6a84d256eb7",
+      "active": true
+    },
+    "SVA-UN-q26": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Singular Noun + Prep + Singular Noun>Town after town</ud> <math == [ was / were ]> plundered.",
+      "mids": [],
+      "signature": "5726188d4188b90142a960ef84f00977cf540a0d010273a8ff680da87dc49cc7",
+      "active": true
+    },
+    "SVA-UN-q27": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Identical Singular Pair>Door to door</ud> service <math == [ is / are ]> available.",
+      "mids": [],
+      "signature": "f592a3651eefe2b18fe488571c0013cdcc40d051c27c92bdab7ace2a934c304a",
+      "active": true
+    },
+    "SVA-UN-q28": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Identical Singular Pair>Word for word</ud> repetition <math == [ is / are ]> not allowed.",
+      "mids": [],
+      "signature": "ae3c99feadb66eb8c6b109fb411c2876e71bdb4b6997d8ca796ac7d2c76e557a",
+      "active": true
+    },
+    "SVA-UN-q29": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "4. Spot the error: <ud = Plural Trap>Men after men have</ud> turned up for the ceremony.",
+      "mids": [],
+      "signature": "031070c0ca7c4df120537be38e83f71aa479780e5391625baf8ce438574b9b68",
+      "active": true
+    },
+    "SVA-UN-q30": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Singular>Each student</ud> <math == [ is / are ]> ordered to complete <math == [ his / their ]> assignment.",
+      "mids": [],
+      "signature": "72e9473aa631180022681a83b1b0a4b19ec2085cf21dcbba9eb1294e2b910e4a",
+      "active": true
+    },
+    "SVA-UN-q31": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Singular>Every soldier</ud> <math == [ is / are ]> expected to be brave.",
+      "mids": [],
+      "signature": "7c50ba1f3aea780e91acf0517adfe3c5e9a384fc7e91948de9074ace4c4255b7",
+      "active": true
+    },
+    "SVA-UN-q32": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Singular>Each boy and girl</ud> <math == [ was / were ]> punished.",
+      "mids": [],
+      "signature": "b6dabdf4c024615c858c3b4a02a4cc59a2d55a4f49cb980766b5dc09965cc774",
+      "active": true
+    },
+    "SVA-UN-q33": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Singular>Each boy and each girl</ud> <math == [ was / were ]> punished.",
+      "mids": [],
+      "signature": "0621f38499306398a70f2eafce72c499ba36a10b57f485c827d58ba7f50abd0e",
+      "active": true
+    },
+    "SVA-UN-q34": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "5. <ud = Singular>Every man, woman and child</ud> <math == [ was / were ]> excited to perform in the Dandiya competition.",
+      "mids": [],
+      "signature": "6a7d21559cb94de3e17da774e7c7b80e795ce30ef0a642364bbc8ed797f25738",
+      "active": true
+    },
+    "SVA-UN-q35": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Single Book Title>“The Arabian Nights”</ud> <math == [ is / are ]> indeed an interesting book.",
+      "mids": [],
+      "signature": "b553077754bfd8dac217a8e6bd1afe622b396320adb58fdb3f64fb88e76b6348",
+      "active": true
+    },
+    "SVA-UN-q36": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Single Book Title>‘Gulliver’s Travels’</ud> <math == [ is / are ]> indeed an interesting book.",
+      "mids": [],
+      "signature": "40fbdc9eb2b7e30a87f8b1f8186fe4e269120e4f7bd30deee63906e84e8fafeb",
+      "active": true
+    },
+    "SVA-UN-q37": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Single Country>The US</ud> <math == [ don't / doesn't ]> want India in the Security Council.",
+      "mids": [],
+      "signature": "2fb5260e7cf880e5547e26255538e545b0ee3f4d2e8b868965835b43b47ddc06",
+      "active": true
+    },
+    "SVA-UN-q38": {
+      "conceptMid": "UN",
+      "sourceFile": "file-2.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Single Book Title>A Tale of Two Cities</ud> <math == [ is / are ]> written by Charles Dickens.",
+      "mids": [],
+      "signature": "dc029d6a2335dc5b269f6ff7b8c46269cefc64845139567e476586fee702f30e",
+      "active": true
+    },
+    "SVA-UN-q39": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "1. A great many <math == [ student / students ]> have been declared successful.",
+      "mids": [],
+      "signature": "58652e8c203125fcb3bd992b392b9a2cad92af46fe3778d34d92d0898ec13d9c",
+      "active": true
+    },
+    "SVA-UN-q40": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Singular Structure>Many a man</ud> <math == [ has / have ]> realized that real happiness lies in making sacrifices.",
+      "mids": [],
+      "signature": "d75808866db9ca35a0306b6b5a418fb07ccd826505920f5cd866c06c2145dadb",
+      "active": true
+    },
+    "SVA-UN-q41": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Singular Structure>Many a man</ud> <math == [ want / wants ]> to be rich quickly.",
+      "mids": [],
+      "signature": "d2e4aeb4ae1c2a5907995dde56c4220e9ceb389b6f29e8c39b94d4fe5b0f642a",
+      "active": true
+    },
+    "SVA-UN-q42": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Singular Structure>Many a man</ud> <math == [ has / have ]> come to India from Canada to live here permanently.",
+      "mids": [],
+      "signature": "c1123ba1bf21e71f5ddb180c1b4eae9032610ebab0bada3d7316c66d27c15ac4",
+      "active": true
+    },
+    "SVA-UN-q43": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "5. <ud = Singular Structure>Many a girl</ud> <math == [ was / were ]> influenced by the inspirational lecture given by the Nobel laureate.",
+      "mids": [],
+      "signature": "2d506e5c7fed45cb4477e9449832c74ba22377a196058fa04ccc6cd10aa71e6a",
+      "active": true
+    },
+    "SVA-UN-q44": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "6. <ud = Singular Structure>Many a man</ud> <math == [ has / have ]> died of cancer.",
+      "mids": [],
+      "signature": "b768d2e4cf798138af9415eb82aadeee6fde7012fe6057c5430b61ba34343552",
+      "active": true
+    },
+    "SVA-UN-q45": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "7. How many <math == [ country / countries ]> are there in Europe?",
+      "mids": [],
+      "signature": "97078e90867eae986b12dbdf2935f38fda4d22dfe8616a3b918badd846a87449",
+      "active": true
+    },
+    "SVA-UN-q46": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Definite Count>The number of</ud> guests invited to the party <math == [ is / are ]> five hundred.",
+      "mids": [],
+      "signature": "6a84da1a342b92896814d6408df2ae3c9b67e412858d8b0d59b4da154ff37d6b",
+      "active": true
+    },
+    "SVA-UN-q47": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Indefinite (Many)>A number of</ud> points of resemblance between the Australian and Dravidian languages <math == [ is / are ]> discovered.",
+      "mids": [],
+      "signature": "de40ee0dcb521988df20c9dd3bf0787122df10fcdf887076e584d4b1ae37b199",
+      "active": true
+    },
+    "SVA-UN-q48": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Singular Subject>Each</ud> of the students in the computer class has to type <math == [ their / his ]> own research paper this semester.",
+      "mids": [],
+      "signature": "76ad462a4592d04ef988d43eb71a260055fe34a25a4cc2dc3c38ed88fa762a5d",
+      "active": true
+    },
+    "SVA-UN-q49": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Singular Subject>Each</ud> of these boys <math == [ play / plays ]> games in the playground.",
+      "mids": [],
+      "signature": "c871494cca00ff25308a9171db1d89c9251597e1284ff749fd02ca5698f0a6ea",
+      "active": true
+    },
+    "SVA-UN-q50": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "3. One of the most important <math == [ factor / factors ]> that contribute to the success of a person is his sincerity.",
+      "mids": [],
+      "signature": "a3dfb301d9c5a0896a8c9aa8dc0bc5a3a9d31ac426e8ea047e290c105e39ec25",
+      "active": true
+    },
+    "SVA-UN-q51": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Singular Subject>Each</ud> of the girls <math == [ is / are ]> clever.",
+      "mids": [],
+      "signature": "b5fa3435487448ee9fdb8900e32095218db7c0fef717622b5308aba174518916",
+      "active": true
+    },
+    "SVA-UN-q52": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "5. <ud = Singular>Each one</ud> of you must make up <math == [ their / your ]> mind as I did.",
+      "mids": [],
+      "signature": "70da0fb8248be9d282f375ffe23a8ba683e8a26612bcafd5b6c4a1fd8357ecf6",
+      "active": true
+    },
+    "SVA-UN-q53": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "6. One of the most dangerous <math == [ disease / diseases ]> is AIDS.",
+      "mids": [],
+      "signature": "9413059c3d3ee879d177b1a95bd54df6589d5041749b4df580eef856980de308",
+      "active": true
+    },
+    "SVA-UN-q54": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "7. One of the most widely spread bad <math == [ habit / habits ]> is the use of tobacco.",
+      "mids": [],
+      "signature": "6fd56589c35a2f74b0add924db987bc40d70f0fcb56828ed1952fc831fcff004",
+      "active": true
+    },
+    "SVA-UN-q55": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "8. <ud = Singular>One</ud> of my desires <math == [ is / are ]> to become a doctor.",
+      "mids": [],
+      "signature": "13484548496db0b080c05e9bb39ff7815f87e6e5f01008f661330b37921ce7b1",
+      "active": true
+    },
+    "SVA-UN-q56": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "9. One of my <math == [ friend / friends ]> is an engineer, and one of the <math == [ student / students ]> was selected to visit NASA.",
+      "mids": [],
+      "signature": "796b5bdb7025f77cfb161837cc45ec4fb0943f73b62a57b8ba445d5f3a0db9e6",
+      "active": true
+    },
+    "SVA-UN-q57": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Singular (0 of 2)>Neither</ud> of these two documents <math == [ support / supports ]> your claim on the property.",
+      "mids": [],
+      "signature": "5315768b0f2eee5c7ecf090d579cbb35b02dcb99ddbbffab360c52c1c5155ea7",
+      "active": true
+    },
+    "SVA-UN-q58": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Singular>Neither</ud> of the sisters <math == [ is / are ]> sensible enough to carry out the plan.",
+      "mids": [],
+      "signature": "573a8911eb0a2a26c6dadc88ee17ce7742ca36a83a8e5dd717d1034672f88732",
+      "active": true
+    },
+    "SVA-UN-q59": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-3.html",
+      "type": "UNTYPED",
+      "text": "3. <ud = Singular>Neither</ud> of the scout leaders <math == [ know / knows ]> how to trap wild animals or how to prepare them for mounting.",
+      "mids": [],
+      "signature": "8719fd75acb255bf245d201f9fcf17898e6ac5045843d8a8eabecf354386a5b7",
+      "active": true
+    },
+    "SVA-UN-q60": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "1. Nine-tenths of <ud = Singular Noun>the pillar</ud> <b>[ has / have ]</b> rotted away.",
+      "mids": [],
+      "signature": "e9697ae5ff5a48f3855f7e2b1e55000b0803bf5c75be1511d543a3de80f4515a",
+      "active": true
+    },
+    "SVA-UN-q61": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "2. Three-fourths of <ud = Plural Noun>the men</ud> <b>[ has / have ]</b> gone to war.",
+      "mids": [],
+      "signature": "059430530628839555f5d0a6b155288446e3afbd89a3f7d6665cd910143a77a5",
+      "active": true
+    },
+    "SVA-UN-q62": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "1. <ud = Plural Pests>Vermin</ud> <b>[ is / are ]</b> small insects and animals harmful to plants and crops.",
+      "mids": [],
+      "signature": "5a7214fd2bdfc94c9d9139bb3f655c59e7f76db838fbbb4e52a6092303a1035d",
+      "active": true
+    },
+    "SVA-UN-q63": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "2. <ud = Plural Group>The police</ud> <b>[ has / have ]</b> arrived, and <ud = Voters>the electorate</ud> <b>[ has / have ]</b> voted against the party.",
+      "mids": [],
+      "signature": "f60c93103701bc62ae0a10b2e3b1eec35e49945ba6691bd9ca1f830f29c15e6d",
+      "active": true
+    },
+    "SVA-UN-q64": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "3. Spot the errors: (a) <i>The youths needs jobs.</i> (b) <i>Cattles are grazing in the field.</i> (c) <i>Police personnels have arrived.</i>",
+      "mids": [],
+      "signature": "28ccadbe865a4055a3ba0e7e6efbb02c68e3c0fd22ea4922aacb191a27536447",
+      "active": true
+    },
+    "SVA-UN-q65": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "4. <ud = Plural Group>Local clergy</ud> <b>[ has / have ]</b> come to resolve the issue.",
+      "mids": [],
+      "signature": "bd1826d2bb76a38cc02a5da02fcf8eaca931d1b96a94c086697c7c77dcdf1117",
+      "active": true
+    },
+    "SVA-UN-q66": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "5. Contrast Check: (a) Peasantry <b>[ is / are ]</b> a thankless profession. vs. (b) Peasantry <b>[ is / are ]</b> raising slogans against the government.",
+      "mids": [],
+      "signature": "22677f132c4e37d5a0aa366368ce415d21750d3d65123188836dbe6cfe519ef8",
+      "active": true
+    },
+    "SVA-UN-q67": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "6. Contrast Check: (a) Poultry <b>[ is / are ]</b> better than red meat. vs. (b) Poultry <b>[ was / were ]</b> culled to check bird flu.",
+      "mids": [],
+      "signature": "72d156030ba0682bf8040754456deccb06104735bf6b53d6524ddaa16f7c63ec",
+      "active": true
+    },
+    "SVA-UN-q68": {
+      "conceptMid": "UN",
+      "sourceFile": "vid-4.html",
+      "type": "UNTYPED",
+      "text": "7. Contrast Check: (a) Infantry <b>[ was / were ]</b> taught how to camouflage themselves. vs. (b) Infantry <b>[ is / are ]</b> an essential unit of the army.",
+      "mids": [],
+      "signature": "35914912573802bc86efe735714921aec7351aeae5cc4ab767a5cfdcae346096",
+      "active": true
+    }
+  },
+  "identity": {
+    "nextIndexByConcept": {
+      "UN": 69
+    },
+    "signatureToId": {
+      "UN": {
+        "b80b03c881b7f4ef0436d2b5663c8b5da95ee1b053e4217e7fcf0f87a5f46fb6": "SVA-UN-q1",
+        "406d81c77da36813ac02e2e9b2c7c4dde3ca584e7f76d199f2d6e0c2f22f7e7c": "SVA-UN-q2",
+        "ecd26325dc8c25384f1c475144b0c9d18b39743d8c3c37a6cc6678bf259b32a9": "SVA-UN-q3",
+        "6f00de99237d9d5b8fdc48c2ac33bb4bcebee2107c73390b6c7ab2239f13e360": "SVA-UN-q4",
+        "b965fb4e93a080934ea5a377c73970e4633a624aacf0b1be453a44c81b49600a": "SVA-UN-q5",
+        "3d0b31a56051c3fec37b50fb0aae79d103e802b7db15306f625948e94e0a1749": "SVA-UN-q6",
+        "3bd35684d3f24baeb8edb5f9b8e191ac85b9598e24590bc1af0fe00c25792e2f": "SVA-UN-q7",
+        "de792d3a44592d76722bd8de15afb1567e70f2171bfa789e9a805219298337ce": "SVA-UN-q8",
+        "20dd84043a4f1830d0be6b61aac7a256d311f9c151a30d0445064134a5a202b8": "SVA-UN-q9",
+        "bccb76d18c19e720664d831c49f11498ce302161af55480c4c050386f010f2e2": "SVA-UN-q10",
+        "96d36728b42de94f420dd58f370eccee7674faab74e05f56ce725aad8f9af138": "SVA-UN-q11",
+        "881affb008a15bef2884f1557dcf7d9c45a04056dd299e58742c51eb170dbc62": "SVA-UN-q12",
+        "5633b7d990188e0d4d12bf2b08bdc0665e56059e4190f8f4262949ca140b7b7c": "SVA-UN-q13",
+        "bc55aaa898e1effc9cebdb6a07fe1408e30a0d73b493d27050df5e9f7b5aacb1": "SVA-UN-q14",
+        "6c22bacbd4b3d9f06a97cd42a61b76750232c9f070f366769452e7d5253e76c7": "SVA-UN-q15",
+        "6204cad9b5faacfe99aa2c470fcc9392eda5ba77dda747caf5c6b0163e3cc397": "SVA-UN-q16",
+        "29ad1458b572be7d3e0dcfcd69cbefc439b336bccd6b09e871c2c4684d04a66c": "SVA-UN-q17",
+        "8d218036b426fe3680f69a5553798f5562d915d0cff45246be766be236de4471": "SVA-UN-q18",
+        "1eb7b77a596b015527d352138e1d417d95822af4afa9ded02a34ea7ad90a813b": "SVA-UN-q19",
+        "9b1cfd2a0d3182b51bac693d9b739eca2dc61381ad7c093904cb9b08de360b89": "SVA-UN-q20",
+        "d50630c8bccdbc59f66c6f5d52f00a77ee5039904bf5c69c0e79c54a9024452f": "SVA-UN-q21",
+        "69b88e3eb89fefb3b46b51b612f576ba106a5991be82aa1f296250f0a932a09a": "SVA-UN-q22",
+        "030286149a90d8920e8f7032a56a136be27d65a2fbb8061c0d91604d66274620": "SVA-UN-q23",
+        "3c836c23a7367bcf86a28b7e77bb6b4bdbb8652680176e48dcd5fe6e4797b3e9": "SVA-UN-q24",
+        "2fee1314644f4e96c707ae8f0ae7d19d33d673aca329e6014540a6a84d256eb7": "SVA-UN-q25",
+        "5726188d4188b90142a960ef84f00977cf540a0d010273a8ff680da87dc49cc7": "SVA-UN-q26",
+        "f592a3651eefe2b18fe488571c0013cdcc40d051c27c92bdab7ace2a934c304a": "SVA-UN-q27",
+        "ae3c99feadb66eb8c6b109fb411c2876e71bdb4b6997d8ca796ac7d2c76e557a": "SVA-UN-q28",
+        "031070c0ca7c4df120537be38e83f71aa479780e5391625baf8ce438574b9b68": "SVA-UN-q29",
+        "72e9473aa631180022681a83b1b0a4b19ec2085cf21dcbba9eb1294e2b910e4a": "SVA-UN-q30",
+        "7c50ba1f3aea780e91acf0517adfe3c5e9a384fc7e91948de9074ace4c4255b7": "SVA-UN-q31",
+        "b6dabdf4c024615c858c3b4a02a4cc59a2d55a4f49cb980766b5dc09965cc774": "SVA-UN-q32",
+        "0621f38499306398a70f2eafce72c499ba36a10b57f485c827d58ba7f50abd0e": "SVA-UN-q33",
+        "6a7d21559cb94de3e17da774e7c7b80e795ce30ef0a642364bbc8ed797f25738": "SVA-UN-q34",
+        "b553077754bfd8dac217a8e6bd1afe622b396320adb58fdb3f64fb88e76b6348": "SVA-UN-q35",
+        "40fbdc9eb2b7e30a87f8b1f8186fe4e269120e4f7bd30deee63906e84e8fafeb": "SVA-UN-q36",
+        "2fb5260e7cf880e5547e26255538e545b0ee3f4d2e8b868965835b43b47ddc06": "SVA-UN-q37",
+        "dc029d6a2335dc5b269f6ff7b8c46269cefc64845139567e476586fee702f30e": "SVA-UN-q38",
+        "58652e8c203125fcb3bd992b392b9a2cad92af46fe3778d34d92d0898ec13d9c": "SVA-UN-q39",
+        "d75808866db9ca35a0306b6b5a418fb07ccd826505920f5cd866c06c2145dadb": "SVA-UN-q40",
+        "d2e4aeb4ae1c2a5907995dde56c4220e9ceb389b6f29e8c39b94d4fe5b0f642a": "SVA-UN-q41",
+        "c1123ba1bf21e71f5ddb180c1b4eae9032610ebab0bada3d7316c66d27c15ac4": "SVA-UN-q42",
+        "2d506e5c7fed45cb4477e9449832c74ba22377a196058fa04ccc6cd10aa71e6a": "SVA-UN-q43",
+        "b768d2e4cf798138af9415eb82aadeee6fde7012fe6057c5430b61ba34343552": "SVA-UN-q44",
+        "97078e90867eae986b12dbdf2935f38fda4d22dfe8616a3b918badd846a87449": "SVA-UN-q45",
+        "6a84da1a342b92896814d6408df2ae3c9b67e412858d8b0d59b4da154ff37d6b": "SVA-UN-q46",
+        "de40ee0dcb521988df20c9dd3bf0787122df10fcdf887076e584d4b1ae37b199": "SVA-UN-q47",
+        "76ad462a4592d04ef988d43eb71a260055fe34a25a4cc2dc3c38ed88fa762a5d": "SVA-UN-q48",
+        "c871494cca00ff25308a9171db1d89c9251597e1284ff749fd02ca5698f0a6ea": "SVA-UN-q49",
+        "a3dfb301d9c5a0896a8c9aa8dc0bc5a3a9d31ac426e8ea047e290c105e39ec25": "SVA-UN-q50",
+        "b5fa3435487448ee9fdb8900e32095218db7c0fef717622b5308aba174518916": "SVA-UN-q51",
+        "70da0fb8248be9d282f375ffe23a8ba683e8a26612bcafd5b6c4a1fd8357ecf6": "SVA-UN-q52",
+        "9413059c3d3ee879d177b1a95bd54df6589d5041749b4df580eef856980de308": "SVA-UN-q53",
+        "6fd56589c35a2f74b0add924db987bc40d70f0fcb56828ed1952fc831fcff004": "SVA-UN-q54",
+        "13484548496db0b080c05e9bb39ff7815f87e6e5f01008f661330b37921ce7b1": "SVA-UN-q55",
+        "796b5bdb7025f77cfb161837cc45ec4fb0943f73b62a57b8ba445d5f3a0db9e6": "SVA-UN-q56",
+        "5315768b0f2eee5c7ecf090d579cbb35b02dcb99ddbbffab360c52c1c5155ea7": "SVA-UN-q57",
+        "573a8911eb0a2a26c6dadc88ee17ce7742ca36a83a8e5dd717d1034672f88732": "SVA-UN-q58",
+        "8719fd75acb255bf245d201f9fcf17898e6ac5045843d8a8eabecf354386a5b7": "SVA-UN-q59",
+        "e9697ae5ff5a48f3855f7e2b1e55000b0803bf5c75be1511d543a3de80f4515a": "SVA-UN-q60",
+        "059430530628839555f5d0a6b155288446e3afbd89a3f7d6665cd910143a77a5": "SVA-UN-q61",
+        "5a7214fd2bdfc94c9d9139bb3f655c59e7f76db838fbbb4e52a6092303a1035d": "SVA-UN-q62",
+        "f60c93103701bc62ae0a10b2e3b1eec35e49945ba6691bd9ca1f830f29c15e6d": "SVA-UN-q63",
+        "28ccadbe865a4055a3ba0e7e6efbb02c68e3c0fd22ea4922aacb191a27536447": "SVA-UN-q64",
+        "bd1826d2bb76a38cc02a5da02fcf8eaca931d1b96a94c086697c7c77dcdf1117": "SVA-UN-q65",
+        "22677f132c4e37d5a0aa366368ce415d21750d3d65123188836dbe6cfe519ef8": "SVA-UN-q66",
+        "72d156030ba0682bf8040754456deccb06104735bf6b53d6524ddaa16f7c63ec": "SVA-UN-q67",
+        "35914912573802bc86efe735714921aec7351aeae5cc4ab767a5cfdcae346096": "SVA-UN-q68"
+      }
+    },
+    "retiredAttemptsByConcept": {
+      "UN": {}
+    }
+  }
+}
